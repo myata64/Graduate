@@ -1,0 +1,26 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: clothing_store
+      POSTGRES_USER: myata64
+      POSTGRES_PASSWORD: pass1234
+    ports:
+      - '5434:5432'
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash -c "python3 /code/manage.py collectstatic --noinput && python3 /code/manage.py runserver 0.0.0.0:8000"
+
+    volumes:
+      - .:/code
+    ports:
+      - '8000:8000'
+    depends_on:
+      - db
+volumes:
+  pgdata:

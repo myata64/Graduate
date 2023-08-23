@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'img/shortlogoC.png' %}" type="image/png">
+    <title>Официальный сайт Сredo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shojumaru&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://putracetol.com/">
+    <link rel="preconnect" href="https://putracetol.com/">
+
+
+    <link rel="stylesheet" href="{% static 'styles/shoes.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <script src="{% static 'scripts/shadow.js' %}"></script>
+</head>
+<body>
+<div class="page">
+    <header>
+        <div id="hover" class="header_nav">
+            <div class="container">
+                <a class="header_logo hover" href="{% url 'home' %}" id="logo">C R E D O</a>
+                <ul class="header_list" id="menu">
+                    <a href="{% url 'shoes' %}" class="header_menu">
+                        <li>Обувь</li>
+                    </a>
+                    <a href="#" class="header_menu">
+                        <li>Штаны</li>
+                    </a>
+                    <a href="#" class="header_menu">
+                        <li>Худи</li>
+                    </a>
+                    <a href="#" class="header_menu">
+                        <li>Куртки</li>
+                    </a>
+                    <a href="#" class="header_menu">
+                        <li>Аксуссуары</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="menu">
+                <img class="header_account-icon" src="{% static 'img/user.png' %}" alt="Account">
+                <div class="list_menu">
+                    <ul>
+                        {% if user.is_authenticated %}
+                            <li><a href="#">Личные данные</a></li>
+                            <li><a href="#">Избранное</a></li>
+                            <li><a href="#">Корзина</a></li>
+                            <li><a href="#">Весь каталог</a></li>
+                            <li><a href="{% url 'logout' %}">Выход</a></li>
+                        {% else %}
+                            <li><a href="{% url 'entrance' %}">Войти</a></li>
+                            <li><a href="{% url 'register' %}">Регистрация</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="footer_menu">
+                    <p>©Данные под хешем</p>
+                </div>
+            </div>
+
+            <div class="filter">
+                <img class="header_account-icon" src="{% static 'img/user.png' %}" alt="Account">
+                <div class="list_menu">
+                    <ul>
+                        {% if user.is_authenticated %}
+                            <li><a href="#">Личные данные</a></li>
+                            <li><a href="#">Избранное</a></li>
+                            <li><a href="#">Корзина</a></li>
+                            <li><a href="#">Весь каталог</a></li>
+                            <li><a href="{% url 'logout' %}">Выход</a></li>
+                        {% else %}
+                            <li><a href="{% url 'entrance' %}">Войти</a></li>
+                            <li><a href="{% url 'register' %}">Регистрация</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="footer_menu">
+                    <p>©Данные под хешем</p>
+                </div>
+            </div>
+
+            <div id="header_shadow" class="header_shadow"></div>
+        </div>
+    </header>
+    <section class="main-home">
+        <div class='wrapper'>
+            <div class='card'>
+                {% for product in products %}
+                <img class='card-img' src='{% static 'img/nb1.jpg' %}'>
+                <div class='card-title'>{{ product.name_product }}</div>
+                {% endfor %}
+                <div class='btn-keeper'>
+                    <a class='btn' href='{% url 'product' %}'>Подробнее</a>
+                </div>
+            </div>
+            <div class='card'>
+                <img class='card-img' src='{% static 'img/nb1.jpg' %}'>
+                <div class='card-title'>NewBalance 990</div>
+                <div class='btn-keeper'>
+                    <a class='btn' href='{% url 'product' %}'>Подробнее</a>
+                </div>
+            </div>
+            <div class='card'>
+                <img class='card-img' src='{% static 'img/nb1.jpg' %}'>
+                <div class='card-title'>NewBalance 990</div>
+                <div class='btn-keeper'>
+                    <a class='btn' href='{% url 'product' %}'>Подробнее</a>
+                </div>
+            </div>
+            <div class='card'>
+                <img class='card-img' src='{% static 'img/nb1.jpg' %}'>
+                <div class='card-title'>NewBalance 990</div>
+                <div class='btn-keeper'>
+                    <a class='btn' href='{% url 'product' %}'>Подробнее</a>
+                </div>
+            </div>
+            <div class='card'>
+                <img class='card-img' src='{% static 'img/nb1.jpg' %}'>
+                <div class='card-title'>NewBalance 990</div>
+                <div class='btn-keeper'>
+                    <a class='btn' href='{% url 'product' %}'>Подробнее</a>
+                </div>
+            </div>
+            <div class='card'>
+                <img class='card-img' src='{% static 'img/nb1.jpg' %}'>
+                <div class='card-title'>NewBalance 990</div>
+                <div class='btn-keeper'>
+                    <a class='btn' href='{% url 'product' %}'>Подробнее</a>
+                </div>
+            </div>
+            <div class='card'>
+                <img class='card-img' src='{% static 'img/nb1.jpg' %}'>
+                <div class='card-title'>NewBalance 990</div>
+                <div class='btn-keeper'>
+                    <a class='btn' href='{% url 'product' %}'>Подробнее</a>
+                </div>
+            </div>
+            <div class='card'>
+                <img class='card-img' src='{% static 'img/nb1.jpg' %}'>
+                <div class='card-title'>NewBalance 990</div>
+                <div class='btn-keeper'>
+                    <a class='btn' href='{% url 'product' %}'>Подробнее</a>
+                </div>
+            </div>
+            <div class='card'>
+                <img class='card-img' src='{% static 'img/nb1.jpg' %}'>
+                <div class='card-title'>NewBalance 990</div>
+                <div class='btn-keeper'>
+                    <a class='btn' href='{% url 'product' %}'>Подробнее</a>
+                </div>
+            </div>
+            <div class='card'>
+                <img class='card-img' src='{% static 'img/nb1.jpg' %}'>
+                <div class='card-title'>NewBalance 990</div>
+                <div class='btn-keeper'>
+                    <a class='btn' href='{% url 'product' %}'>Подробнее</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <nav>
+            <a href="{% url 'home' %}">HOME</a>
+            <a href="{% url 'home' %}">ABOUT</a>
+
+        </nav>
+        <div class="footer_icons">
+            <h4>Купить можно тут</h4>
+            <a href="https://www.instagram.com/credo.sh/"><img src="{% static 'img/instagram.png' %}"
+                                                               alt="instagram"></a>
+            <a href="https://t.me/credo_sh"><img src="{% static 'img/telegram.png' %}" alt="telegram"></a>
+        </div>
+    </footer>
+</div>
+</div>
+<!-- <script src="../credo/static/scripts/add-post.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

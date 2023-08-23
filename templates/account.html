@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'styles/account.css' %}">
+</head>
+<body>
+<div class="popup" id="popup">
+    <div class="popup__body">
+        <div class="popup__close-area close-popup"></div>
+        <div class="popup__content">
+            <span class="popup__title">День добрый</span>
+            <a href="{% url 'entrance' %}">Войти</a>
+            <a href="{% url 'register' %}">Зарегистрироваться</a>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
