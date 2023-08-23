@@ -9,6 +9,7 @@
 
 - Проверка на занятость портов: `sudo lsof -i :5433`</br>
 - `sudo пшdocker run --name my-postgres -e`
+- Пересборка контейнера: `sudo docker-compose build` </br>
 - Запуск контейнеров: </br>
   `sudo docker-compose up -d` </br>
   `sudo docker-compose exec web python manage.py migrate` </br>

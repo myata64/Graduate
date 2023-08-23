@@ -8,7 +8,7 @@ from .models import User, Product
 
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'index.html')
 
 
 def account(request):
