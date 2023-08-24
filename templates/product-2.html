@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +10,17 @@
 
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700ii%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/ion.rangeSlider.css">
-    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css">
-    <link rel="stylesheet" href="css/jquery.bxslider.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/swiper.css">
-    <link rel="stylesheet" href="css/swiper.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="{% static 'styles/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/ion.rangeSlider.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/ion.rangeSlider.skinFlat.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/jquery.bxslider.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/jquery.fancybox.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/flexslider.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/media.css' %}">
 
 </head>
 <body>
@@ -91,7 +91,7 @@
                     <li>
                         <a href="{% url 'compare'  %}">
                             <i class="fa fa-bar-chart"></i>
-                            <span class="shop-menu-ttl">Compare</span> (5)
+                            <span class="shop-menu-ttl">Сравнение</span> (5)
                         </a>
                     </li>
 
@@ -126,7 +126,7 @@
         <div class="container">
             <nav class="topmenu">
 
-                <!-- Catalog menu - start -->
+                <!-- Каталогmenu - start -->
                 <div class="topcatalog">
                     <a class="topcatalog-btn" href="{% url 'catalog'  %}"><span>All</span> catalog</a>
                     <ul class="topcatalog-list">
@@ -504,7 +504,7 @@
                         </li>
                     </ul>
                 </div>
-                <!-- Catalog menu - end -->
+                <!-- Каталогmenu - end -->
 
                 <!-- Main menu - start -->
                 <button type="button" class="mainmenu-btn">Menu</button>
@@ -517,49 +517,49 @@
                     </li>
                     <li class="menu-item-has-children">
                         <a href="{% url 'catalog'  %}">
-                            Catalog <i class="fa fa-angle-down"></i>
+                            Каталог<i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li>
                                 <a href="{% url 'catalog'  %}">
-                                    Catalog List - Style 1
+                                    КаталогList - Style 1
                                 </a>
                             </li>
                             <li>
                                 <a href="{% url 'catalog_list_2'  %}">
-                                    Catalog List - Style 2
+                                    КаталогList - Style 2
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'catalog-gallery'  %}">
-                                    Catalog Gallery - Style 1
+                                <a href="{% url 'catalog_gallery'  %}">
+                                    КаталогGallery - Style 1
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'catalog-gallery_2'  %}">
-                                    Catalog Gallery - Style 2
+                                <a href="{% url 'catalog_gallery_2'  %}">
+                                    КаталогGallery - Style 2
                                 </a>
                             </li>
                             <li>
                                 <a href="{% url 'catalog_table'  %}">
-                                    Catalog Table
+                                    КаталогTable
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="{% url 'product'  %}" class="active">
-                            Product <i class="fa fa-angle-down"></i>
+                            Товар<i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li>
                                 <a href="{% url 'product'  %}">
-                                    Product - Style 1 (Slider)
+                                    Товар- Style 1 (Slider)
                                 </a>
                             </li>
                             <li>
                                 <a href="{% url 'product_2'  %}" class="active">
-                                    Product - Style 2 (Scroll)
+                                    Товар- Style 2 (Scroll)
                                 </a>
                             </li>
                         </ul>
@@ -585,7 +585,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="post.html">
+                                <a href="{% url 'post' %}">
                                     Single Post
                                 </a>
                             </li>
@@ -679,10 +679,10 @@
             </li>
         </ul>
         <h1 class="main-ttl"><span>Aperiam nihil veniam</span></h1>
-        <!-- Single Product - start -->
+        <!-- Single Товар- start -->
         <div class="prod-wrap prod2-wrap">
 
-            <!-- Product Images -->
+            <!-- ТоварImages -->
             <div class="prod-slider-wrap prod2-slider-wrap">
                 <div class="prod-slider">
                     <ul class="prod2-slider-car">
@@ -754,7 +754,7 @@
                 </div>
             </div>
 
-            <!-- Product Description/Info -->
+            <!-- ТоварDescription/Info -->
             <div class="prod-cont">
                 <div class="prod-cont-inner">
                     <div class="prod-cont-txt">
@@ -842,7 +842,7 @@
                     </ul>
 
 
-                    <!-- Product Tabs -->
+                    <!-- ТоварTabs -->
                     <div class="prod-tabs-wrap">
                         <ul class="prod-tabs">
                             <li><a data-prodtab-num="1" class="active" href="#" data-prodtab="#prod-tab-1">Description</a></li>
@@ -881,51 +881,51 @@
                                 <div class="flexslider post-rel-wrap" id="post-rel-car" data-type="type-2">
                                     <ul class="slides">
                                         <li class="posts-i">
-                                            <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/354x236)"></span></a>
+                                            <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/354x236)"></span></a>
                                             <time class="posts-i-date" datetime="2017-01-01 08:18"><span>09</span> Feb</time>
                                             <div class="posts-i-info">
                                                 <a class="posts-i-ctg" href="{% url 'blog' %}">Articles</a>
-                                                <h3 class="posts-i-ttl"><a href="post.html">Adipisci corporis velit</a></h3>
+                                                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Adipisci corporis velit</a></h3>
                                             </div>
                                         </li>
                                         <li class="posts-i">
-                                            <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/360x203)"></span></a>
+                                            <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/360x203)"></span></a>
                                             <time class="posts-i-date" datetime="2017-01-01 08:18"><span>05</span> Jan</time>
                                             <div class="posts-i-info">
                                                 <a class="posts-i-ctg" href="{% url 'blog' %}">Reviews</a>
-                                                <h3 class="posts-i-ttl"><a href="post.html">Excepturi ducimus recusandae</a></h3>
+                                                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Excepturi ducimus recusandae</a></h3>
                                             </div>
                                         </li>
                                         <li class="posts-i">
-                                            <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/360x224)"></span></a>
+                                            <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/360x224)"></span></a>
                                             <time class="posts-i-date" datetime="2017-01-01 08:18"><span>17</span> Apr</time>
                                             <div class="posts-i-info">
                                                 <a class="posts-i-ctg" href="{% url 'blog' %}">Reviews</a>
-                                                <h3 class="posts-i-ttl"><a href="post.html">Consequuntur minus numquam</a></h3>
+                                                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Consequuntur minus numquam</a></h3>
                                             </div>
                                         </li>
                                         <li class="posts-i">
-                                            <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/314x236)"></span></a>
+                                            <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/314x236)"></span></a>
                                             <time class="posts-i-date" datetime="2017-01-01 08:18"><span>21</span> May</time>
                                             <div class="posts-i-info">
                                                 <a class="posts-i-ctg" href="{% url 'blog' %}">Articles</a>
-                                                <h3 class="posts-i-ttl"><a href="post.html">Non ex sapiente excepturi</a></h3>
+                                                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Non ex sapiente excepturi</a></h3>
                                             </div>
                                         </li>
                                         <li class="posts-i">
-                                            <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/318x236)"></span></a>
+                                            <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/318x236)"></span></a>
                                             <time class="posts-i-date" datetime="2017-01-01 08:18"><span>24</span> Jan</time>
                                             <div class="posts-i-info">
                                                 <a class="posts-i-ctg" href="{% url 'blog' %}">Articles</a>
-                                                <h3 class="posts-i-ttl"><a href="post.html">Veritatis officiis</a></h3>
+                                                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Veritatis officiis</a></h3>
                                             </div>
                                         </li>
                                         <li class="posts-i">
-                                            <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/354x236)"></span></a>
+                                            <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/354x236)"></span></a>
                                             <time class="posts-i-date" datetime="2017-01-01 08:18"><span>08</span> Sep</time>
                                             <div class="posts-i-info">
                                                 <a class="posts-i-ctg" href="{% url 'blog' %}">Reviews</a>
-                                                <h3 class="posts-i-ttl"><a href="post.html">Ratione magni laudantium</a></h3>
+                                                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Ratione magni laudantium</a></h3>
                                             </div>
                                         </li>
                                     </ul>
@@ -1027,7 +1027,7 @@
 
 
         </div>
-        <!-- Single Product - end -->
+        <!-- Single Товар- end -->
 
         <!-- Related Products - start -->
         <div class="prod-related prod2-related">
@@ -1363,7 +1363,7 @@
                 </h3>
                 <ul class="nav nav-pills nav-stacked">
                     <li class="active"><a href="{% url 'home'  %}">Home</a></li>
-                    <li><a href="{% url 'catalog'  %}">Catalog</a></li>
+                    <li><a href="{% url 'catalog'  %}">Каталог</a></li>
                     <li><a href="{% url 'elements'  %}">Elements</a></li>
                     <li><a href="{% url 'blog' %}">Blog</a></li>
                     <li><a href="{% url 'contacts'  %}">Contacts</a></li>
@@ -1458,21 +1458,21 @@
 
 
 <!-- jQuery plugins/scripts - start -->
-<script src="js/jquery-1.11.2.min.js"></script>
-<script src="js/jquery.bxslider.min.js"></script>
-<script src="js/fancybox/fancybox.js"></script>
-<script src="js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/swiper.jquery.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/progressbar.min.js"></script>
-<script src="js/ion.rangeSlider.min.js"></script>
-<script src="js/chosen.jquery.min.js"></script>
-<script src="js/jQuery.Brazzers-Carousel.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<script src="{% static 'scripts/jquery-1.11.2.min.js' %}"></script>
+<script src="{% static 'scripts/jquery.bxslider.min.js' %}"></script>
+<script src="{% static 'scripts/fancybox/fancybox.js' %}"></script>
+<script src="{% static 'scripts/fancybox/helpers/jquery.fancybox-thumbs.js' %}"></script>
+<script src="{% static 'scripts/jquery.flexslider-min.js' %}"></script>
+<script src="{% static 'scripts/swiper.jquery.min.js' %}"></script>
+<script src="{% static 'scripts/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'scripts/progressbar.min.js' %}"></script>
+<script src="{% static 'scripts/ion.rangeSlider.min.js' %}"></script>
+<script src="{% static 'scripts/chosen.jquery.min.js' %}"></script>
+<script src="{% static 'scripts/jQuery.Brazzers-Carousel.js' %}"></script>
+<script src="{% static 'scripts/plugins.js' %}"></script>
+<script src="{% static 'scripts/main.js' %}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhAYvx0GmLyN5hlf6Uv_e9pPvUT3YpozE"></script>
-<script src="js/gmap.js"></script>
+<script src="{% static 'scripts/gmap.js' %}"></script>
 <!-- jQuery plugins/scripts - end -->
 
 </body>

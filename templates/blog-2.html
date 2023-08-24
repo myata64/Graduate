@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +10,17 @@
 
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700ii%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/ion.rangeSlider.css">
-    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css">
-    <link rel="stylesheet" href="css/jquery.bxslider.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/swiper.css">
-    <link rel="stylesheet" href="css/swiper.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="{% static 'styles/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/ion.rangeSlider.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/ion.rangeSlider.skinFlat.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/jquery.bxslider.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/jquery.fancybox.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/flexslider.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/media.css' %}">
 
 </head>
 <body>
@@ -91,7 +91,7 @@
                     <li>
                         <a href="{% url 'compare'  %}">
                             <i class="fa fa-bar-chart"></i>
-                            <span class="shop-menu-ttl">Compare</span> (5)
+                            <span class="shop-menu-ttl">Сравнение</span> (5)
                         </a>
                     </li>
 
@@ -126,7 +126,7 @@
         <div class="container">
             <nav class="topmenu">
 
-                <!-- Catalog menu - start -->
+                <!-- Каталогmenu - start -->
                 <div class="topcatalog">
                     <a class="topcatalog-btn" href="{% url 'catalog'  %}"><span>All</span> catalog</a>
                     <ul class="topcatalog-list">
@@ -504,7 +504,7 @@
                         </li>
                     </ul>
                 </div>
-                <!-- Catalog menu - end -->
+                <!-- Каталогmenu - end -->
 
                 <!-- Main menu - start -->
                 <button type="button" class="mainmenu-btn">Menu</button>
@@ -517,49 +517,49 @@
                     </li>
                     <li class="menu-item-has-children">
                         <a href="{% url 'catalog'  %}">
-                            Catalog <i class="fa fa-angle-down"></i>
+                            Каталог<i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li>
                                 <a href="{% url 'catalog'  %}">
-                                    Catalog List - Style 1
+                                    КаталогList - Style 1
                                 </a>
                             </li>
                             <li>
                                 <a href="{% url 'catalog_list_2'  %}">
-                                    Catalog List - Style 2
+                                    КаталогList - Style 2
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'catalog-gallery'  %}">
-                                    Catalog Gallery - Style 1
+                                <a href="{% url 'catalog_gallery'  %}">
+                                    КаталогGallery - Style 1
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'catalog-gallery_2'  %}">
-                                    Catalog Gallery - Style 2
+                                <a href="{% url 'catalog_gallery_2'  %}">
+                                    КаталогGallery - Style 2
                                 </a>
                             </li>
                             <li>
                                 <a href="{% url 'catalog_table'  %}">
-                                    Catalog Table
+                                    КаталогTable
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="{% url 'catalog'  %}">
-                            Product <i class="fa fa-angle-down"></i>
+                            Товар<i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li>
                                 <a href="{% url 'product'  %}">
-                                    Product - Style 1 (Slider)
+                                    Товар- Style 1 (Slider)
                                 </a>
                             </li>
                             <li>
                                 <a href="{% url 'product_2'  %}">
-                                    Product - Style 2 (Scroll)
+                                    Товар- Style 2 (Scroll)
                                 </a>
                             </li>
                         </ul>
@@ -585,7 +585,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="post.html">
+                                <a href="{% url 'post' %}">
                                     Single Post
                                 </a>
                             </li>
@@ -680,76 +680,76 @@
         <!-- Blog Posts - start -->
         <div class="posts-list blog-page">
             <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
-                <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/354x236)"></span></a>
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/354x236)"></span></a>
                 <time class="posts-i-date" datetime="2017-01-01 12:00"><span>09</span> Jan</time>
-                <h3 class="posts-i-ttl"><a href="post.html">Animi quaerat at</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit obcaecati quod veritatis vero!</p>		<a href="post.html" class="posts-i-more">Read more...</a>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Animi quaerat at</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit obcaecati quod veritatis vero!</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
             </div>
             <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
-                <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/360x203)"></span></a>
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/360x203)"></span></a>
                 <time class="posts-i-date" datetime="2017-01-01 12:00"><span>15</span> Feb</time>
-                <h3 class="posts-i-ttl"><a href="post.html">Ex atque commodi</a></h3>
-                <p>Obcaecati ratione, illo qui dignissimos excepturi non earum, sed tempore, amet at labore ullam unde delectus</p>		<a href="post.html" class="posts-i-more">Read more...</a>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Ex atque commodi</a></h3>
+                <p>Obcaecati ratione, illo qui dignissimos excepturi non earum, sed tempore, amet at labore ullam unde delectus</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
             </div>
             <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
-                <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/360x224)"></span></a>
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/360x224)"></span></a>
                 <time class="posts-i-date" datetime="2017-01-01 12:00"><span>21</span> Mar</time>
-                <h3 class="posts-i-ttl"><a href="post.html">Hic quod maxime deserunt</a></h3>
-                <p>Aliquam soluta eveniet voluptas, nesciunt eius libero officiis officia eos consectetur ut velit natus</p>		<a href="post.html" class="posts-i-more">Read more...</a>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Hic quod maxime deserunt</a></h3>
+                <p>Aliquam soluta eveniet voluptas, nesciunt eius libero officiis officia eos consectetur ut velit natus</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
             </div>
             <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
-                <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/314x236)"></span></a>
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/314x236)"></span></a>
                 <time class="posts-i-date" datetime="2017-01-01 12:00"><span>08</span> Apr</time>
-                <h3 class="posts-i-ttl"><a href="post.html">Ipsum dolor sit amet</a></h3>
-                <p>Porro incidunt reprehenderit eaque? Sit nihil culpa ex quaerat nostrum ab</p>		<a href="post.html" class="posts-i-more">Read more...</a>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Ipsum dolor sit amet</a></h3>
+                <p>Porro incidunt reprehenderit eaque? Sit nihil culpa ex quaerat nostrum ab</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
             </div>
             <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
-                <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/318x236)"></span></a>
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/318x236)"></span></a>
                 <time class="posts-i-date" datetime="2017-01-01 12:00"><span>18</span> Jun</time>
-                <h3 class="posts-i-ttl"><a href="post.html">Lorem ipsum dolor sit amet</a></h3>
-                <p>Nihil vel quod laboriosam perspiciatis nostrum nam quis optio, vitae autem, architecto pariatur quo</p>		<a href="post.html" class="posts-i-more">Read more...</a>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Lorem ipsum dolor sit amet</a></h3>
+                <p>Nihil vel quod laboriosam perspiciatis nostrum nam quis optio, vitae autem, architecto pariatur quo</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
             </div>
             <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
-                <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/354x236)"></span></a>
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/354x236)"></span></a>
                 <time class="posts-i-date" datetime="2017-01-01 12:00"><span>29</span> Jul</time>
-                <h3 class="posts-i-ttl"><a href="post.html">Adipisci corporis velit</a></h3>
-                <p>Id vero tenetur sunt eligendi sequi adipisci similique sint corporis praesentium aliquam iusto maxime tempora eos non culpa</p>		<a href="post.html" class="posts-i-more">Read more...</a>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Adipisci corporis velit</a></h3>
+                <p>Id vero tenetur sunt eligendi sequi adipisci similique sint corporis praesentium aliquam iusto maxime tempora eos non culpa</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
             </div>
             <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
-                <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/341x236)"></span></a>
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/341x236)"></span></a>
                 <time class="posts-i-date" datetime="2017-01-01 12:00"><span>04</span> Aug</time>
-                <h3 class="posts-i-ttl"><a href="post.html">Beatae nisi blanditiis</a></h3>
-                <p>Asperiores minus ipsam eaque saepe repellat libero earum mollitia cum tempore sint autem, magni, ducimus</p>		<a href="post.html" class="posts-i-more">Read more...</a>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Beatae nisi blanditiis</a></h3>
+                <p>Asperiores minus ipsam eaque saepe repellat libero earum mollitia cum tempore sint autem, magni, ducimus</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
             </div>
             <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
-                <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/354x236)"></span></a>
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/354x236)"></span></a>
                 <time class="posts-i-date" datetime="2017-01-01 12:00"><span>14</span> Sep</time>
-                <h3 class="posts-i-ttl"><a href="post.html">Dolorum vero mollitia</a></h3>
-                <p>Aliquid nesciunt amet officiis nemo numquam perferendis ipsam dolor ratione rerum quasi repellat officia distinctio quos</p>		<a href="post.html" class="posts-i-more">Read more...</a>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Dolorum vero mollitia</a></h3>
+                <p>Aliquid nesciunt amet officiis nemo numquam perferendis ipsam dolor ratione rerum quasi repellat officia distinctio quos</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
             </div>
             <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
-                <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/354x236)"></span></a>
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/354x236)"></span></a>
                 <time class="posts-i-date" datetime="2017-01-01 12:00"><span>21</span> Oct</time>
-                <h3 class="posts-i-ttl"><a href="post.html">Quasi corporis recusandae</a></h3>
-                <p>Officiis atque facilis corporis ipsum, sint totam doloremque quas laborum asperiores doloribus voluptatum</p>		<a href="post.html" class="posts-i-more">Read more...</a>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Quasi corporis recusandae</a></h3>
+                <p>Officiis atque facilis corporis ipsum, sint totam doloremque quas laborum asperiores doloribus voluptatum</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
             </div>
             <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
-                <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/353x235)"></span></a>
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/353x235)"></span></a>
                 <time class="posts-i-date" datetime="2017-01-01 12:00"><span>02</span> Nov</time>
-                <h3 class="posts-i-ttl"><a href="post.html">Sit deleniti placeat quia aspernatur</a></h3>
-                <p>Sit nihil culpa ex quaerat nostrum ab. Aliquid nesciunt amet officiis nemo numquam perferendis ipsam dolor ratione</p>		<a href="post.html" class="posts-i-more">Read more...</a>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Sit deleniti placeat quia aspernatur</a></h3>
+                <p>Sit nihil culpa ex quaerat nostrum ab. Aliquid nesciunt amet officiis nemo numquam perferendis ipsam dolor ratione</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
             </div>
             <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
-                <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/354x236)"></span></a>
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/354x236)"></span></a>
                 <time class="posts-i-date" datetime="2017-01-01 12:00"><span>09</span> Dec</time>
-                <h3 class="posts-i-ttl"><a href="post.html">Odit reprehenderit</a></h3>
-                <p>Id distinctio cum laboriosam sint atque culpa laborum eaque, quod porro esse hic, consectetur assumenda optio</p>		<a href="post.html" class="posts-i-more">Read more...</a>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Odit reprehenderit</a></h3>
+                <p>Id distinctio cum laboriosam sint atque culpa laborum eaque, quod porro esse hic, consectetur assumenda optio</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
             </div>
             <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
-                <a class="posts-i-img" href="post.html"><span style="background: url(http://placehold.it/354x236)"></span></a>
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/354x236)"></span></a>
                 <time class="posts-i-date" datetime="2017-01-01 12:00"><span>22</span> Jan</time>
-                <h3 class="posts-i-ttl"><a href="post.html">Quibusdam officiis quas</a></h3>
-                <p>Suscipit alias cumque, totam iure ipsam voluptatibus ratione sed quam minima non laudantium</p>		<a href="post.html" class="posts-i-more">Read more...</a>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Quibusdam officiis quas</a></h3>
+                <p>Suscipit alias cumque, totam iure ipsam voluptatibus ratione sed quam minima non laudantium</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
             </div>
         </div>
         <!-- Blog Posts - end -->
@@ -877,7 +877,7 @@
                 </h3>
                 <ul class="nav nav-pills nav-stacked">
                     <li class="active"><a href="{% url 'home'  %}">Home</a></li>
-                    <li><a href="{% url 'catalog'  %}">Catalog</a></li>
+                    <li><a href="{% url 'catalog'  %}">Каталог</a></li>
                     <li><a href="{% url 'elements'  %}">Elements</a></li>
                     <li><a href="{% url 'blog' %}">Blog</a></li>
                     <li><a href="{% url 'contacts'  %}">Contacts</a></li>
@@ -972,21 +972,21 @@
 
 
 <!-- jQuery plugins/scripts - start -->
-<script src="js/jquery-1.11.2.min.js"></script>
-<script src="js/jquery.bxslider.min.js"></script>
-<script src="js/fancybox/fancybox.js"></script>
-<script src="js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/swiper.jquery.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/progressbar.min.js"></script>
-<script src="js/ion.rangeSlider.min.js"></script>
-<script src="js/chosen.jquery.min.js"></script>
-<script src="js/jQuery.Brazzers-Carousel.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<script src="{% static 'scripts/jquery-1.11.2.min.js' %}"></script>
+<script src="{% static 'scripts/jquery.bxslider.min.js' %}"></script>
+<script src="{% static 'scripts/fancybox/fancybox.js' %}"></script>
+<script src="{% static 'scripts/fancybox/helpers/jquery.fancybox-thumbs.js' %}"></script>
+<script src="{% static 'scripts/jquery.flexslider-min.js' %}"></script>
+<script src="{% static 'scripts/swiper.jquery.min.js' %}"></script>
+<script src="{% static 'scripts/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'scripts/progressbar.min.js' %}"></script>
+<script src="{% static 'scripts/ion.rangeSlider.min.js' %}"></script>
+<script src="{% static 'scripts/chosen.jquery.min.js' %}"></script>
+<script src="{% static 'scripts/jQuery.Brazzers-Carousel.js' %}"></script>
+<script src="{% static 'scripts/plugins.js' %}"></script>
+<script src="{% static 'scripts/main.js' %}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhAYvx0GmLyN5hlf6Uv_e9pPvUT3YpozE"></script>
-<script src="js/gmap.js"></script>
+<script src="{% static 'scripts/gmap.js' %}"></script>
 <!-- jQuery plugins/scripts - end -->
 
 </body>

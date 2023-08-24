@@ -91,7 +91,7 @@
 					<li>
 						<a href="{% url 'compare'  %}">
 							<i class="fa fa-bar-chart"></i>
-							<span class="shop-menu-ttl">Compare</span> (5)
+							<span class="shop-menu-ttl">Сравнение</span> (5)
 						</a>
 					</li>
 
@@ -126,7 +126,7 @@
 		<div class="container">
 			<nav class="topmenu">
 
-				<!-- Catalog menu - start -->
+				<!-- Каталогmenu - start -->
 				<div class="topcatalog">
 					<a class="topcatalog-btn" href="{% url 'catalog'  %}"><span>All</span> catalog</a>
 					<ul class="topcatalog-list">
@@ -504,7 +504,7 @@
 						</li>
 					</ul>
 				</div>
-				<!-- Catalog menu - end -->
+				<!-- Каталогmenu - end -->
 
 				<!-- Main menu - start -->
 				<button type="button" class="mainmenu-btn">Menu</button>
@@ -517,49 +517,49 @@
 					</li>
 					<li class="menu-item-has-children">
 						<a href="{% url 'catalog'  %}" class="active">
-							Catalog <i class="fa fa-angle-down"></i>
+							Каталог<i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="sub-menu">
 							<li>
 								<a href="{% url 'catalog'  %}" class="active">
-									Catalog List - Style 1
+									КаталогList - Style 1
 								</a>
 							</li>
 							<li>
 								<a href="{% url 'catalog_list_2'  %}">
-									Catalog List - Style 2
+									КаталогList - Style 2
 								</a>
 							</li>
 							<li>
-								<a href="{% url 'catalog-gallery'  %}">
-									Catalog Gallery - Style 1
+								<a href="{% url 'catalog_gallery'  %}">
+									КаталогGallery - Style 1
 								</a>
 							</li>
 							<li>
-								<a href="{% url 'catalog-gallery_2'  %}">
-									Catalog Gallery - Style 2
+								<a href="{% url 'catalog_gallery_2'  %}">
+									КаталогGallery - Style 2
 								</a>
 							</li>
 							<li>
 								<a href="{% url 'catalog_table'  %}">
-									Catalog Table
+									КаталогTable
 								</a>
 							</li>
 						</ul>
 					</li>
 					<li class="menu-item-has-children">
 						<a href="{% url 'product'  %}">
-							Product <i class="fa fa-angle-down"></i>
+							Товар<i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="sub-menu">
 							<li>
 								<a href="{% url 'product'  %}">
-									Product - Style 1 (Slider)
+									Товар- Style 1 (Slider)
 								</a>
 							</li>
 							<li>
 								<a href="{% url 'product_2'  %}">
-									Product - Style 2 (Scroll)
+									Товар- Style 2 (Scroll)
 								</a>
 							</li>
 						</ul>
@@ -585,7 +585,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="post.html">
+								<a href="{% url 'post' %}">
 									Single Post
 								</a>
 							</li>
@@ -674,10 +674,10 @@
 			</li>
 		</ul>
 		<h1 class="main-ttl"><span>Women</span></h1>
-		<!-- Catalog Sidebar - start -->
+		<!-- КаталогSidebar - start -->
 		<div class="section-sb">
 
-			<!-- Catalog Categories - start -->
+			<!-- КаталогCategories - start -->
 			<div class="section-sb-current">
 				<h3><a href="{% url 'catalog'  %}">Women <span id="section-sb-toggle" class="section-sb-toggle"><span class="section-sb-ico"></span></span></a></h3>
 				<ul class="section-sb-list" id="section-sb-list">
@@ -759,7 +759,7 @@
 					</li>
 				</ul>
 			</div>
-			<!-- Catalog Categories - end -->
+			<!-- КаталогCategories - end -->
 
 			<!-- Filter - start -->
 			<div class="section-filter">
@@ -1217,16 +1217,16 @@
 			<!-- Filter - end -->
 
 		</div>
-		<!-- Catalog Sidebar - end -->
-		<!-- Catalog Items | List V1 - start -->
+		<!-- КаталогSidebar - end -->
+		<!-- КаталогItems | List V1 - start -->
 		<div class="section-cont">
 
-			<!-- Catalog Topbar - start -->
+			<!-- КаталогTopbar - start -->
 			<div class="section-top">
 
 				<!-- View Mode -->
 				<ul class="section-mode">
-					<li class="section-mode-gallery"><a title="View mode: Gallery" href="{% url 'catalog-gallery'  %}"></a></li>
+					<li class="section-mode-gallery"><a title="View mode: Gallery" href="{% url 'catalog_gallery'  %}"></a></li>
 					<li class="section-mode-list active"><a title="View mode: List" href="{% url 'catalog'  %}"></a></li>
 					<li class="section-mode-table"><a title="View mode: Table" href="{% url 'catalog_table'  %}"></a></li>
 				</ul>
@@ -1267,7 +1267,7 @@
 				</div>
 
 			</div>
-			<!-- Catalog Topbar - end -->
+			<!-- КаталогTopbar - end -->
 			<div class="prod-items section-items">
 				<div class="prodlist-i">
 					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE --><img src="http://placehold.it/300x311" alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
@@ -1902,7 +1902,7 @@
 			<!-- Pagination - end -->
 		</div>
 
-		<!-- Quick View Product - start -->
+		<!-- Quick View Товар- start -->
 		<div class="qview-modal">
 			<div class="prod-wrap">
 				<a href="{% url 'product'  %}">
@@ -2069,7 +2069,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- Quick View Product - end -->
+		<!-- Quick View Товар- end -->
 	</section>
 </main>
 <!-- Main Content - end -->
@@ -2184,7 +2184,7 @@
 				</h3>
 				<ul class="nav nav-pills nav-stacked">
 					<li class="active"><a href="{% url 'home' %}">Home</a></li>
-					<li><a href="{% url 'catalog'  %}">Catalog</a></li>
+					<li><a href="{% url 'catalog'  %}">Каталог</a></li>
 					<li><a href="{% url 'elements'  %}">Elements</a></li>
 					<li><a href="{% url 'blog' %}">Blog</a></li>
 					<li><a href="{% url 'contacts'  %}">Contacts</a></li>

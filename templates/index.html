@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700ii%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic"
           rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'styles//font-awesome.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/ion.rangeSlider.css' %}">
@@ -74,7 +73,7 @@
     <div class="header-middle">
         <div class="container header-middle-cont">
             <div class="toplogo">
-                <a href="{% url 'home'  %}">
+                <a href="{% url 'home' %}">
                     <img src="{% static 'img/logo_chrome.png' %}" alt="AllStore - MultiConcept eCommerce Template">
                 </a>
             </div>
@@ -82,7 +81,7 @@
                 <ul>
 
                     <li>
-                        <a href="{% url 'wishlist'  %}">
+                        <a href="{% url 'wishlist' %}">
                             <i class="fa fa-heart"></i>
                             <span class="shop-menu-ttl">Избранное</span>
                             (<span id="topbar-favorites">1</span>)
@@ -90,9 +89,9 @@
                     </li>
 
                     <li>
-                        <a href="{% url 'compare'  %}">
+                        <a href="{% url 'compare' %}">
                             <i class="fa fa-bar-chart"></i>
-                            <span class="shop-menu-ttl">Сравнить</span> (5)
+                            <span class="shop-menu-ttl">Сравнение</span> (5)
                         </a>
                     </li>
 
@@ -127,7 +126,7 @@
         <div class="container">
             <nav class="topmenu">
 
-                <!-- Catalog menu - start -->
+                <!-- Каталогmenu - start -->
                 <div class="topcatalog">
                     <a class="topcatalog-btn" href="{% url 'catalog' %}"><span>Весь</span> каталог</a>
                     <ul class="topcatalog-list">
@@ -505,68 +504,68 @@
                         </li>
                     </ul>
                 </div>
-                <!-- Catalog menu - end -->
+                <!-- Каталогmenu - end -->
 
                 <!-- Main menu - start -->
                 <button type="button" class="mainmenu-btn">Menu</button>
 
                 <ul class="mainmenu">
                     <li>
-                        <a href="{% url 'home'  %}" class="active">
+                        <a href="{% url 'home' %}" class="active">
                             Home
                         </a>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="{% url 'catalog' %}">
-                            Catalog <i class="fa fa-angle-down"></i>
+                            Каталог<i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li>
                                 <a href="{% url 'catalog' %}">
-                                    Catalog List - Style 1
+                                    КаталогList - Style 1
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'catalog_list_2'  %}">
-                                    Catalog List - Style 2
+                                <a href="{% url 'catalog_list_2' %}">
+                                    КаталогList - Style 2
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'catalog-gallery'  %}">
-                                    Catalog Gallery - Style 1
+                                <a href="{% url 'catalog_gallery' %}">
+                                    КаталогGallery - Style 1
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'catalog-gallery_2'  %}">
-                                    Catalog Gallery - Style 2
+                                <a href="{% url 'catalog_gallery_2' %}">
+                                    КаталогGallery - Style 2
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'catalog_table'  %}">
-                                    Catalog Table
+                                <a href="{% url 'catalog_table' %}">
+                                    КаталогTable
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="{% url 'product'  %}">
-                            Product <i class="fa fa-angle-down"></i>
+                        <a href="{% url 'product' %}">
+                            Товар<i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="{% url 'product'  %}">
-                                    Product - Style 1 (Slider)
+                                <a href="{% url 'product' %}">
+                                    Товар- Style 1 (Slider)
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'product_2'  %}">
-                                    Product - Style 2 (Scroll)
+                                <a href="{% url 'product_2' %}">
+                                    Товар- Style 2 (Scroll)
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="{% url 'elements'  %}">
+                        <a href="{% url 'elements' %}">
                             Elements
                         </a>
                     </li>
@@ -586,7 +585,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="post.html">
+                                <a href="{% url 'post' %}">
                                     Single Post
                                 </a>
                             </li>
@@ -598,7 +597,7 @@
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="{% url 'contacts'  %}">
+                                <a href="{% url 'contacts' %}">
                                     Контакты
                                 </a>
                             </li>
@@ -609,16 +608,16 @@
                             </li>
                             <li>
                                 <a href="{% url 'auth' %}">
-                                   Авторизация
+                                    Авторизация
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'compare'  %}">
+                                <a href="{% url 'compare' %}">
                                     Сравнить
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'wishlist'  %}">
+                                <a href="{% url 'wishlist' %}">
                                     Избранное
                                 </a>
                             </li>
@@ -676,18 +675,21 @@
                         </div>
                     </li>
                     <li>
-                        <img src="img/slider/slide1.jpg" alt="">
+                        <img style="height: 550px;" src="{% static 'img/slide3.jpg' %}" alt="">
                         <div class="fr-slider-cont">
                             <h3>Видео обзор</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>Aliquam consequuntur dolorem
-                                doloribus <f></f>uga harum</p>
+                                doloribus
+                                <f></f>
+                                uga harum
+                            </p>
                             <p class="fr-slider-more-wrap">
                                 <a class="fr-slider-more" href="#">Shopping now</a>
                             </p>
                         </div>
                     </li>
                     <li>
-                        <img src="img/slider/slide1.jpg" alt="">
+                        <img src="{% static 'img/slide1.jpg' %}" alt="">
                         <div class="fr-slider-cont">
                             <h3>SUMMER TRENDS</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>Aliquam consequuntur dolorem
@@ -726,7 +728,7 @@
 
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x350" alt="Aspernatur excepturi rem">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -734,7 +736,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -742,7 +744,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Aspernatur excepturi rem</a>
+                                <a href="{% url 'product' %}">Aspernatur excepturi rem</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$90</b>
@@ -756,14 +758,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/277x250" alt="Aperiam tempore"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -771,7 +773,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Aperiam tempore</a>
+                                <a href="{% url 'product' %}">Aperiam tempore</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$75</b>
@@ -779,14 +781,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x324" alt="Blanditiis eaque"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -794,7 +796,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Blanditiis eaque</a>
+                                <a href="{% url 'product' %}">Blanditiis eaque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$115</b>
@@ -802,14 +804,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x500" alt="Excepturi ducimus"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -817,7 +819,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Excepturi ducimus</a>
+                                <a href="{% url 'product' %}">Excepturi ducimus</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$105</b>
@@ -825,7 +827,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/329x250" alt="Sit recusandae voluptas">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -833,7 +835,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -845,7 +847,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Sit recusandae voluptas</a>
+                                <a href="{% url 'product' %}">Sit recusandae voluptas</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$200</b>
@@ -853,7 +855,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x317" alt="Consequuntur minus atque">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -861,7 +863,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -869,7 +871,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Consequuntur minus atque</a>
+                                <a href="{% url 'product' %}">Consequuntur minus atque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$160</b>
@@ -877,14 +879,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x329" alt="Nostrum nihil ipsa"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -892,7 +894,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Nostrum nihil ipsa</a>
+                                <a href="{% url 'product' %}">Nostrum nihil ipsa</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$140</b>
@@ -900,7 +902,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x361" alt="Non ex sapiente deserunt">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -908,7 +910,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -921,7 +923,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Non ex sapiente deserunt</a>
+                                <a href="{% url 'product' %}">Non ex sapiente deserunt</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$65</b>
@@ -929,14 +931,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x361" alt="Amet tempore unde"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -944,7 +946,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Amet tempore unde</a>
+                                <a href="{% url 'product' %}">Amet tempore unde</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$85</b>
@@ -952,7 +954,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x361" alt="Neque fugiat voluptates">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -960,7 +962,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -968,7 +970,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Neque fugiat voluptates</a>
+                                <a href="{% url 'product' %}">Neque fugiat voluptates</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$120</b>
@@ -976,14 +978,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x302" alt="Amet tempore unde"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -991,7 +993,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Amet tempore unde</a>
+                                <a href="{% url 'product' %}">Amet tempore unde</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$165</b>
@@ -999,14 +1001,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x327" alt="Perspiciatis dolor"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1014,7 +1016,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Perspiciatis dolor</a>
+                                <a href="{% url 'product' %}">Perspiciatis dolor</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$205</b>
@@ -1028,7 +1030,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x262" alt="Veritatis officiis quae">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -1036,7 +1038,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1044,7 +1046,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Veritatis officiis quae</a>
+                                <a href="{% url 'product' %}">Veritatis officiis quae</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$90</b>
@@ -1052,7 +1054,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x292" alt="Fuga numquam obcaecati"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1060,7 +1062,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1068,7 +1070,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Fuga numquam obcaecati</a>
+                                <a href="{% url 'product' %}">Fuga numquam obcaecati</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$65</b>
@@ -1076,14 +1078,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x351" alt="Ratione magni"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1091,7 +1093,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Ratione magni</a>
+                                <a href="{% url 'product' %}">Ratione magni</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$125</b>
@@ -1099,7 +1101,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x301" alt="Asperiores sit sequi"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1107,7 +1109,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1115,7 +1117,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Asperiores sit sequi</a>
+                                <a href="{% url 'product' %}">Asperiores sit sequi</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$140</b>
@@ -1123,7 +1125,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x322" alt="Repudiandae accusamus"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1131,7 +1133,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1139,7 +1141,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Repudiandae accusamus</a>
+                                <a href="{% url 'product' %}">Repudiandae accusamus</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$95</b>
@@ -1147,7 +1149,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x266" alt="Quod praesentium illum"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1155,7 +1157,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1163,7 +1165,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Quod praesentium illum</a>
+                                <a href="{% url 'product' %}">Quod praesentium illum</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$80</b>
@@ -1171,14 +1173,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x301" alt="Deleniti ut earum"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1186,7 +1188,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Deleniti ut earum</a>
+                                <a href="{% url 'product' %}">Deleniti ut earum</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$220</b>
@@ -1194,7 +1196,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x362" alt="Voluptatem quibusdam"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1202,7 +1204,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1210,7 +1212,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Voluptatem quibusdam</a>
+                                <a href="{% url 'product' %}">Voluptatem quibusdam</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$185</b>
@@ -1218,7 +1220,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x422" alt="Nisi provident atque"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1226,7 +1228,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1234,7 +1236,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Nisi provident atque</a>
+                                <a href="{% url 'product' %}">Nisi provident atque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$130</b>
@@ -1242,7 +1244,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x385" alt="Eveniet nobis minus possimus">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -1250,7 +1252,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1262,7 +1264,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Eveniet nobis minus possimus</a>
+                                <a href="{% url 'product' %}">Eveniet nobis minus possimus</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$80</b>
@@ -1270,7 +1272,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x288" alt="Quis ex fugiat blanditiis">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -1278,7 +1280,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1286,7 +1288,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Quis ex fugiat blanditiis</a>
+                                <a href="{% url 'product' %}">Quis ex fugiat blanditiis</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$150</b>
@@ -1300,14 +1302,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x279" alt="Nisi autem error"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1315,7 +1317,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Nisi autem error</a>
+                                <a href="{% url 'product' %}">Nisi autem error</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$65</b>
@@ -1323,7 +1325,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x403" alt="Quod soluta corrupti"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1331,7 +1333,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1339,7 +1341,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Quod soluta corrupti</a>
+                                <a href="{% url 'product' %}">Quod soluta corrupti</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$175</b>
@@ -1347,14 +1349,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x280" alt="Ipsa doloremque"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1362,7 +1364,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Ipsa doloremque</a>
+                                <a href="{% url 'product' %}">Ipsa doloremque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$85</b>
@@ -1370,14 +1372,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x409" alt="Dignissimos fuga"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1385,7 +1387,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Dignissimos fuga</a>
+                                <a href="{% url 'product' %}">Dignissimos fuga</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$205</b>
@@ -1393,14 +1395,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/252x250" alt="Nisi autem error"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1408,7 +1410,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Nisi autem error</a>
+                                <a href="{% url 'product' %}">Nisi autem error</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$95</b>
@@ -1422,7 +1424,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/316x250" alt="Tempora ea ratione vel"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1430,7 +1432,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1442,7 +1444,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Tempora ea ratione vel</a>
+                                <a href="{% url 'product' %}">Tempora ea ratione vel</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$120</b>
@@ -1450,14 +1452,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/281x250" alt="Minus sequi iste"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1465,7 +1467,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Minus sequi iste</a>
+                                <a href="{% url 'product' %}">Minus sequi iste</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$135</b>
@@ -1473,7 +1475,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/265x250" alt="Dignissimos fuga voluptates totam">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -1481,7 +1483,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1489,7 +1491,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Dignissimos fuga voluptates totam</a>
+                                <a href="{% url 'product' %}">Dignissimos fuga voluptates totam</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$85</b>
@@ -1497,7 +1499,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/291x250" alt="Perferendis recusandae"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1505,7 +1507,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1513,7 +1515,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Perferendis recusandae</a>
+                                <a href="{% url 'product' %}">Perferendis recusandae</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$70</b>
@@ -1521,7 +1523,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/277x250" alt="Officiis nihil culpa"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1529,7 +1531,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1537,7 +1539,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Officiis nihil culpa</a>
+                                <a href="{% url 'product' %}">Officiis nihil culpa</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$180</b>
@@ -1545,7 +1547,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/295x250" alt="Distinctio modi quos"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1553,7 +1555,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1561,7 +1563,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Distinctio modi quos</a>
+                                <a href="{% url 'product' %}">Distinctio modi quos</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$195</b>
@@ -1569,7 +1571,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/301x250" alt="Corrupti velit vero"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1577,7 +1579,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1585,7 +1587,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Corrupti velit vero</a>
+                                <a href="{% url 'product' %}">Corrupti velit vero</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$220</b>
@@ -1593,7 +1595,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/289x250" alt="Dicta doloremque hic"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1601,7 +1603,7 @@
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i
                                             class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1609,7 +1611,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Dicta doloremque hic</a>
+                                <a href="{% url 'product' %}">Dicta doloremque hic</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$90</b>
@@ -1627,14 +1629,14 @@
 
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x350" alt="Aspernatur excepturi rem">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1642,7 +1644,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Aspernatur excepturi rem</a>
+                                <a href="{% url 'product' %}">Aspernatur excepturi rem</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$90</b>
@@ -1656,13 +1658,13 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/277x250" alt="Aperiam tempore"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1670,7 +1672,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Aperiam tempore</a>
+                                <a href="{% url 'product' %}">Aperiam tempore</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$75</b>
@@ -1678,13 +1680,13 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x324" alt="Blanditiis eaque"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1692,7 +1694,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Blanditiis eaque</a>
+                                <a href="{% url 'product' %}">Blanditiis eaque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$115</b>
@@ -1700,13 +1702,13 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x500" alt="Excepturi ducimus"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1714,7 +1716,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Excepturi ducimus</a>
+                                <a href="{% url 'product' %}">Excepturi ducimus</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$105</b>
@@ -1722,14 +1724,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/329x250" alt="Sit recusandae voluptas">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1741,7 +1743,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Sit recusandae voluptas</a>
+                                <a href="{% url 'product' %}">Sit recusandae voluptas</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$200</b>
@@ -1749,14 +1751,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x317" alt="Consequuntur minus atque">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1764,7 +1766,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Consequuntur minus atque</a>
+                                <a href="{% url 'product' %}">Consequuntur minus atque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$160</b>
@@ -1772,13 +1774,13 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x329" alt="Nostrum nihil ipsa"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1786,7 +1788,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Nostrum nihil ipsa</a>
+                                <a href="{% url 'product' %}">Nostrum nihil ipsa</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$140</b>
@@ -1794,14 +1796,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x361" alt="Non ex sapiente deserunt">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1814,7 +1816,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Non ex sapiente deserunt</a>
+                                <a href="{% url 'product' %}">Non ex sapiente deserunt</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$65</b>
@@ -1822,13 +1824,13 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x361" alt="Amet tempore unde"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1836,7 +1838,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Amet tempore unde</a>
+                                <a href="{% url 'product' %}">Amet tempore unde</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$85</b>
@@ -1844,14 +1846,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x361" alt="Neque fugiat voluptates">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1859,7 +1861,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Neque fugiat voluptates</a>
+                                <a href="{% url 'product' %}">Neque fugiat voluptates</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$120</b>
@@ -1876,13 +1878,13 @@
 
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x302" alt="Amet tempore unde"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1890,7 +1892,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Amet tempore unde</a>
+                                <a href="{% url 'product' %}">Amet tempore unde</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$165</b>
@@ -1898,13 +1900,13 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x327" alt="Perspiciatis dolor"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1912,7 +1914,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Perspiciatis dolor</a>
+                                <a href="{% url 'product' %}">Perspiciatis dolor</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$205</b>
@@ -1926,14 +1928,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x262" alt="Veritatis officiis quae">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1941,7 +1943,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Veritatis officiis quae</a>
+                                <a href="{% url 'product' %}">Veritatis officiis quae</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$90</b>
@@ -1949,14 +1951,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x292" alt="Fuga numquam obcaecati"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1964,7 +1966,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Fuga numquam obcaecati</a>
+                                <a href="{% url 'product' %}">Fuga numquam obcaecati</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$65</b>
@@ -1972,13 +1974,13 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x351" alt="Ratione magni"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -1986,7 +1988,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Ratione magni</a>
+                                <a href="{% url 'product' %}">Ratione magni</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$125</b>
@@ -1994,14 +1996,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x301" alt="Asperiores sit sequi"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2009,7 +2011,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Asperiores sit sequi</a>
+                                <a href="{% url 'product' %}">Asperiores sit sequi</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$140</b>
@@ -2017,14 +2019,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x322" alt="Repudiandae accusamus"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2032,7 +2034,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Repudiandae accusamus</a>
+                                <a href="{% url 'product' %}">Repudiandae accusamus</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$95</b>
@@ -2040,14 +2042,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x266" alt="Quod praesentium illum"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2055,7 +2057,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Quod praesentium illum</a>
+                                <a href="{% url 'product' %}">Quod praesentium illum</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$80</b>
@@ -2063,13 +2065,13 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x301" alt="Deleniti ut earum"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2077,7 +2079,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Deleniti ut earum</a>
+                                <a href="{% url 'product' %}">Deleniti ut earum</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$220</b>
@@ -2085,14 +2087,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x362" alt="Voluptatem quibusdam"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2100,7 +2102,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Voluptatem quibusdam</a>
+                                <a href="{% url 'product' %}">Voluptatem quibusdam</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$185</b>
@@ -2117,14 +2119,14 @@
 
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x422" alt="Nisi provident atque"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2132,7 +2134,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Nisi provident atque</a>
+                                <a href="{% url 'product' %}">Nisi provident atque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$130</b>
@@ -2140,14 +2142,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x385" alt="Eveniet nobis minus possimus">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2159,7 +2161,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Eveniet nobis minus possimus</a>
+                                <a href="{% url 'product' %}">Eveniet nobis minus possimus</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$80</b>
@@ -2167,14 +2169,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x288" alt="Quis ex fugiat blanditiis">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2182,7 +2184,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Quis ex fugiat blanditiis</a>
+                                <a href="{% url 'product' %}">Quis ex fugiat blanditiis</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$150</b>
@@ -2196,13 +2198,13 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x279" alt="Nisi autem error"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2210,7 +2212,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Nisi autem error</a>
+                                <a href="{% url 'product' %}">Nisi autem error</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$65</b>
@@ -2218,14 +2220,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x403" alt="Quod soluta corrupti"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2233,7 +2235,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Quod soluta corrupti</a>
+                                <a href="{% url 'product' %}">Quod soluta corrupti</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$175</b>
@@ -2241,13 +2243,13 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x280" alt="Ipsa doloremque"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2255,7 +2257,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Ipsa doloremque</a>
+                                <a href="{% url 'product' %}">Ipsa doloremque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$85</b>
@@ -2263,13 +2265,13 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x409" alt="Dignissimos fuga"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2277,7 +2279,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Dignissimos fuga</a>
+                                <a href="{% url 'product' %}">Dignissimos fuga</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$205</b>
@@ -2296,13 +2298,13 @@
 
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/252x250" alt="Nisi autem error"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2310,7 +2312,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Nisi autem error</a>
+                                <a href="{% url 'product' %}">Nisi autem error</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$95</b>
@@ -2324,14 +2326,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/316x250" alt="Tempora ea ratione vel"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2343,7 +2345,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Tempora ea ratione vel</a>
+                                <a href="{% url 'product' %}">Tempora ea ratione vel</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$120</b>
@@ -2351,13 +2353,13 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/281x250" alt="Minus sequi iste"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2365,7 +2367,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Minus sequi iste</a>
+                                <a href="{% url 'product' %}">Minus sequi iste</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$135</b>
@@ -2373,14 +2375,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/265x250" alt="Dignissimos fuga voluptates totam">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2388,7 +2390,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Dignissimos fuga voluptates totam</a>
+                                <a href="{% url 'product' %}">Dignissimos fuga voluptates totam</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$85</b>
@@ -2396,14 +2398,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/291x250" alt="Perferendis recusandae"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2411,7 +2413,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Perferendis recusandae</a>
+                                <a href="{% url 'product' %}">Perferendis recusandae</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$70</b>
@@ -2419,14 +2421,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/277x250" alt="Officiis nihil culpa"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2434,7 +2436,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Officiis nihil culpa</a>
+                                <a href="{% url 'product' %}">Officiis nihil culpa</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$180</b>
@@ -2442,14 +2444,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/295x250" alt="Distinctio modi quos"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2457,7 +2459,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Distinctio modi quos</a>
+                                <a href="{% url 'product' %}">Distinctio modi quos</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$195</b>
@@ -2465,14 +2467,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/301x250" alt="Corrupti velit vero"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2480,7 +2482,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Corrupti velit vero</a>
+                                <a href="{% url 'product' %}">Corrupti velit vero</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$220</b>
@@ -2488,14 +2490,14 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product' %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/289x250" alt="Dicta doloremque hic"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
                                             class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i
+                                    <a class="prod-i-compare" href="#"><span>Сравнение</span><i
                                             class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -2503,7 +2505,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="{% url 'product'  %}">Dicta doloremque hic</a>
+                                <a href="{% url 'product' %}">Dicta doloremque hic</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$90</b>
@@ -2581,11 +2583,11 @@
             <div class="flexslider discounts-list">
                 <ul class="slides">
                     <li class="discounts-i">
-                        <a href="{% url 'product'  %}" class="discounts-i-img">
+                        <a href="{% url 'product' %}" class="discounts-i-img">
                             <img src="http://placehold.it/120x120" alt="Dicta doloremque">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="{% url 'product'  %}">Dicta doloremque</a>
+                            <a href="{% url 'product' %}">Dicta doloremque</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$115</b>
@@ -2593,11 +2595,11 @@
                         </p>
                     </li>
                     <li class="discounts-i">
-                        <a href="{% url 'product'  %}" class="discounts-i-img">
+                        <a href="{% url 'product' %}" class="discounts-i-img">
                             <img src="http://placehold.it/99x120" alt="Similique delectus">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="{% url 'product'  %}">Similique delectus</a>
+                            <a href="{% url 'product' %}">Similique delectus</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$105</b>
@@ -2605,11 +2607,11 @@
                         </p>
                     </li>
                     <li class="discounts-i">
-                        <a href="{% url 'product'  %}" class="discounts-i-img">
+                        <a href="{% url 'product' %}" class="discounts-i-img">
                             <img src="http://placehold.it/75x120" alt="Adipisci nemo">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="{% url 'product'  %}">Adipisci nemo</a>
+                            <a href="{% url 'product' %}">Adipisci nemo</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$70</b>
@@ -2617,11 +2619,11 @@
                         </p>
                     </li>
                     <li class="discounts-i">
-                        <a href="{% url 'product'  %}" class="discounts-i-img">
+                        <a href="{% url 'product' %}" class="discounts-i-img">
                             <img src="http://placehold.it/65x120" alt="Ullam harum">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="{% url 'product'  %}">Ullam harum</a>
+                            <a href="{% url 'product' %}">Ullam harum</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$55</b>
@@ -2629,11 +2631,11 @@
                         </p>
                     </li>
                     <li class="discounts-i">
-                        <a href="{% url 'product'  %}" class="discounts-i-img">
+                        <a href="{% url 'product' %}" class="discounts-i-img">
                             <img src="http://placehold.it/78x120" alt="Similique delectus">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="{% url 'product'  %}">Similique delectus</a>
+                            <a href="{% url 'product' %}">Similique delectus</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$135</b>
@@ -2641,11 +2643,11 @@
                         </p>
                     </li>
                     <li class="discounts-i">
-                        <a href="{% url 'product'  %}" class="discounts-i-img">
+                        <a href="{% url 'product' %}" class="discounts-i-img">
                             <img src="http://placehold.it/81x120" alt="Туфли Dr.Koffer">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="{% url 'product'  %}">Туфли Dr.Koffer</a>
+                            <a href="{% url 'product' %}">Туфли Dr.Koffer</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$190</b>
@@ -2653,11 +2655,11 @@
                         </p>
                     </li>
                     <li class="discounts-i">
-                        <a href="{% url 'product'  %}" class="discounts-i-img">
+                        <a href="{% url 'product' %}" class="discounts-i-img">
                             <img src="http://placehold.it/117x120" alt="Quod consequatur">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="{% url 'product'  %}">Quod consequatur</a>
+                            <a href="{% url 'product' %}">Quod consequatur</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$120</b>
@@ -2665,11 +2667,11 @@
                         </p>
                     </li>
                     <li class="discounts-i">
-                        <a href="{% url 'product'  %}" class="discounts-i-img">
+                        <a href="{% url 'product' %}" class="discounts-i-img">
                             <img src="http://placehold.it/80x120" alt="Dolore fugit">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="{% url 'product'  %}">Dolore fugit</a>
+                            <a href="{% url 'product' %}">Dolore fugit</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$80</b>
@@ -2689,38 +2691,38 @@
         <div class="posts-wrap">
             <div class="posts-list">
                 <div class="posts-i">
-                    <a class="posts-i-img" href="post.html">
+                    <a class="posts-i-img" href="{% url 'post' %}">
                         <span style="background: url(http://placehold.it/354x236)"></span>
                     </a>
                     <time class="posts-i-date" datetime="2016-11-09 00:00:00"><span>30</span> Jan</time>
                     <div class="posts-i-info">
                         <a href="{% url 'blog' %}" class="posts-i-ctg">Reviews</a>
                         <h3 class="posts-i-ttl">
-                            <a href="post.html">Animi quaerat at</a>
+                            <a href="{% url 'post' %}">Animi quaerat at</a>
                         </h3>
                     </div>
                 </div>
                 <div class="posts-i">
-                    <a class="posts-i-img" href="post.html">
+                    <a class="posts-i-img" href="{% url 'post' %}">
                         <span style="background: url(http://placehold.it/354x236)"></span>
                     </a>
                     <time class="posts-i-date" datetime="2016-11-09 00:00:00"><span>29</span> Jan</time>
                     <div class="posts-i-info">
                         <a href="{% url 'blog' %}" class="posts-i-ctg">Articles</a>
                         <h3 class="posts-i-ttl">
-                            <a href="post.html">Ex atque commodi</a>
+                            <a href="{% url 'post' %}">Ex atque commodi</a>
                         </h3>
                     </div>
                 </div>
                 <div class="posts-i">
-                    <a class="posts-i-img" href="post.html">
+                    <a class="posts-i-img" href="{% url 'post' %}">
                         <span style="background: url(http://placehold.it/354x236)"></span>
                     </a>
                     <time class="posts-i-date" datetime="2016-11-09 00:00:00"><span>25</span> Jan</time>
                     <div class="posts-i-info">
                         <a href="{% url 'blog' %}" class="posts-i-ctg">News</a>
                         <h3 class="posts-i-ttl">
-                            <a href="post.html">Hic quod maxime deserunt</a>
+                            <a href="{% url 'post' %}">Hic quod maxime deserunt</a>
                         </h3>
                     </div>
                 </div>
@@ -2876,10 +2878,10 @@
             </form>
         </div>
 
-        <!-- Quick View Product - start -->
+        <!-- Quick View Товар- start -->
         <div class="qview-modal">
             <div class="prod-wrap">
-                <a href="{% url 'product'  %}">
+                <a href="{% url 'product' %}">
                     <h1 class="main-ttl">
                         <span>Reprehenderit adipisci</span>
                     </h1>
@@ -3050,7 +3052,7 @@
                 </div>
             </div>
         </div>
-        <!-- Quick View Product - end -->
+        <!-- Quick View Товар- end -->
     </section>
 </main>
 <!-- Main Content - end -->
@@ -3062,7 +3064,7 @@
         <div class="container">
             <div class="row">
                 <div class="companyinfo">
-                    <a href="{% url 'home'  %}">
+                    <a href="{% url 'home' %}">
                         <img src="img/logo-b.png" alt="AllStore - MultiConcept eCommerce Responsive HTML5 Template">
                         AllStore - MultiConcept eCommerce Responsive HTML5 Template
                     </a>
@@ -3171,11 +3173,11 @@
                     About us
                 </h3>
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="{% url 'home'  %}">Home</a></li>
-                    <li><a href="{% url 'catalog' %}">Catalog</a></li>
-                    <li><a href="{% url 'elements'  %}">Elements</a></li>
+                    <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'catalog' %}">Каталог</a></li>
+                    <li><a href="{% url 'elements' %}">Elements</a></li>
                     <li><a href="{% url 'blog' %}">Blog</a></li>
-                    <li><a href="{% url 'contacts'  %}">Contacts</a></li>
+                    <li><a href="{% url 'contacts' %}">Contacts</a></li>
                 </ul>
             </div>
             <div class="f-menu">
@@ -3199,7 +3201,7 @@
                     <li><a href="{% url 'blog' %}">News</a></li>
                     <li><a href="reviews.html">Reviews</a></li>
                     <li><a href="{% url 'blog' %}">Articles</a></li>
-                    <li><a href="{% url 'contacts'  %}">Contacts</a></li>
+                    <li><a href="{% url 'contacts' %}">Contacts</a></li>
                 </ul>
             </div>
             <div class="f-menu">
@@ -3207,10 +3209,10 @@
                     Pages
                 </h3>
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a href="{% url 'contacts'  %}">About us</a></li>
-                    <li><a href="{% url 'contacts'  %}">Delivery</a></li>
-                    <li><a href="{% url 'contacts'  %}">Guarantees</a></li>
-                    <li><a href="{% url 'contacts'  %}">Contacts</a></li>
+                    <li><a href="{% url 'contacts' %}">About us</a></li>
+                    <li><a href="{% url 'contacts' %}">Delivery</a></li>
+                    <li><a href="{% url 'contacts' %}">Guarantees</a></li>
+                    <li><a href="{% url 'contacts' %}">Contacts</a></li>
                     <li><a href="{% url 'error' %}">Page 404</a></li>
                 </ul>
             </div>
