@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +10,17 @@
 
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700ii%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/ion.rangeSlider.css">
-	<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css">
-	<link rel="stylesheet" href="css/jquery.bxslider.css">
-	<link rel="stylesheet" href="css/jquery.fancybox.css">
-	<link rel="stylesheet" href="css/flexslider.css">
-	<link rel="stylesheet" href="css/swiper.css">
-	<link rel="stylesheet" href="css/swiper.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles//font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/ion.rangeSlider.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/ion.rangeSlider.skinFlat.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/jquery.bxslider.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/jquery.fancybox.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/flexslider.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/swiper.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/media.css' %}">
 
 </head>
 <body>
@@ -73,7 +73,7 @@
 	<div class="header-middle">
 		<div class="container header-middle-cont">
 			<div class="toplogo">
-				<a href="index.html">
+				<a href="{% url 'home' %}">
 					<img src="img/logo.png" alt="AllStore - MultiConcept eCommerce Template">
 				</a>
 			</div>
@@ -81,7 +81,7 @@
 				<ul>
 
 					<li>
-						<a href="wishlist.html">
+						<a href="{% url 'wishlist'  %}">
 							<i class="fa fa-heart"></i>
 							<span class="shop-menu-ttl">Wishlist</span>
 							(<span id="topbar-favorites">1</span>)
@@ -89,25 +89,25 @@
 					</li>
 
 					<li>
-						<a href="compare.html">
+						<a href="{% url 'compare'  %}">
 							<i class="fa fa-bar-chart"></i>
 							<span class="shop-menu-ttl">Compare</span> (5)
 						</a>
 					</li>
 
 					<li class="topauth">
-						<a href="auth.html">
+						<a href="{% url 'auth' %}">
 							<i class="fa fa-lock"></i>
 							<span class="shop-menu-ttl">Registration</span>
 						</a>
-						<a href="auth.html">
+						<a href="{% url 'auth' %}">
 							<span class="shop-menu-ttl">Login</span>
 						</a>
 					</li>
 
 					<li>
 						<div class="h-cart">
-							<a href="cart.html">
+							<a href="{% url 'cart' %}">
 								<i class="fa fa-shopping-cart"></i>
 								<span class="shop-menu-ttl">Cart</span>
 								(<b>0</b>)
@@ -128,253 +128,253 @@
 
 				<!-- Catalog menu - start -->
 				<div class="topcatalog">
-					<a class="topcatalog-btn" href="catalog-list.html"><span>All</span> catalog</a>
+					<a class="topcatalog-btn" href="{% url 'catalog'  %}"><span>All</span> catalog</a>
 					<ul class="topcatalog-list">
 						<li>
-							<a href="catalog-list.html">
+							<a href="{% url 'catalog'  %}">
 								Women
 							</a>
 							<i class="fa fa-angle-right"></i>
 							<ul>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Knitwear
 									</a>
 								</li>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Dresses
 									</a>
 								</li>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Bags
 									</a>
 									<i class="fa fa-angle-right"></i>
 									<ul>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Shoulder Bags
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Falabella
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Becks
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Clutches
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Travel Bags
 											</a>
 										</li>
 									</ul>
 								</li>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Accessories
 									</a>
 									<i class="fa fa-angle-right"></i>
 									<ul>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Sunglasses
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Tech Cases
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Jewelry
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Stella
 											</a>
 										</li>
 									</ul>
 								</li>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Coats & Jackets
 									</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="catalog-list.html">
+							<a href="{% url 'catalog'  %}">
 								Men
 							</a>
 							<i class="fa fa-angle-right"></i>
 							<ul>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Jackets & Blazers
 									</a>
 								</li>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Pants & Shorts
 									</a>
 								</li>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Accessories
 									</a>
 									<i class="fa fa-angle-right"></i>
 									<ul>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Bags
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Sunglasses
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Other Accessories
 											</a>
 										</li>
 									</ul>
 								</li>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Suiting
 									</a>
 								</li>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Shirts
 									</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="catalog-list.html">
+							<a href="{% url 'catalog'  %}">
 								Kids
 							</a>
 							<i class="fa fa-angle-right"></i>
 							<ul>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Girls
 									</a>
 									<i class="fa fa-angle-right"></i>
 									<ul>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Outerwear
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												T-Shirts
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Blouses & Shirts
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Pants & Shorts
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Sleepwear & Underwear
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Skirts
 											</a>
 										</li>
 									</ul>
 								</li>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Boys
 									</a>
 									<i class="fa fa-angle-right"></i>
 									<ul>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Shoes & Accessories
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Jumpers & Cardigans
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Shirts
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Outerwear
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Swimwear
 											</a>
 										</li>
 									</ul>
 								</li>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Baby
 									</a>
 									<i class="fa fa-angle-right"></i>
 									<ul>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Baby Sets
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Dresses & All-In-One
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Pants & Shorts
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Shoes & Accessories
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												T-shirts
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Outerwear
 											</a>
 										</li>
@@ -383,118 +383,118 @@
 							</ul>
 						</li>
 						<li>
-							<a href="catalog-list.html">
+							<a href="{% url 'catalog'  %}">
 								Shoes
 							</a>
 							<i class="fa fa-angle-right"></i>
 							<ul>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Women
 									</a>
 									<i class="fa fa-angle-right"></i>
 									<ul>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Elyse
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Odette
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Brody
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Flats
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Sandals
 											</a>
 										</li>
 									</ul>
 								</li>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Men
 									</a>
 									<i class="fa fa-angle-right"></i>
 									<ul>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Casual Shoes
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Sneakers
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Sandals
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Boots
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Mules & Clogs
 											</a>
 										</li>
 									</ul>
 								</li>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Children's
 									</a>
 									<i class="fa fa-angle-right"></i>
 									<ul>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Girls
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Boys
 											</a>
 										</li>
 									</ul>
 								</li>
 								<li>
-									<a href="catalog-list.html">
+									<a href="{% url 'catalog'  %}">
 										Baby Shoe
 									</a>
 									<i class="fa fa-angle-right"></i>
 									<ul>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												First Walkers
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Sneakers
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Boots
 											</a>
 										</li>
 										<li>
-											<a href="catalog-list.html">
+											<a href="{% url 'catalog'  %}">
 												Sandals & Clogs
 											</a>
 										</li>
@@ -511,76 +511,76 @@
 
 				<ul class="mainmenu">
 					<li>
-						<a href="index.html">
+						<a href="{% url 'home' %}">
 							Home
 						</a>
 					</li>
 					<li class="menu-item-has-children">
-						<a href="catalog-list.html" class="active">
+						<a href="{% url 'catalog'  %}" class="active">
 							Catalog <i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="sub-menu">
 							<li>
-								<a href="catalog-list.html" class="active">
+								<a href="{% url 'catalog'  %}" class="active">
 									Catalog List - Style 1
 								</a>
 							</li>
 							<li>
-								<a href="catalog-list-2.html">
+								<a href="{% url 'catalog_list_2'  %}">
 									Catalog List - Style 2
 								</a>
 							</li>
 							<li>
-								<a href="catalog-gallery.html">
+								<a href="{% url 'catalog-gallery'  %}">
 									Catalog Gallery - Style 1
 								</a>
 							</li>
 							<li>
-								<a href="catalog-gallery-2.html">
+								<a href="{% url 'catalog-gallery_2'  %}">
 									Catalog Gallery - Style 2
 								</a>
 							</li>
 							<li>
-								<a href="catalog-table.html">
+								<a href="{% url 'catalog_table'  %}">
 									Catalog Table
 								</a>
 							</li>
 						</ul>
 					</li>
 					<li class="menu-item-has-children">
-						<a href="product.html">
+						<a href="{% url 'product'  %}">
 							Product <i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="sub-menu">
 							<li>
-								<a href="product.html">
+								<a href="{% url 'product'  %}">
 									Product - Style 1 (Slider)
 								</a>
 							</li>
 							<li>
-								<a href="product-2.html">
+								<a href="{% url 'product_2'  %}">
 									Product - Style 2 (Scroll)
 								</a>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<a href="elements.html">
+						<a href="{% url 'elements'  %}">
 							Elements
 						</a>
 					</li>
 					<li class="menu-item-has-children">
-						<a href="blog.html">
+						<a href="{% url 'blog' %}">
 							Blog <i class="fa fa-angle-down"></i>
 						</a>
 						<ul class="sub-menu">
 							<li>
-								<a href="blog.html">
+								<a href="{% url 'blog' %}">
 									Blog - Style 1
 								</a>
 							</li>
 							<li>
-								<a href="blog-2.html">
+								<a href="{% url 'blog_2' %}">
 									Blog - Style 2
 								</a>
 							</li>
@@ -597,32 +597,32 @@
 						</a>
 						<ul class="sub-menu">
 							<li>
-								<a href="contacts.html">
+								<a href="{% url 'contacts'  %}">
 									Contacts
 								</a>
 							</li>
 							<li>
-								<a href="cart.html">
+								<a href="{% url 'cart' %}">
 									Cart
 								</a>
 							</li>
 							<li>
-								<a href="auth.html">
+								<a href="{% url 'auth' %}">
 									Authorization
 								</a>
 							</li>
 							<li>
-								<a href="compare.html">
+								<a href="{% url 'compare'  %}">
 									Compare
 								</a>
 							</li>
 							<li>
-								<a href="wishlist.html">
+								<a href="{% url 'wishlist'  %}">
 									Wishlist
 								</a>
 							</li>
 							<li>
-								<a href="404.html">
+								<a href="{% url 'error' %}">
 									Error 404
 								</a>
 							</li>
@@ -660,12 +660,12 @@
 
 		<ul class="b-crumbs">
 			<li>
-				<a href="index.html">
+				<a href="{% url 'home' %}">
 					Home
 				</a>
 			</li>
 			<li>
-				<a href="catalog-list.html">
+				<a href="{% url 'catalog'  %}">
 					Catalog
 				</a>
 			</li>
@@ -679,81 +679,81 @@
 
 			<!-- Catalog Categories - start -->
 			<div class="section-sb-current">
-				<h3><a href="catalog-list.html">Women <span id="section-sb-toggle" class="section-sb-toggle"><span class="section-sb-ico"></span></span></a></h3>
+				<h3><a href="{% url 'catalog'  %}">Women <span id="section-sb-toggle" class="section-sb-toggle"><span class="section-sb-ico"></span></span></a></h3>
 				<ul class="section-sb-list" id="section-sb-list">
 					<li class="categ-1">
-						<a href="catalog-list.html">
+						<a href="{% url 'catalog'  %}">
 							<span class="categ-1-label">Knitwear</span>
 						</a>
 					</li>
 					<li class="categ-1">
-						<a href="catalog-list.html">
+						<a href="{% url 'catalog'  %}">
 							<span class="categ-1-label">Dresses</span>
 						</a>
 					</li>
 					<li class="categ-1 has_child">
-						<a href="catalog-list.html">
+						<a href="{% url 'catalog'  %}">
 							<span class="categ-1-label">Bags</span>
 							<span class="section-sb-toggle"><span class="section-sb-ico"></span></span>
 						</a>
 						<ul>
 							<li class="categ-2">
-								<a href="catalog-list.html">
+								<a href="{% url 'catalog'  %}">
 									<span class="categ-2-label">Shoulder Bags</span>
 								</a>
 							</li>
 							<li class="categ-2">
-								<a href="catalog-list.html">
+								<a href="{% url 'catalog'  %}">
 									<span class="categ-2-label">Falabella</span>
 								</a>
 							</li>
 							<li class="categ-2">
-								<a href="catalog-list.html">
+								<a href="{% url 'catalog'  %}">
 									<span class="categ-2-label">Becks</span>
 								</a>
 							</li>
 							<li class="categ-2">
-								<a href="catalog-list.html">
+								<a href="{% url 'catalog'  %}">
 									<span class="categ-2-label">Clutches</span>
 								</a>
 							</li>
 							<li class="categ-2">
-								<a href="catalog-list.html">
+								<a href="{% url 'catalog'  %}">
 									<span class="categ-2-label">Travel Bags</span>
 								</a>
 							</li>
 						</ul>
 					</li>
 					<li class="categ-1 has_child">
-						<a href="catalog-list.html">
+						<a href="{% url 'catalog'  %}">
 							<span class="categ-1-label">Accessories</span>
 							<span class="section-sb-toggle"><span class="section-sb-ico"></span></span>
 						</a>
 						<ul>
 							<li class="categ-2">
-								<a href="catalog-list.html">
+								<a href="{% url 'catalog'  %}">
 									<span class="categ-2-label">Sunglasses</span>
 								</a>
 							</li>
 							<li class="categ-2">
-								<a href="catalog-list.html">
+								<a href="{% url 'catalog'  %}">
 									<span class="categ-2-label">Tech Cases</span>
 								</a>
 							</li>
 							<li class="categ-2">
-								<a href="catalog-list.html">
+								<a href="{% url 'catalog'  %}">
 									<span class="categ-2-label">Jewelry</span>
 								</a>
 							</li>
 							<li class="categ-2">
-								<a href="catalog-list.html">
+								<a href="{% url 'catalog'  %}">
 									<span class="categ-2-label">Stella</span>
 								</a>
 							</li>
 						</ul>
 					</li>
 					<li class="categ-1">
-						<a href="catalog-list.html">
+						<a href="{% url 'catalog'  %}">
 							<span class="categ-1-label">Coats & Jackets</span>
 						</a>
 					</li>
@@ -1226,9 +1226,9 @@
 
 				<!-- View Mode -->
 				<ul class="section-mode">
-					<li class="section-mode-gallery"><a title="View mode: Gallery" href="catalog-gallery.html"></a></li>
-					<li class="section-mode-list active"><a title="View mode: List" href="catalog-list.html"></a></li>
-					<li class="section-mode-table"><a title="View mode: Table" href="catalog-table.html"></a></li>
+					<li class="section-mode-gallery"><a title="View mode: Gallery" href="{% url 'catalog-gallery'  %}"></a></li>
+					<li class="section-mode-list active"><a title="View mode: List" href="{% url 'catalog'  %}"></a></li>
+					<li class="section-mode-table"><a title="View mode: Table" href="{% url 'catalog_table'  %}"></a></li>
 				</ul>
 
 				<!-- Sorting -->
@@ -1270,9 +1270,9 @@
 			<!-- Catalog Topbar - end -->
 			<div class="prod-items section-items">
 				<div class="prodlist-i">
-					<a class="prodlist-i-img" href="product.html"><!-- NO SPACE --><img src="http://placehold.it/300x311" alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
+					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE --><img src="http://placehold.it/300x311" alt="Adipisci aperiam commodi"><!-- NO SPACE --></a>
 					<div class="prodlist-i-cont">
-						<h3><a href="product.html">Adipisci aperiam commodi</a></h3>
+						<h3><a href="{% url 'product'  %}">Adipisci aperiam commodi</a></h3>
 						<div class="prodlist-i-txt">
 							Quisquam totam quas veritatis dolor voluptates, laudantium repellendus. Cupiditate repellat tempora consequatur sequi, neque					</div>
 						<div class="prodlist-i-skuwrap">
@@ -1337,9 +1337,9 @@
 					</div>
 				</div>
 				<div class="prodlist-i">
-					<a class="prodlist-i-img" href="product.html"><!-- NO SPACE --><img src="http://placehold.it/300x366" alt="Nulla numquam obcaecati"><!-- NO SPACE --></a>
+					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE --><img src="http://placehold.it/300x366" alt="Nulla numquam obcaecati"><!-- NO SPACE --></a>
 					<div class="prodlist-i-cont">
-						<h3><a href="product.html">Nulla numquam obcaecati</a></h3>
+						<h3><a href="{% url 'product'  %}">Nulla numquam obcaecati</a></h3>
 						<div class="prodlist-i-txt">
 							Assumenda deserunt eligendi qui, est error, sed dolorum magnam sequi totam recusandae nam minima accusamus illo dolores adipisci non fugit quis consequatur					</div>
 						<div class="prodlist-i-action">
@@ -1376,9 +1376,9 @@
 					</div>
 				</div>
 				<div class="prodlist-i">
-					<a class="prodlist-i-img" href="product.html"><!-- NO SPACE --><img src="http://placehold.it/370x300" alt="Dignissimos eaque earum"><!-- NO SPACE --></a>
+					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE --><img src="http://placehold.it/370x300" alt="Dignissimos eaque earum"><!-- NO SPACE --></a>
 					<div class="prodlist-i-cont">
-						<h3><a href="product.html">Dignissimos eaque earum</a></h3>
+						<h3><a href="{% url 'product'  %}">Dignissimos eaque earum</a></h3>
 						<div class="prodlist-i-txt">
 							Deserunt sapiente mollitia expedita, quia blanditiis ipsam dignissimos? A consectetur tempora dolorum quisquam assumenda, quidem ratione accusamus cupiditate commodi					</div>
 						<div class="prodlist-i-action">
@@ -1412,9 +1412,9 @@
 					</div>
 				</div>
 				<div class="prodlist-i">
-					<a class="prodlist-i-img" href="product.html"><!-- NO SPACE --><img src="http://placehold.it/300x345" alt="Porro quae quasi"><!-- NO SPACE --></a>
+					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE --><img src="http://placehold.it/300x345" alt="Porro quae quasi"><!-- NO SPACE --></a>
 					<div class="prodlist-i-cont">
-						<h3><a href="product.html">Porro quae quasi</a></h3>
+						<h3><a href="{% url 'product'  %}">Porro quae quasi</a></h3>
 						<div class="prodlist-i-txt">
 							Rerum est facere consequuntur, vero error deleniti totam vitae, eius necessitatibus, deserunt cupiditate quae iusto sint quasi, id officiis! Labore amet, architecto dolorum rerum voluptates					</div>
 						<div class="prodlist-i-action">
@@ -1453,9 +1453,9 @@
 					</div>
 				</div>
 				<div class="prodlist-i">
-					<a class="prodlist-i-img" href="product.html"><!-- NO SPACE --><img src="http://placehold.it/378x300" alt="Sunt temporibus velit"><!-- NO SPACE --></a>
+					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE --><img src="http://placehold.it/378x300" alt="Sunt temporibus velit"><!-- NO SPACE --></a>
 					<div class="prodlist-i-cont">
-						<h3><a href="product.html">Sunt temporibus velit</a></h3>
+						<h3><a href="{% url 'product'  %}">Sunt temporibus velit</a></h3>
 						<div class="prodlist-i-txt">
 							Excepturi odit perferendis assumenda nisi cum, sunt autem quos odio quibusdam ipsa, molestias eum officia					</div>
 						<div class="prodlist-i-skuwrap">
@@ -1520,9 +1520,9 @@
 					</div>
 				</div>
 				<div class="prodlist-i">
-					<a class="prodlist-i-img" href="product.html"><!-- NO SPACE --><img src="http://placehold.it/300x394" alt="Harum illum incidunt"><!-- NO SPACE --></a>
+					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE --><img src="http://placehold.it/300x394" alt="Harum illum incidunt"><!-- NO SPACE --></a>
 					<div class="prodlist-i-cont">
-						<h3><a href="product.html">Harum illum incidunt</a></h3>
+						<h3><a href="{% url 'product'  %}">Harum illum incidunt</a></h3>
 						<div class="prodlist-i-txt">
 							Distinctio laborum quos fugit nobis mollitia rem sit saepe perspiciatis qui					</div>
 						<div class="prodlist-i-skuwrap">
@@ -1578,9 +1578,9 @@
 					</div>
 				</div>
 				<div class="prodlist-i">
-					<a class="prodlist-i-img" href="product.html"><!-- NO SPACE --><img src="http://placehold.it/300x303" alt="Reprehenderit rerum"><!-- NO SPACE --></a>
+					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE --><img src="http://placehold.it/300x303" alt="Reprehenderit rerum"><!-- NO SPACE --></a>
 					<div class="prodlist-i-cont">
-						<h3><a href="product.html">Reprehenderit rerum</a></h3>
+						<h3><a href="{% url 'product'  %}">Reprehenderit rerum</a></h3>
 						<div class="prodlist-i-skuwrap">
 							<div class="prodlist-i-skuitem">
 								<p class="prodlist-i-skuttl">Color</p>
@@ -1645,9 +1645,9 @@
 					</div>
 				</div>
 				<div class="prodlist-i">
-					<a class="prodlist-i-img" href="product.html"><!-- NO SPACE --><img src="http://placehold.it/300x588" alt="Quae quasi adipisci alias"><!-- NO SPACE --></a>
+					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE --><img src="http://placehold.it/300x588" alt="Quae quasi adipisci alias"><!-- NO SPACE --></a>
 					<div class="prodlist-i-cont">
-						<h3><a href="product.html">Quae quasi adipisci alias</a></h3>
+						<h3><a href="{% url 'product'  %}">Quae quasi adipisci alias</a></h3>
 						<div class="prodlist-i-txt">
 							Cum nihil saepe itaque, quibusdam quos libero, et possimus rerum ratione similique					</div>
 						<div class="prodlist-i-action">
@@ -1682,9 +1682,9 @@
 					</div>
 				</div>
 				<div class="prodlist-i">
-					<a class="prodlist-i-img" href="product.html"><!-- NO SPACE --><img src="http://placehold.it/300x416" alt="Maxime molestias necessitatibus nobis"><!-- NO SPACE --></a>
+					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE --><img src="http://placehold.it/300x416" alt="Maxime molestias necessitatibus nobis"><!-- NO SPACE --></a>
 					<div class="prodlist-i-cont">
-						<h3><a href="product.html">Maxime molestias necessitatibus nobis</a></h3>
+						<h3><a href="{% url 'product'  %}">Maxime molestias necessitatibus nobis</a></h3>
 						<div class="prodlist-i-txt">
 							Tempora eius in voluptates quos dolorem, omnis consequatur quae, autem eligendi totam ex esse dolores accusamus					</div>
 						<div class="prodlist-i-action">
@@ -1727,9 +1727,9 @@
 					</div>
 				</div>
 				<div class="prodlist-i">
-					<a class="prodlist-i-img" href="product.html"><!-- NO SPACE --><img src="http://placehold.it/300x480" alt="Facilis illum"><!-- NO SPACE --></a>
+					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE --><img src="http://placehold.it/300x480" alt="Facilis illum"><!-- NO SPACE --></a>
 					<div class="prodlist-i-cont">
-						<h3><a href="product.html">Facilis illum</a></h3>
+						<h3><a href="{% url 'product'  %}">Facilis illum</a></h3>
 						<div class="prodlist-i-txt">
 							Quis temporibus hic reprehenderit explicabo odio earum maxime cupiditate mollitia					</div>
 						<div class="prodlist-i-skuwrap">
@@ -1781,9 +1781,9 @@
 					</div>
 				</div>
 				<div class="prodlist-i">
-					<a class="prodlist-i-img" href="product.html"><!-- NO SPACE --><img src="http://placehold.it/358x300" alt="Iusto labore laudantium"><!-- NO SPACE --></a>
+					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE --><img src="http://placehold.it/358x300" alt="Iusto labore laudantium"><!-- NO SPACE --></a>
 					<div class="prodlist-i-cont">
-						<h3><a href="product.html">Iusto labore laudantium</a></h3>
+						<h3><a href="{% url 'product'  %}">Iusto labore laudantium</a></h3>
 						<div class="prodlist-i-txt">
 							Veniam, non harum voluptate dicta sit porro iste cumque eligendi					</div>
 						<div class="prodlist-i-skuwrap">
@@ -1853,9 +1853,9 @@
 					</div>
 				</div>
 				<div class="prodlist-i">
-					<a class="prodlist-i-img" href="product.html"><!-- NO SPACE --><img src="http://placehold.it/300x504" alt="Fuga impedit inciduntipsa"><!-- NO SPACE --></a>
+					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE --><img src="http://placehold.it/300x504" alt="Fuga impedit inciduntipsa"><!-- NO SPACE --></a>
 					<div class="prodlist-i-cont">
-						<h3><a href="product.html">Fuga impedit inciduntipsa</a></h3>
+						<h3><a href="{% url 'product'  %}">Fuga impedit inciduntipsa</a></h3>
 						<div class="prodlist-i-txt">
 							Praesentium iure inventore nostrum corporis illum, est asperiores accusamus, ducimus, accusantium natus					</div>
 						<div class="prodlist-i-action">
@@ -1905,7 +1905,7 @@
 		<!-- Quick View Product - start -->
 		<div class="qview-modal">
 			<div class="prod-wrap">
-				<a href="product.html">
+				<a href="{% url 'product'  %}">
 					<h1 class="main-ttl">
 						<span>Reprehenderit adipisci</span>
 					</h1>
@@ -2081,7 +2081,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="companyinfo">
-					<a href="index.html">
+					<a href="{% url 'home' %}">
 						<img src="img/logo-b.png" alt="AllStore - MultiConcept eCommerce Responsive HTML5 Template">
 						AllStore - MultiConcept eCommerce Responsive HTML5 Template
 					</a>
@@ -2183,11 +2183,11 @@
 					About us
 				</h3>
 				<ul class="nav nav-pills nav-stacked">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="catalog-list.html">Catalog</a></li>
-					<li><a href="elements.html">Elements</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="contacts.html">Contacts</a></li>
+					<li class="active"><a href="{% url 'home' %}">Home</a></li>
+					<li><a href="{% url 'catalog'  %}">Catalog</a></li>
+					<li><a href="{% url 'elements'  %}">Elements</a></li>
+					<li><a href="{% url 'blog' %}">Blog</a></li>
+					<li><a href="{% url 'contacts'  %}">Contacts</a></li>
 				</ul>
 			</div>
 			<div class="f-menu">
@@ -2195,11 +2195,11 @@
 					Shop
 				</h3>
 				<ul class="nav nav-pills nav-stacked">
-					<li><a href="catalog-list.html">Women</a></li>
-					<li><a href="catalog-list.html">Men</a></li>
-					<li><a href="catalog-list.html">Kids</a></li>
-					<li><a href="catalog-list.html">Shoes</a></li>
-					<li><a href="catalog-list.html">Accessories</a></li>
+					<li><a href="{% url 'catalog'  %}">Women</a></li>
+					<li><a href="{% url 'catalog'  %}">Men</a></li>
+					<li><a href="{% url 'catalog'  %}">Kids</a></li>
+					<li><a href="{% url 'catalog'  %}">Shoes</a></li>
+					<li><a href="{% url 'catalog'  %}">Accessories</a></li>
 				</ul>
 			</div>
 			<div class="f-menu">
@@ -2207,11 +2207,11 @@
 					Information
 				</h3>
 				<ul class="nav nav-pills nav-stacked">
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="blog.html">News</a></li>
+					<li><a href="{% url 'blog' %}">Blog</a></li>
+					<li><a href="{% url 'blog' %}">News</a></li>
 					<li><a href="reviews.html">Reviews</a></li>
-					<li><a href="blog.html">Articles</a></li>
-					<li><a href="contacts.html">Contacts</a></li>
+					<li><a href="{% url 'blog' %}">Articles</a></li>
+					<li><a href="{% url 'contacts'  %}">Contacts</a></li>
 				</ul>
 			</div>
 			<div class="f-menu">
@@ -2219,11 +2219,11 @@
 					Pages
 				</h3>
 				<ul class="nav nav-pills nav-stacked">
-					<li><a href="contacts.html">About us</a></li>
-					<li><a href="contacts.html">Delivery</a></li>
-					<li><a href="contacts.html">Guarantees</a></li>
-					<li><a href="contacts.html">Contacts</a></li>
-					<li><a href="404.html">Page 404</a></li>
+					<li><a href="{% url 'contacts'  %}">About us</a></li>
+					<li><a href="{% url 'contacts'  %}">Delivery</a></li>
+					<li><a href="{% url 'contacts'  %}">Guarantees</a></li>
+					<li><a href="{% url 'contacts'  %}">Contacts</a></li>
+					<li><a href="{% url 'error' %}">Page 404</a></li>
 				</ul>
 			</div>
 			<div class="f-subscribe">
@@ -2279,21 +2279,21 @@
 
 
 <!-- jQuery plugins/scripts - start -->
-<script src="js/jquery-1.11.2.min.js"></script>
-<script src="js/jquery.bxslider.min.js"></script>
-<script src="js/fancybox/fancybox.js"></script>
-<script src="js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/swiper.jquery.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/progressbar.min.js"></script>
-<script src="js/ion.rangeSlider.min.js"></script>
-<script src="js/chosen.jquery.min.js"></script>
-<script src="js/jQuery.Brazzers-Carousel.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<script src="{% static 'scripts/jquery-1.11.2.min.js' %}"></script>
+<script src="{% static 'scripts/jquery.bxslider.min.js' %}"></script>
+<script src="{% static 'scripts/fancybox/fancybox.js' %}"></script>
+<script src="{% static 'scripts/fancybox/helpers/jquery.fancybox-thumbs.js' %}"></script>
+<script src="{% static 'scripts/jquery.flexslider-min.js' %}"></script>
+<script src="{% static 'scripts/swiper.jquery.min.js' %}"></script>
+<script src="{% static 'scripts/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'scripts/progressbar.min.js' %}"></script>
+<script src="{% static 'scripts/ion.rangeSlider.min.js' %}"></script>
+<script src="{% static 'scripts/chosen.jquery.min.js' %}"></script>
+<script src="{% static 'scripts/jQuery.Brazzers-Carousel.js' %}"></script>
+<script src="{% static 'scripts/plugins.js' %}"></script>
+<script src="{% static 'scripts/main.js' %}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhAYvx0GmLyN5hlf6Uv_e9pPvUT3YpozE"></script>
-<script src="js/gmap.js"></script>
+<script src="{% static 'scripts/gmap.js' %}"></script>
 <!-- jQuery plugins/scripts - end -->
 
 </body>

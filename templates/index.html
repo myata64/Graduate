@@ -74,7 +74,7 @@
     <div class="header-middle">
         <div class="container header-middle-cont">
             <div class="toplogo">
-                <a href="index.html">
+                <a href="{% url 'home'  %}">
                     <img src="{% static 'img/logo_chrome.png' %}" alt="AllStore - MultiConcept eCommerce Template">
                 </a>
             </div>
@@ -82,7 +82,7 @@
                 <ul>
 
                     <li>
-                        <a href="wishlist.html">
+                        <a href="{% url 'wishlist'  %}">
                             <i class="fa fa-heart"></i>
                             <span class="shop-menu-ttl">Избранное</span>
                             (<span id="topbar-favorites">1</span>)
@@ -90,25 +90,25 @@
                     </li>
 
                     <li>
-                        <a href="compare.html">
+                        <a href="{% url 'compare'  %}">
                             <i class="fa fa-bar-chart"></i>
                             <span class="shop-menu-ttl">Сравнить</span> (5)
                         </a>
                     </li>
 
                     <li class="topauth">
-                        <a href="auth.html">
+                        <a href="{% url 'auth' %}">
                             <i class="fa fa-lock"></i>
                             <span class="shop-menu-ttl">Регистрация</span>
                         </a>
-                        <a href="auth.html">
+                        <a href="{% url 'auth' %}">
                             <span class="shop-menu-ttl">Вход</span>
                         </a>
                     </li>
 
                     <li>
                         <div class="h-cart">
-                            <a href="cart.html">
+                            <a href="{% url 'cart' %}">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span class="shop-menu-ttl">Корзина</span>
                                 (<b>0</b>)
@@ -129,253 +129,253 @@
 
                 <!-- Catalog menu - start -->
                 <div class="topcatalog">
-                    <a class="topcatalog-btn" href="catalog-list.html"><span>Весь</span> каталог</a>
+                    <a class="topcatalog-btn" href="{% url 'catalog' %}"><span>Весь</span> каталог</a>
                     <ul class="topcatalog-list">
                         <li>
-                            <a href="catalog-list.html">
+                            <a href="{% url 'catalog' %}">
                                 Женское
                             </a>
                             <i class="fa fa-angle-right"></i>
                             <ul>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Трикотаж
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Платья
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Сумки
                                     </a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Shoulder Bags
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Falabella
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Becks
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Clutches
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Travel Bags
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">r
                                         Аксессуары
                                     </a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Sunglasses
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Tech Cases
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Jewelry
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Stella
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Coats & Jackets
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="catalog-list.html">
+                            <a href="{% url 'catalog' %}">
                                 Men
                             </a>
                             <i class="fa fa-angle-right"></i>
                             <ul>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Jackets & Blazers
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Pants & Shorts
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Accessories
                                     </a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Bags
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Sunglasses
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Other Accessories
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Suiting
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Shirts
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="catalog-list.html">
+                            <a href="{% url 'catalog' %}">
                                 Kids
                             </a>
                             <i class="fa fa-angle-right"></i>
                             <ul>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Girls
                                     </a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Outerwear
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 T-Shirts
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Blouses & Shirts
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Pants & Shorts
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Sleepwear & Underwear
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Skirts
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Boys
                                     </a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Shoes & Accessories
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Jumpers & Cardigans
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Shirts
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Outerwear
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Swimwear
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Baby
                                     </a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Baby Sets
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Dresses & All-In-One
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Pants & Shorts
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Shoes & Accessories
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 T-shirts
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Outerwear
                                             </a>
                                         </li>
@@ -384,118 +384,118 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="catalog-list.html">
+                            <a href="{% url 'catalog' %}">
                                 Shoes
                             </a>
                             <i class="fa fa-angle-right"></i>
                             <ul>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Women
                                     </a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Elyse
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Odette
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Brody
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Flats
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Sandals
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Men
                                     </a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Casual Shoes
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Sneakers
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Sandals
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Boots
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Mules & Clogs
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Children's
                                     </a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Girls
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Boys
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="catalog-list.html">
+                                    <a href="{% url 'catalog' %}">
                                         Baby Shoe
                                     </a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 First Walkers
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Sneakers
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Boots
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="catalog-list.html">
+                                            <a href="{% url 'catalog' %}">
                                                 Sandals & Clogs
                                             </a>
                                         </li>
@@ -512,76 +512,76 @@
 
                 <ul class="mainmenu">
                     <li>
-                        <a href="index.html" class="active">
+                        <a href="{% url 'home'  %}" class="active">
                             Home
                         </a>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="catalog-list.html">
+                        <a href="{% url 'catalog' %}">
                             Catalog <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="catalog-list.html">
+                                <a href="{% url 'catalog' %}">
                                     Catalog List - Style 1
                                 </a>
                             </li>
                             <li>
-                                <a href="catalog-list-2.html">
+                                <a href="{% url 'catalog_list_2'  %}">
                                     Catalog List - Style 2
                                 </a>
                             </li>
                             <li>
-                                <a href="catalog-gallery.html">
+                                <a href="{% url 'catalog-gallery'  %}">
                                     Catalog Gallery - Style 1
                                 </a>
                             </li>
                             <li>
-                                <a href="catalog-gallery-2.html">
+                                <a href="{% url 'catalog-gallery_2'  %}">
                                     Catalog Gallery - Style 2
                                 </a>
                             </li>
                             <li>
-                                <a href="catalog-table.html">
+                                <a href="{% url 'catalog_table'  %}">
                                     Catalog Table
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="product.html">
+                        <a href="{% url 'product'  %}">
                             Product <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="product.html">
+                                <a href="{% url 'product'  %}">
                                     Product - Style 1 (Slider)
                                 </a>
                             </li>
                             <li>
-                                <a href="product-2.html">
+                                <a href="{% url 'product_2'  %}">
                                     Product - Style 2 (Scroll)
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="elements.html">
+                        <a href="{% url 'elements'  %}">
                             Elements
                         </a>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="blog.html">
+                        <a href="{% url 'blog' %}">
                             Blog <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="blog.html">
+                                <a href="{% url 'blog' %}">
                                     Blog - Style 1
                                 </a>
                             </li>
                             <li>
-                                <a href="blog-2.html">
+                                <a href="{% url 'blog_2' %}">
                                     Blog - Style 2
                                 </a>
                             </li>
@@ -598,32 +598,32 @@
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="contacts.html">
+                                <a href="{% url 'contacts'  %}">
                                     Контакты
                                 </a>
                             </li>
                             <li>
-                                <a href="cart.html">
+                                <a href="{% url 'cart' %}">
                                     Корзина
                                 </a>
                             </li>
                             <li>
-                                <a href="auth.html">
+                                <a href="{% url 'auth' %}">
                                    Авторизация
                                 </a>
                             </li>
                             <li>
-                                <a href="compare.html">
+                                <a href="{% url 'compare'  %}">
                                     Сравнить
                                 </a>
                             </li>
                             <li>
-                                <a href="wishlist.html">
+                                <a href="{% url 'wishlist'  %}">
                                     Избранное
                                 </a>
                             </li>
                             <li>
-                                <a href="404.html">
+                                <a href="{% url 'error' %}">
                                     Error 404
                                 </a>
                             </li>
@@ -726,7 +726,7 @@
 
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x350" alt="Aspernatur excepturi rem">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -742,7 +742,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Aspernatur excepturi rem</a>
+                                <a href="{% url 'product'  %}">Aspernatur excepturi rem</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$90</b>
@@ -756,7 +756,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/277x250" alt="Aperiam tempore"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -771,7 +771,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Aperiam tempore</a>
+                                <a href="{% url 'product'  %}">Aperiam tempore</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$75</b>
@@ -779,7 +779,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x324" alt="Blanditiis eaque"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -794,7 +794,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Blanditiis eaque</a>
+                                <a href="{% url 'product'  %}">Blanditiis eaque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$115</b>
@@ -802,7 +802,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x500" alt="Excepturi ducimus"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -817,7 +817,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Excepturi ducimus</a>
+                                <a href="{% url 'product'  %}">Excepturi ducimus</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$105</b>
@@ -825,7 +825,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/329x250" alt="Sit recusandae voluptas">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -845,7 +845,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="product.html">Sit recusandae voluptas</a>
+                                <a href="{% url 'product'  %}">Sit recusandae voluptas</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$200</b>
@@ -853,7 +853,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x317" alt="Consequuntur minus atque">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -869,7 +869,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Consequuntur minus atque</a>
+                                <a href="{% url 'product'  %}">Consequuntur minus atque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$160</b>
@@ -877,7 +877,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x329" alt="Nostrum nihil ipsa"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -892,7 +892,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Nostrum nihil ipsa</a>
+                                <a href="{% url 'product'  %}">Nostrum nihil ipsa</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$140</b>
@@ -900,7 +900,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x361" alt="Non ex sapiente deserunt">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -921,7 +921,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="product.html">Non ex sapiente deserunt</a>
+                                <a href="{% url 'product'  %}">Non ex sapiente deserunt</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$65</b>
@@ -929,7 +929,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x361" alt="Amet tempore unde"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -944,7 +944,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Amet tempore unde</a>
+                                <a href="{% url 'product'  %}">Amet tempore unde</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$85</b>
@@ -952,7 +952,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x361" alt="Neque fugiat voluptates">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -968,7 +968,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Neque fugiat voluptates</a>
+                                <a href="{% url 'product'  %}">Neque fugiat voluptates</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$120</b>
@@ -976,7 +976,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x302" alt="Amet tempore unde"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -991,7 +991,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Amet tempore unde</a>
+                                <a href="{% url 'product'  %}">Amet tempore unde</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$165</b>
@@ -999,7 +999,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x327" alt="Perspiciatis dolor"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1014,7 +1014,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Perspiciatis dolor</a>
+                                <a href="{% url 'product'  %}">Perspiciatis dolor</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$205</b>
@@ -1028,7 +1028,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x262" alt="Veritatis officiis quae">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -1044,7 +1044,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Veritatis officiis quae</a>
+                                <a href="{% url 'product'  %}">Veritatis officiis quae</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$90</b>
@@ -1052,7 +1052,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x292" alt="Fuga numquam obcaecati"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1068,7 +1068,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Fuga numquam obcaecati</a>
+                                <a href="{% url 'product'  %}">Fuga numquam obcaecati</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$65</b>
@@ -1076,7 +1076,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x351" alt="Ratione magni"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1091,7 +1091,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Ratione magni</a>
+                                <a href="{% url 'product'  %}">Ratione magni</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$125</b>
@@ -1099,7 +1099,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x301" alt="Asperiores sit sequi"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1115,7 +1115,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Asperiores sit sequi</a>
+                                <a href="{% url 'product'  %}">Asperiores sit sequi</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$140</b>
@@ -1123,7 +1123,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x322" alt="Repudiandae accusamus"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1139,7 +1139,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Repudiandae accusamus</a>
+                                <a href="{% url 'product'  %}">Repudiandae accusamus</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$95</b>
@@ -1147,7 +1147,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x266" alt="Quod praesentium illum"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1163,7 +1163,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Quod praesentium illum</a>
+                                <a href="{% url 'product'  %}">Quod praesentium illum</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$80</b>
@@ -1171,7 +1171,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x301" alt="Deleniti ut earum"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1186,7 +1186,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Deleniti ut earum</a>
+                                <a href="{% url 'product'  %}">Deleniti ut earum</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$220</b>
@@ -1194,7 +1194,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x362" alt="Voluptatem quibusdam"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1210,7 +1210,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Voluptatem quibusdam</a>
+                                <a href="{% url 'product'  %}">Voluptatem quibusdam</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$185</b>
@@ -1218,7 +1218,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x422" alt="Nisi provident atque"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1234,7 +1234,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Nisi provident atque</a>
+                                <a href="{% url 'product'  %}">Nisi provident atque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$130</b>
@@ -1242,7 +1242,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x385" alt="Eveniet nobis minus possimus">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -1262,7 +1262,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="product.html">Eveniet nobis minus possimus</a>
+                                <a href="{% url 'product'  %}">Eveniet nobis minus possimus</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$80</b>
@@ -1270,7 +1270,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x288" alt="Quis ex fugiat blanditiis">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -1286,7 +1286,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Quis ex fugiat blanditiis</a>
+                                <a href="{% url 'product'  %}">Quis ex fugiat blanditiis</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$150</b>
@@ -1300,7 +1300,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x279" alt="Nisi autem error"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1315,7 +1315,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Nisi autem error</a>
+                                <a href="{% url 'product'  %}">Nisi autem error</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$65</b>
@@ -1323,7 +1323,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x403" alt="Quod soluta corrupti"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1339,7 +1339,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Quod soluta corrupti</a>
+                                <a href="{% url 'product'  %}">Quod soluta corrupti</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$175</b>
@@ -1347,7 +1347,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x280" alt="Ipsa doloremque"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1362,7 +1362,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Ipsa doloremque</a>
+                                <a href="{% url 'product'  %}">Ipsa doloremque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$85</b>
@@ -1370,7 +1370,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x409" alt="Dignissimos fuga"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1385,7 +1385,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Dignissimos fuga</a>
+                                <a href="{% url 'product'  %}">Dignissimos fuga</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$205</b>
@@ -1393,7 +1393,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/252x250" alt="Nisi autem error"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1408,7 +1408,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Nisi autem error</a>
+                                <a href="{% url 'product'  %}">Nisi autem error</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$95</b>
@@ -1422,7 +1422,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/316x250" alt="Tempora ea ratione vel"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1442,7 +1442,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="product.html">Tempora ea ratione vel</a>
+                                <a href="{% url 'product'  %}">Tempora ea ratione vel</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$120</b>
@@ -1450,7 +1450,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/281x250" alt="Minus sequi iste"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1465,7 +1465,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Minus sequi iste</a>
+                                <a href="{% url 'product'  %}">Minus sequi iste</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$135</b>
@@ -1473,7 +1473,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/265x250" alt="Dignissimos fuga voluptates totam">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -1489,7 +1489,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Dignissimos fuga voluptates totam</a>
+                                <a href="{% url 'product'  %}">Dignissimos fuga voluptates totam</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$85</b>
@@ -1497,7 +1497,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/291x250" alt="Perferendis recusandae"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1513,7 +1513,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Perferendis recusandae</a>
+                                <a href="{% url 'product'  %}">Perferendis recusandae</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$70</b>
@@ -1521,7 +1521,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/277x250" alt="Officiis nihil culpa"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1537,7 +1537,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Officiis nihil culpa</a>
+                                <a href="{% url 'product'  %}">Officiis nihil culpa</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$180</b>
@@ -1545,7 +1545,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/295x250" alt="Distinctio modi quos"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1561,7 +1561,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Distinctio modi quos</a>
+                                <a href="{% url 'product'  %}">Distinctio modi quos</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$195</b>
@@ -1569,7 +1569,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/301x250" alt="Corrupti velit vero"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1585,7 +1585,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Corrupti velit vero</a>
+                                <a href="{% url 'product'  %}">Corrupti velit vero</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$220</b>
@@ -1593,7 +1593,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/289x250" alt="Dicta doloremque hic"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1609,7 +1609,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Dicta doloremque hic</a>
+                                <a href="{% url 'product'  %}">Dicta doloremque hic</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$90</b>
@@ -1627,7 +1627,7 @@
 
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x350" alt="Aspernatur excepturi rem">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -1642,7 +1642,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Aspernatur excepturi rem</a>
+                                <a href="{% url 'product'  %}">Aspernatur excepturi rem</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$90</b>
@@ -1656,7 +1656,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/277x250" alt="Aperiam tempore"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1670,7 +1670,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Aperiam tempore</a>
+                                <a href="{% url 'product'  %}">Aperiam tempore</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$75</b>
@@ -1678,7 +1678,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x324" alt="Blanditiis eaque"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1692,7 +1692,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Blanditiis eaque</a>
+                                <a href="{% url 'product'  %}">Blanditiis eaque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$115</b>
@@ -1700,7 +1700,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x500" alt="Excepturi ducimus"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1714,7 +1714,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Excepturi ducimus</a>
+                                <a href="{% url 'product'  %}">Excepturi ducimus</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$105</b>
@@ -1722,7 +1722,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/329x250" alt="Sit recusandae voluptas">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -1741,7 +1741,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="product.html">Sit recusandae voluptas</a>
+                                <a href="{% url 'product'  %}">Sit recusandae voluptas</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$200</b>
@@ -1749,7 +1749,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x317" alt="Consequuntur minus atque">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -1764,7 +1764,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Consequuntur minus atque</a>
+                                <a href="{% url 'product'  %}">Consequuntur minus atque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$160</b>
@@ -1772,7 +1772,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x329" alt="Nostrum nihil ipsa"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1786,7 +1786,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Nostrum nihil ipsa</a>
+                                <a href="{% url 'product'  %}">Nostrum nihil ipsa</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$140</b>
@@ -1794,7 +1794,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x361" alt="Non ex sapiente deserunt">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -1814,7 +1814,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="product.html">Non ex sapiente deserunt</a>
+                                <a href="{% url 'product'  %}">Non ex sapiente deserunt</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$65</b>
@@ -1822,7 +1822,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x361" alt="Amet tempore unde"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1836,7 +1836,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Amet tempore unde</a>
+                                <a href="{% url 'product'  %}">Amet tempore unde</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$85</b>
@@ -1844,7 +1844,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x361" alt="Neque fugiat voluptates">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -1859,7 +1859,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Neque fugiat voluptates</a>
+                                <a href="{% url 'product'  %}">Neque fugiat voluptates</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$120</b>
@@ -1876,7 +1876,7 @@
 
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x302" alt="Amet tempore unde"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1890,7 +1890,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Amet tempore unde</a>
+                                <a href="{% url 'product'  %}">Amet tempore unde</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$165</b>
@@ -1898,7 +1898,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x327" alt="Perspiciatis dolor"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1912,7 +1912,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Perspiciatis dolor</a>
+                                <a href="{% url 'product'  %}">Perspiciatis dolor</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$205</b>
@@ -1926,7 +1926,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x262" alt="Veritatis officiis quae">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -1941,7 +1941,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Veritatis officiis quae</a>
+                                <a href="{% url 'product'  %}">Veritatis officiis quae</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$90</b>
@@ -1949,7 +1949,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x292" alt="Fuga numquam obcaecati"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -1964,7 +1964,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Fuga numquam obcaecati</a>
+                                <a href="{% url 'product'  %}">Fuga numquam obcaecati</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$65</b>
@@ -1972,7 +1972,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x351" alt="Ratione magni"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -1986,7 +1986,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Ratione magni</a>
+                                <a href="{% url 'product'  %}">Ratione magni</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$125</b>
@@ -1994,7 +1994,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x301" alt="Asperiores sit sequi"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -2009,7 +2009,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Asperiores sit sequi</a>
+                                <a href="{% url 'product'  %}">Asperiores sit sequi</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$140</b>
@@ -2017,7 +2017,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x322" alt="Repudiandae accusamus"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -2032,7 +2032,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Repudiandae accusamus</a>
+                                <a href="{% url 'product'  %}">Repudiandae accusamus</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$95</b>
@@ -2040,7 +2040,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x266" alt="Quod praesentium illum"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -2055,7 +2055,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Quod praesentium illum</a>
+                                <a href="{% url 'product'  %}">Quod praesentium illum</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$80</b>
@@ -2063,7 +2063,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x301" alt="Deleniti ut earum"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -2077,7 +2077,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Deleniti ut earum</a>
+                                <a href="{% url 'product'  %}">Deleniti ut earum</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$220</b>
@@ -2085,7 +2085,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x362" alt="Voluptatem quibusdam"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -2100,7 +2100,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Voluptatem quibusdam</a>
+                                <a href="{% url 'product'  %}">Voluptatem quibusdam</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$185</b>
@@ -2117,7 +2117,7 @@
 
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x422" alt="Nisi provident atque"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -2132,7 +2132,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Nisi provident atque</a>
+                                <a href="{% url 'product'  %}">Nisi provident atque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$130</b>
@@ -2140,7 +2140,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x385" alt="Eveniet nobis minus possimus">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -2159,7 +2159,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="product.html">Eveniet nobis minus possimus</a>
+                                <a href="{% url 'product'  %}">Eveniet nobis minus possimus</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$80</b>
@@ -2167,7 +2167,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x288" alt="Quis ex fugiat blanditiis">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -2182,7 +2182,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Quis ex fugiat blanditiis</a>
+                                <a href="{% url 'product'  %}">Quis ex fugiat blanditiis</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$150</b>
@@ -2196,7 +2196,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x279" alt="Nisi autem error"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -2210,7 +2210,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Nisi autem error</a>
+                                <a href="{% url 'product'  %}">Nisi autem error</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$65</b>
@@ -2218,7 +2218,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x403" alt="Quod soluta corrupti"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -2233,7 +2233,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Quod soluta corrupti</a>
+                                <a href="{% url 'product'  %}">Quod soluta corrupti</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$175</b>
@@ -2241,7 +2241,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x280" alt="Ipsa doloremque"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -2255,7 +2255,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Ipsa doloremque</a>
+                                <a href="{% url 'product'  %}">Ipsa doloremque</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$85</b>
@@ -2263,7 +2263,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/250x409" alt="Dignissimos fuga"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -2277,7 +2277,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Dignissimos fuga</a>
+                                <a href="{% url 'product'  %}">Dignissimos fuga</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$205</b>
@@ -2296,7 +2296,7 @@
 
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/252x250" alt="Nisi autem error"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -2310,7 +2310,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Nisi autem error</a>
+                                <a href="{% url 'product'  %}">Nisi autem error</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$95</b>
@@ -2324,7 +2324,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/316x250" alt="Tempora ea ratione vel"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -2343,7 +2343,7 @@
                                 </div>
                             </div>
                             <h3>
-                                <a href="product.html">Tempora ea ratione vel</a>
+                                <a href="{% url 'product'  %}">Tempora ea ratione vel</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$120</b>
@@ -2351,7 +2351,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/281x250" alt="Minus sequi iste"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i
@@ -2365,7 +2365,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Minus sequi iste</a>
+                                <a href="{% url 'product'  %}">Minus sequi iste</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$135</b>
@@ -2373,7 +2373,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/265x250" alt="Dignissimos fuga voluptates totam">
                                     <!-- NO SPACE --></a>
                                 <p class="prod-i-info">
@@ -2388,7 +2388,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Dignissimos fuga voluptates totam</a>
+                                <a href="{% url 'product'  %}">Dignissimos fuga voluptates totam</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$85</b>
@@ -2396,7 +2396,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/291x250" alt="Perferendis recusandae"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -2411,7 +2411,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Perferendis recusandae</a>
+                                <a href="{% url 'product'  %}">Perferendis recusandae</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$70</b>
@@ -2419,7 +2419,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/277x250" alt="Officiis nihil culpa"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -2434,7 +2434,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Officiis nihil culpa</a>
+                                <a href="{% url 'product'  %}">Officiis nihil culpa</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$180</b>
@@ -2442,7 +2442,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/295x250" alt="Distinctio modi quos"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -2457,7 +2457,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Distinctio modi quos</a>
+                                <a href="{% url 'product'  %}">Distinctio modi quos</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$195</b>
@@ -2465,7 +2465,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/301x250" alt="Corrupti velit vero"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -2480,7 +2480,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Corrupti velit vero</a>
+                                <a href="{% url 'product'  %}">Corrupti velit vero</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$220</b>
@@ -2488,7 +2488,7 @@
                         </li>
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img
+                                <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img
                                         src="http://placehold.it/289x250" alt="Dicta doloremque hic"><!-- NO SPACE -->
                                 </a>
                                 <p class="prod-i-info">
@@ -2503,7 +2503,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">Dicta doloremque hic</a>
+                                <a href="{% url 'product'  %}">Dicta doloremque hic</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>$90</b>
@@ -2581,11 +2581,11 @@
             <div class="flexslider discounts-list">
                 <ul class="slides">
                     <li class="discounts-i">
-                        <a href="product.html" class="discounts-i-img">
+                        <a href="{% url 'product'  %}" class="discounts-i-img">
                             <img src="http://placehold.it/120x120" alt="Dicta doloremque">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="product.html">Dicta doloremque</a>
+                            <a href="{% url 'product'  %}">Dicta doloremque</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$115</b>
@@ -2593,11 +2593,11 @@
                         </p>
                     </li>
                     <li class="discounts-i">
-                        <a href="product.html" class="discounts-i-img">
+                        <a href="{% url 'product'  %}" class="discounts-i-img">
                             <img src="http://placehold.it/99x120" alt="Similique delectus">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="product.html">Similique delectus</a>
+                            <a href="{% url 'product'  %}">Similique delectus</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$105</b>
@@ -2605,11 +2605,11 @@
                         </p>
                     </li>
                     <li class="discounts-i">
-                        <a href="product.html" class="discounts-i-img">
+                        <a href="{% url 'product'  %}" class="discounts-i-img">
                             <img src="http://placehold.it/75x120" alt="Adipisci nemo">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="product.html">Adipisci nemo</a>
+                            <a href="{% url 'product'  %}">Adipisci nemo</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$70</b>
@@ -2617,11 +2617,11 @@
                         </p>
                     </li>
                     <li class="discounts-i">
-                        <a href="product.html" class="discounts-i-img">
+                        <a href="{% url 'product'  %}" class="discounts-i-img">
                             <img src="http://placehold.it/65x120" alt="Ullam harum">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="product.html">Ullam harum</a>
+                            <a href="{% url 'product'  %}">Ullam harum</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$55</b>
@@ -2629,11 +2629,11 @@
                         </p>
                     </li>
                     <li class="discounts-i">
-                        <a href="product.html" class="discounts-i-img">
+                        <a href="{% url 'product'  %}" class="discounts-i-img">
                             <img src="http://placehold.it/78x120" alt="Similique delectus">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="product.html">Similique delectus</a>
+                            <a href="{% url 'product'  %}">Similique delectus</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$135</b>
@@ -2641,11 +2641,11 @@
                         </p>
                     </li>
                     <li class="discounts-i">
-                        <a href="product.html" class="discounts-i-img">
+                        <a href="{% url 'product'  %}" class="discounts-i-img">
                             <img src="http://placehold.it/81x120" alt="Туфли Dr.Koffer">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="product.html">Туфли Dr.Koffer</a>
+                            <a href="{% url 'product'  %}">Туфли Dr.Koffer</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$190</b>
@@ -2653,11 +2653,11 @@
                         </p>
                     </li>
                     <li class="discounts-i">
-                        <a href="product.html" class="discounts-i-img">
+                        <a href="{% url 'product'  %}" class="discounts-i-img">
                             <img src="http://placehold.it/117x120" alt="Quod consequatur">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="product.html">Quod consequatur</a>
+                            <a href="{% url 'product'  %}">Quod consequatur</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$120</b>
@@ -2665,11 +2665,11 @@
                         </p>
                     </li>
                     <li class="discounts-i">
-                        <a href="product.html" class="discounts-i-img">
+                        <a href="{% url 'product'  %}" class="discounts-i-img">
                             <img src="http://placehold.it/80x120" alt="Dolore fugit">
                         </a>
                         <h3 class="discounts-i-ttl">
-                            <a href="product.html">Dolore fugit</a>
+                            <a href="{% url 'product'  %}">Dolore fugit</a>
                         </h3>
                         <p class="discounts-i-price">
                             <b>$80</b>
@@ -2680,7 +2680,7 @@
             </div>
             <div class="discounts-info">
                 <p>Special offer!<br>Limited time only</p>
-                <a href="catalog-list.html">Shop now</a>
+                <a href="{% url 'catalog' %}">Shop now</a>
             </div>
         </div>
 
@@ -2694,7 +2694,7 @@
                     </a>
                     <time class="posts-i-date" datetime="2016-11-09 00:00:00"><span>30</span> Jan</time>
                     <div class="posts-i-info">
-                        <a href="blog.html" class="posts-i-ctg">Reviews</a>
+                        <a href="{% url 'blog' %}" class="posts-i-ctg">Reviews</a>
                         <h3 class="posts-i-ttl">
                             <a href="post.html">Animi quaerat at</a>
                         </h3>
@@ -2706,7 +2706,7 @@
                     </a>
                     <time class="posts-i-date" datetime="2016-11-09 00:00:00"><span>29</span> Jan</time>
                     <div class="posts-i-info">
-                        <a href="blog.html" class="posts-i-ctg">Articles</a>
+                        <a href="{% url 'blog' %}" class="posts-i-ctg">Articles</a>
                         <h3 class="posts-i-ttl">
                             <a href="post.html">Ex atque commodi</a>
                         </h3>
@@ -2718,7 +2718,7 @@
                     </a>
                     <time class="posts-i-date" datetime="2016-11-09 00:00:00"><span>25</span> Jan</time>
                     <div class="posts-i-info">
-                        <a href="blog.html" class="posts-i-ctg">News</a>
+                        <a href="{% url 'blog' %}" class="posts-i-ctg">News</a>
                         <h3 class="posts-i-ttl">
                             <a href="post.html">Hic quod maxime deserunt</a>
                         </h3>
@@ -2879,7 +2879,7 @@
         <!-- Quick View Product - start -->
         <div class="qview-modal">
             <div class="prod-wrap">
-                <a href="product.html">
+                <a href="{% url 'product'  %}">
                     <h1 class="main-ttl">
                         <span>Reprehenderit adipisci</span>
                     </h1>
@@ -3062,7 +3062,7 @@
         <div class="container">
             <div class="row">
                 <div class="companyinfo">
-                    <a href="index.html">
+                    <a href="{% url 'home'  %}">
                         <img src="img/logo-b.png" alt="AllStore - MultiConcept eCommerce Responsive HTML5 Template">
                         AllStore - MultiConcept eCommerce Responsive HTML5 Template
                     </a>
@@ -3171,11 +3171,11 @@
                     About us
                 </h3>
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="catalog-list.html">Catalog</a></li>
-                    <li><a href="elements.html">Elements</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
+                    <li class="active"><a href="{% url 'home'  %}">Home</a></li>
+                    <li><a href="{% url 'catalog' %}">Catalog</a></li>
+                    <li><a href="{% url 'elements'  %}">Elements</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'contacts'  %}">Contacts</a></li>
                 </ul>
             </div>
             <div class="f-menu">
@@ -3183,11 +3183,11 @@
                     Shop
                 </h3>
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a href="catalog-list.html">Women</a></li>
-                    <li><a href="catalog-list.html">Men</a></li>
-                    <li><a href="catalog-list.html">Kids</a></li>
-                    <li><a href="catalog-list.html">Shoes</a></li>
-                    <li><a href="catalog-list.html">Accessories</a></li>
+                    <li><a href="{% url 'catalog' %}">Women</a></li>
+                    <li><a href="{% url 'catalog' %}">Men</a></li>
+                    <li><a href="{% url 'catalog' %}">Kids</a></li>
+                    <li><a href="{% url 'catalog' %}">Shoes</a></li>
+                    <li><a href="{% url 'catalog' %}">Accessories</a></li>
                 </ul>
             </div>
             <div class="f-menu">
@@ -3195,11 +3195,11 @@
                     Information
                 </h3>
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="blog.html">News</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'blog' %}">News</a></li>
                     <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="blog.html">Articles</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="{% url 'blog' %}">Articles</a></li>
+                    <li><a href="{% url 'contacts'  %}">Contacts</a></li>
                 </ul>
             </div>
             <div class="f-menu">
@@ -3207,11 +3207,11 @@
                     Pages
                 </h3>
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a href="contacts.html">About us</a></li>
-                    <li><a href="contacts.html">Delivery</a></li>
-                    <li><a href="contacts.html">Guarantees</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
-                    <li><a href="404.html">Page 404</a></li>
+                    <li><a href="{% url 'contacts'  %}">About us</a></li>
+                    <li><a href="{% url 'contacts'  %}">Delivery</a></li>
+                    <li><a href="{% url 'contacts'  %}">Guarantees</a></li>
+                    <li><a href="{% url 'contacts'  %}">Contacts</a></li>
+                    <li><a href="{% url 'error' %}">Page 404</a></li>
                 </ul>
             </div>
             <div class="f-subscribe">

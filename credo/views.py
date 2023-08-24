@@ -7,20 +7,76 @@ from django.views.decorators.csrf import csrf_protect
 from .models import User, Product
 
 
+def error(request):
+    return render(request, '404.html')
+
+
+def auth(request):
+    return render(request, 'auth.html')
+
+
+def blog(request):
+    return render(request, 'blog.html')
+
+
+def blog_2(request):
+    return render(request, 'blog-2.html')
+
+
+def cart(request):
+    return render(request, 'cart.html')
+
+
+def catalog_gallery(request):
+    return render(request, 'catalog-gallery.html')
+
+
+def catalog_gallery_2(request):
+    return render(request, 'catalog-gallery-2.html')
+
+
+def catalog_list(request):
+    return render(request, 'catalog-list.html')
+
+
+def catalog_list_2(request):
+    return render(request, 'catalog-list-2.html')
+
+
+def catalog_table(request):
+    return render(request, 'catalog-table.html')
+
+
+def compare(request):
+    return render(request, 'compare.html')
+
+
+def contacts(request):
+    return render(request, 'contacts.html')
+
+
+def elements(request):
+    return render(request, 'elements.html')
+
+
 def home(request):
     return render(request, 'index.html')
 
 
-def account(request):
-    return render(request, 'account.html')
+def post(request):
+    return render(request, 'post.html')
 
 
-def entrance(request):
-    return render(request, 'entrance.html')
+def product(request):
+    return render(request, 'product.html')
 
 
-def catalog(request):
-    return render(request, 'catalog-list.html')
+def product_2(request):
+    return render(request, 'product-2.html')
+
+
+def wishlist(request):
+    return render(request, 'wishlist.html')
 
 
 def shoes(request):
