@@ -19,6 +19,10 @@ def entrance(request):
     return render(request, 'entrance.html')
 
 
+def catalog(request):
+    return render(request, 'catalog-list.html')
+
+
 def shoes(request):
     products = Product.objects.all()
     return render(request, 'shoes.html', {'products': products})
