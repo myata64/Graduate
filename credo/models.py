@@ -14,21 +14,23 @@ class User(models.Model):
 # Товар
 
 class Category(models.Model):
-    category_name = models.CharField(max_length=250)
+    category_name = models.CharField(max_length=250, null=True, blank=True, default='')
 
     def __str__(self):
         return self.category_name
 
 
 class Product(models.Model):
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    product_name = models.CharField(max_length=255)
-    size = models.CharField(max_length=15)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    color = models.CharField(max_length=25)
-    availability_status = models.CharField(max_length=10)
-    description = models.CharField(max_length=500, blank=True)
-    image = models.ImageField(blank=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)
+
+    product_name = models.CharField(max_length=255, default='Новый продукт')
+    size = models.CharField(max_length=15, default='')
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    color = models.CharField(max_length=20, default='белый')
+    availability_status = models.CharField(max_length=10, default='в наличии')
+
+    description = models.CharField(max_length=500, blank=True, default='')
+    image = models.ImageField(blank=True, null=True)
 
     def __str__(self):
         return self.product_name

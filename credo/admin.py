@@ -10,12 +10,12 @@ class UserAdmin(admin.ModelAdmin):
 
 
 @admin.register(Product)
-class CourseAdmin(admin.ModelAdmin):
+class Admin(admin.ModelAdmin):
     form = ProductForm
     pass
 
 
 @admin.register(Category)
-class CourseCategory(admin.ModelAdmin):
+class Category(admin.ModelAdmin):
     form = CategoryForm
     pass

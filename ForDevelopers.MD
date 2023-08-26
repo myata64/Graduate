@@ -16,7 +16,7 @@
 
 При запущенном контейнеры любые изменения(имена классов, ссылки, изображения) в html в браузере будут обновляться автоматически.
 - Проверка на занятость портов: `sudo lsof -i :5433`</br>
-- `sudo пшdocker run --name my-postgres -e`
+- `sudo docker run --name my-postgres -e`
 - Пересборка контейнера: `sudo docker-compose build` </br>
 - Запуск контейнеров: </br>
   `sudo docker-compose up -d` </br>
@@ -53,6 +53,11 @@
   `sudo docker-compose up -d` </br>
 - Ну и теперь мы можем делать миграции (докер будет выводить в консоль журнал, потому следющую команду нужно выполнять в другой консоли): </br>
   `sudo docker-compose exec web python manage.py migrate`
+
+### Ошибки
+#### Ошибка создания таблиц
+- Ни раз я сталкивался с ошибкой создания таблиц. По какой то причине, после успешных миграций, таблицы так и не создавались. Именно поэтому мне пришлось узнать о такой команде как: 
+</br> `sudo docker-compose exec web python manage.py migrate credo zero` - эта команда откатывает миграции. А затем применял команду: </br> `sudo docker-compose exec web python manage.py migrate`
 
 
 # Django Admin
