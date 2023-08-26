@@ -13,7 +13,6 @@ def error(request):
 
 def add_post(request):
     form = AddPostForm()
-
     return render(request, 'add-post.html', {"form": form,})
 
 def auth(request):
