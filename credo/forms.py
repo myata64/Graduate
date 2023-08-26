@@ -1,5 +1,5 @@
 from django import forms
-from .models import User, Category, Product
+from .models import User, Category, SubCategory, Product
 
 
 class UserForm(forms.ModelForm):
@@ -11,6 +11,11 @@ class UserForm(forms.ModelForm):
 class CategoryForm(forms.ModelForm):
     class Meta:
         model = Category
+        fields = '__all__'
+
+class SubCategoryForm(forms.ModelForm):
+    class Meta:
+        model = SubCategory
         fields = '__all__'
 
 

@@ -36,7 +36,9 @@ def catalog_gallery_2(request):
 
 
 def catalog_list(request):
-    return render(request, 'catalog-list.html')
+    products = Product.objects.all() #Здесь создал переменную, кт. получает объкты модели
+    context = {'products': products} #Передал объекты в словарик
+    return render(request, 'catalog-list.html', context)
 
 
 def catalog_list_2(request):
