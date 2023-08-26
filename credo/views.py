@@ -5,11 +5,16 @@ from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_protect
 from .models import User, Product
+from .forms import *
 
 
 def error(request):
     return render(request, '404.html')
 
+def add_post(request):
+    form = AddPostForm()
+
+    return render(request, 'add-post.html', {"form": form,})
 
 def auth(request):
     return render(request, 'auth.html')
@@ -100,11 +105,11 @@ def register(request):
         # Проверка на существование почты в БД
         if User.objects.filter(email=email).exists():
             messages.error(request, 'Пользователь уже существует')
-            return redirect('register')
+            return redirect('auth')
         # Проверка на совпадение паролей
         if confirm_password != password:
             messages.error(request, 'Пароли не совпадают.')
-            return redirect('register')
+            return redirect('auth')
         else:
             hashed_password = make_password(password)
             User.objects.create(username=email, email=email, password=hashed_password)
@@ -112,7 +117,7 @@ def register(request):
         messages.success(request, 'Регистрация прошла успешно.')
         return redirect('home')
 
-    return render(request, 'registration.html')
+    return render(request, 'auth.html')
 
 
 @csrf_protect

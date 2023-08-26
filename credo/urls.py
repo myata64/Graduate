@@ -24,6 +24,7 @@ app_name = 'credo'
 urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('error/', views.error, name='error'),
+                  path('addpost/', views.add_post, name='add_post'),
                   path('auth/', views.auth, name='auth'),
                   path('blog/', views.blog, name='blog'),
                   path('blog/', views.blog_2, name='blog_2'),

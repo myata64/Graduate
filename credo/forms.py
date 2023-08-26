@@ -1,5 +1,14 @@
 from django import forms
-from .models import User, Category, SubCategory, Product
+# from .models import User, Category, SubCategory, Product
+from .models import *
+
+
+class AddPostForm(forms.Form):
+    category_name = forms.ModelChoiceField(queryset=Category.objects.all())
+    subcategory_name = forms.ModelChoiceField(queryset=SubCategory.objects.all())
+
+
+
 
 
 class UserForm(forms.ModelForm):
