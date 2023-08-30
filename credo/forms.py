@@ -9,7 +9,6 @@ class AddPostForm(forms.ModelForm):
         fields = '__all__'
 
 
-
 class UserForm(forms.ModelForm):
     class Meta:
         model = User
@@ -19,6 +18,30 @@ class UserForm(forms.ModelForm):
 class CategoryForm(forms.ModelForm):
     class Meta:
         model = Category
+        fields = '__all__'
+
+
+class BrandForm(forms.ModelForm):
+    class Meta:
+        model = Brand
+        fields = '__all__'
+
+
+class ColorForm(forms.ModelForm):
+    class Meta:
+        model = Color
+        fields = '__all__'
+
+
+class SizeForm(forms.ModelForm):
+    class Meta:
+        model = Size
+        fields = '__all__'
+
+
+class AvailabilityStatusForm(forms.ModelForm):
+    class Meta:
+        model = AvailabilityStatus
         fields = '__all__'
 
 

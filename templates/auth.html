@@ -691,12 +691,16 @@
             </div>
             <div class="auth-col">
                 <h2>Register</h2>
-                <form method="post" class="register">
+                <form  method="post" class="register">
+                    {% csrf_token %}
                     <p>
-                        <label for="reg_email">Email <span class="required">*</span></label><input type="email" id="reg_email">
+                        <label style="text-align: left;" for="reg_email">Email <span class="required">*</span></label><input type="email" id="reg_email">
                     </p>
                     <p>
-                        <label for="reg_password">Password <span class="required">*</span></label><input type="password" id="reg_password">
+                        <label style="text-align: left;" for="reg_password">Password <span class="required">*</span></label><input type="password" id="reg_password">
+                    </p>
+                    <p>
+                        <label style="text-align: left;" for="reg_confirm_password">Confirm password <span class="required">*</span></label><input type="password" id="reg_password">
                     </p>
                     <p class="auth-submit">
                         <input type="submit" value="Register">

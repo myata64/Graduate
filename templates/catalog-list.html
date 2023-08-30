@@ -1271,12 +1271,14 @@
 			<div class="prod-items section-items">
                 {% for product in products %}
 				<div class="prodlist-i">
-
-					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE --><img src="#" alt="{{ product.product_name}}"><!-- NO SPACE --></a>
+					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE -->
+                        {% if product.image %}
+                        <img src="{{ product.image.url}}" alt="{{ product.product_name}}"><!-- NO SPACE --></a>
+                        {% endif %}
 					<div class="prodlist-i-cont">
 						<h3><a href="{% url 'product'  %}">{{ product.product_name}}</a></h3>
 						<div class="prodlist-i-txt">
-							Quisquam totam quas veritatis dolor voluptates, laudantium repellendus. Cupiditate repellat tempora consequatur sequi, neque					</div>
+							{{ product.description }}					</div>
 						<div class="prodlist-i-skuwrap">
 							<div class="prodlist-i-skuitem">
 								<p class="prodlist-i-skuttl">Color</p>
@@ -1314,7 +1316,7 @@
 								<a href="#" class="prodlist-i-add">Add to cart</a>
 							</p>
 						<span class="prodlist-i-price">
-							<b>$59</b>
+							<b>{{ product.price }} BYN</b>
 													</span>
 						</div>
 						<p class="prodlist-i-info">
@@ -1338,8 +1340,7 @@
 						</ul>
 					</div>
 				</div>
-                    {% endfor %}
-
+                {% endfor %}
 			</div>
 
 			<!-- Pagination - start -->

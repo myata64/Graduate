@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import User, Category, SubCategory, Product
-from .forms import UserForm, CategoryForm, SubCategoryForm, ProductForm
+from .models import *
+from .forms import *
 
 
 @admin.register(User)
@@ -18,6 +18,30 @@ class Category(admin.ModelAdmin):
 @admin.register(SubCategory)
 class SubCategory(admin.ModelAdmin):
     form = SubCategoryForm
+    pass
+
+
+@admin.register(Brand)
+class Brand(admin.ModelAdmin):
+    form = BrandForm
+    pass
+
+
+@admin.register(Size)
+class Size(admin.ModelAdmin):
+    form = SizeForm
+    pass
+
+
+@admin.register(Color)
+class Color(admin.ModelAdmin):
+    form = ColorForm
+    pass
+
+
+@admin.register(AvailabilityStatus)
+class AvailabilityStatus(admin.ModelAdmin):
+    form = AvailabilityStatusForm
     pass
 
 
