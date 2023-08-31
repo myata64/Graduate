@@ -8,10 +8,11 @@
 
 
 - Проверка на занятость портов: `sudo lsof -i :5433`</br>
-- `sudo пшdocker run --name my-postgres -e`
+- `sudo docker run --name my-postgres -e`
 - Пересборка контейнера: `sudo docker-compose build` </br>
 - Запуск контейнеров: </br>
   `sudo docker-compose up -d` </br>
+  `sudo docker-compose exec web python manage.py makemigrations` </br>
   `sudo docker-compose exec web python manage.py migrate` </br>
   `sudo docker-compose exec web python manage.py runserver 0.0.0.0:8000`
 - Проверка на занятость портов: `sudo lsof -i :5433`</br>
@@ -32,6 +33,13 @@
 `sudo docker-compose stop` - остановить работу контейнеров </br>
 `sudo docker-compose down` - удалить контейнеры </br>
 `sudo docker-compose ps` - просмотр списка запущенных контейнеров
+
+
+# Redis 
+- Откройте веб-браузер и перейдите по адресу http://localhost:8001
+- 'HOST': redis
+- Port: 6379
+- Name: redis-local
 
 # Миграции
 

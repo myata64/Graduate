@@ -3,18 +3,49 @@ from django.contrib.auth.forms import User
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate, login, logout
+from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_protect
-from .models import User, Product
+# from .models import User, Product
 from .forms import *
+import logging
+
+logger = logging.getLogger('registration')
+
+
+def register(request):
+    if request.method == 'POST':
+        email = request.POST.get('reg_email')
+        password = request.POST.get('reg_password')
+        confirm_password = request.POST.get('confirm_reg_password')
+        if password == confirm_password: # and password.is_valid() and email.is_valid():
+            if User.objects.filter(email=email).exists():
+                messages.error(request, 'Email уже зарегистрирован')
+                return render(request, 'auth.html')
+            user = User.objects.create(
+                username=email,
+                email=email,
+                password=make_password(password)
+            )
+            send_mail(
+                'Registration confirmed',
+                'You',
+                'credoshop.@gmail.com',
+                [email],
+                fail_silently=False
+            )
+
+            logger.info('Новый пользователь зарегистрирован', extra={'userid': user.id})
+            return redirect('auth')
 
 
 def error(request):
     return render(request, '404.html')
 
+
 def add_post(request):
     form = AddPostForm()
+    return render(request, 'add-post.html', {"form": form, })
 
-    return render(request, 'add-post.html', {"form": form,})
 
 def auth(request):
     return render(request, 'auth.html')
@@ -41,8 +72,8 @@ def catalog_gallery_2(request):
 
 
 def catalog_list(request):
-    products = Product.objects.all() #Здесь создал переменную, кт. получает объкты модели
-    context = {'products': products} #Передал объекты в словарик
+    products = Product.objects.all()  # Здесь создал переменную, кт. получает объкты модели
+    context = {'products': products}  # Передал объекты в словарик
     return render(request, 'catalog-list.html', context)
 
 
@@ -89,35 +120,6 @@ def wishlist(request):
 def shoes(request):
     products = Product.objects.all()
     return render(request, 'shoes.html', {'products': products})
-
-
-def newbalance(request):
-    return render(request, 'nb990.html')
-
-
-def register(request):
-    if request.method == 'POST':
-        # username = request.POST['email']
-        email = request.POST['email']
-        password = request.POST['password']
-        confirm_password = request.POST['confirm_password']
-
-        # Проверка на существование почты в БД
-        if User.objects.filter(email=email).exists():
-            messages.error(request, 'Пользователь уже существует')
-            return redirect('auth')
-        # Проверка на совпадение паролей
-        if confirm_password != password:
-            messages.error(request, 'Пароли не совпадают.')
-            return redirect('auth')
-        else:
-            hashed_password = make_password(password)
-            User.objects.create(username=email, email=email, password=hashed_password)
-
-        messages.success(request, 'Регистрация прошла успешно.')
-        return redirect('home')
-
-    return render(request, 'auth.html')
 
 
 @csrf_protect
