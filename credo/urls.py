@@ -43,6 +43,8 @@ urlpatterns = [
                   path('product/', views.product_2, name='product_2'),
                   path('wishlist/', views.wishlist, name='wishlist'),
 
+                  path('register/', views.register, name='register'),
+
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:

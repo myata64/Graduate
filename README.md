@@ -34,8 +34,17 @@
 `sudo docker-compose down` - удалить контейнеры </br>
 `sudo docker-compose ps` - просмотр списка запущенных контейнеров
 
+# pgAdmin (PostgreSQL)
+- Откройте веб-браузер и перейдите по адресу http://localhost:8080
 
-# Redis 
+### pgAdmim
+- credostore.mail@gmail.com
+- lalka228
+### postgreSQL
+- Имя пользователя myata64
+- Пароль pass1234
+
+# Redis Insight (Redis)
 - Откройте веб-браузер и перейдите по адресу http://localhost:8001
 - 'HOST': redis
 - Port: 6379

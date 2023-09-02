@@ -16,8 +16,8 @@ def register(request):
     if request.method == 'POST':
         email = request.POST.get('reg_email')
         password = request.POST.get('reg_password')
-        confirm_password = request.POST.get('confirm_reg_password')
-        if password == confirm_password: # and password.is_valid() and email.is_valid():
+        confirm_password = request.POST.get('reg_confirm_password')
+        if password == confirm_password and len(password) > 8: # and password.is_valid() and email.is_valid():
             if User.objects.filter(email=email).exists():
                 messages.error(request, 'Email уже зарегистрирован')
                 return render(request, 'auth.html')
@@ -29,13 +29,38 @@ def register(request):
             send_mail(
                 'Registration confirmed',
                 'You',
-                'credoshop.@gmail.com',
+                'credostore.mail@gmail.com',
                 [email],
                 fail_silently=False
             )
 
             logger.info('Новый пользователь зарегистрирован', extra={'userid': user.id})
             return redirect('auth')
+
+
+# def register(request):
+#     if request.method == 'POST':
+#         # username = request.POST['email']
+#         email = request.POST['reg_email']
+#         password = request.POST['reg_password']
+#         confirm_password = request.POST['reg_confirm_password']
+#
+#         # Проверка на существование почты в БД
+#         if User.objects.filter(email=email).exists():
+#             messages.error(request, 'Пользователь уже существует')
+#             return redirect('auth')
+#         # Проверка на совпадение паролей
+#         if confirm_password != password:
+#             messages.error(request, 'Пароли не совпадают.')
+#             return redirect('auth')
+#         else:
+#             hashed_password = make_password(password)
+#             User.objects.create(username=email, email=email, password=hashed_password)
+#
+#         messages.success(request, 'Регистрация прошла успешно.')
+#         return redirect('auth')
+#
+#     return render(request, 'auth.html')
 
 
 def error(request):

@@ -94,6 +94,14 @@ DATABASES = {
 # REDIS
 SESSION_ENGINE = "django.contrib.sessions.backends.cached_db"
 
+
+EMAIL_HOST = 'credostore.mail@gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'credostore.mail@gmail.com'
+EMAIL_HOST_PASSWORD = 'credobygomel'
+
+# EMAIL_USE_TLS = True
+
 # CACHES = {
 #     "default": {
 #         "BACKEND": "django_redis.cache.RedisCache",

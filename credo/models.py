@@ -3,7 +3,7 @@ from django.db import models
 
 # Пользователь
 class User(models.Model):
-    username = models.CharField(max_length=25, null=False, unique=True, verbose_name="Имя пользователя", )
+    username = models.CharField(max_length=100, null=False, unique=True, verbose_name="Имя пользователя", )
     email = models.EmailField(max_length=100, null=False, unique=True)
     password = models.CharField(max_length=200, null=False, default='', verbose_name="Хеш пароля", )
     time_register = models.DateTimeField(auto_now_add=True, null=True, verbose_name="Дата регистрации", )
