@@ -1,21 +1,16 @@
 from django.db import models
 
+from django.contrib.auth.models import AbstractUser
 
-# Пользователь
-class User(models.Model):
-    username = models.CharField(max_length=100, null=False, unique=True, verbose_name="Имя пользователя", )
-    email = models.EmailField(max_length=100, null=False, unique=True)
-    password = models.CharField(max_length=200, null=False, default='', verbose_name="Хеш пароля", )
-    time_register = models.DateTimeField(auto_now_add=True, null=True, verbose_name="Дата регистрации", )
+
+class CustomUser(AbstractUser):
+    fio = models.CharField('ФИО', max_length=255, default='')
 
     class Meta:
-        verbose_name_plural = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
 
     def __str__(self):
         return self.username
-
-
-# Товар
 
 class Category(models.Model):
     category_name = models.CharField(max_length=250, unique=True, null=True, blank=True, default='',
@@ -104,7 +99,7 @@ class Product(models.Model):
 
 # Заказ
 class Order(models.Model):
-    user = models.OneToOneField('User', on_delete=models.CASCADE, null=True, verbose_name="Имя пользователя")
+    user = models.OneToOneField('CustomUser', on_delete=models.CASCADE, null=True, verbose_name="Имя пользователя")
     product = models.ForeignKey('Product', on_delete=models.PROTECT, null=True, verbose_name="Товар")
     delivery_method = models.ForeignKey('DeliveryMethod', on_delete=models.PROTECT, null=True,
                                         verbose_name="Способ доставки")

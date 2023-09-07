@@ -1,6 +1,19 @@
 from django import forms
-# from .models import User, Category, SubCategory, Product
-from .models import *
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+
+from credo.models import *
+
+
+class CustomUserCreationForm(UserCreationForm):
+    class Meta:
+        model = CustomUser
+        fields = '__all__'
+
+
+class CustomUserChangeForm(UserChangeForm):
+    class Meta:
+        model = CustomUser
+        fields = '__all__'
 
 
 class AddPostForm(forms.ModelForm):
@@ -9,10 +22,10 @@ class AddPostForm(forms.ModelForm):
         fields = '__all__'
 
 
-class UserForm(forms.ModelForm):
-    class Meta:
-        model = User
-        fields = '__all__'
+# class UserForm(forms.ModelForm):
+#     class Meta:
+#         model = User
+#         fields = '__all__'
 
 
 class CategoryForm(forms.ModelForm):

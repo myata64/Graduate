@@ -44,6 +44,7 @@ urlpatterns = [
                   path('wishlist/', views.wishlist, name='wishlist'),
 
                   path('register/', views.register, name='register'),
+                  path('login/', views.login_view, name='login')
 
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

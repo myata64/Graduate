@@ -15,8 +15,10 @@ RUN pip install -r requirements.txt
 # Копирование файлов проекта в рабочую директорию
 COPY . /code/
 
-RUN python manage.py makemigrations
+RUN python manage.py makemigrations credo
+RUN python manage.py migrate credo
+RUN python manage.py migrate
 
 # Запуск сервера Django
-CMD python manage.py migrate && python manage.py runserver 0.0.0.0:8000
+CMD python manage.py migrate credo && python manage.py runserver 0.0.0.0:8000
 

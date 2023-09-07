@@ -1,11 +1,11 @@
 from django.contrib import admin
-from .models import *
+from credo.models import *
 from .forms import *
 
 
-@admin.register(User)
+@admin.register(CustomUser)
 class UserAdmin(admin.ModelAdmin):
-    form = UserForm
+    form = CustomUserCreationForm
     pass
 
 

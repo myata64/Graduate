@@ -34,15 +34,17 @@ AUTHENTICATION_BACKENDS = [
 # Application definition
 
 INSTALLED_APPS = [
+    # 'django_redis',
+    'credo',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'django_redis',
-    'credo',
 ]
+
+AUTH_USER_MODEL = 'credo.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -94,11 +96,10 @@ DATABASES = {
 # REDIS
 SESSION_ENGINE = "django.contrib.sessions.backends.cached_db"
 
-
 EMAIL_HOST = 'credostore.mail@gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'credostore.mail@gmail.com'
-EMAIL_HOST_PASSWORD = 'credobygomel'
+# EMAIL_HOST_PASSWORD = ''  # не актуален
 
 # EMAIL_USE_TLS = True
 

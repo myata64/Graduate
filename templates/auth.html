@@ -672,12 +672,16 @@
         <div class="auth-wrap">
             <div class="auth-col">
                 <h2>Login</h2>
-                <form method="post" class="login">
+                <form method="POST" class="login" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    {% if error  %}
+                    <p>{{ error }}</p>
+                    {% endif %}
                     <p>
-                        <label for="username">E-mail <span class="required">*</span></label><input type="text" id="username">
+                        <label for="username">E-mail <span class="required">*</span></label><input type="text" id="username" name="log_email">
                     </p>
                     <p>
-                        <label for="password">Password <span class="required">*</span></label><input type="password" id="password">
+                        <label for="password">Password <span class="required">*</span></label><input type="password" id="password" name="log_password">
                     </p>
                     <p class="auth-submit">
                         <input type="submit" value="Login">
