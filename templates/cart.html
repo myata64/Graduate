@@ -685,118 +685,37 @@
                     </tr>
                     </thead>
                     <tbody>
+                    {% for item in cart_item %}
                     <tr>
                         <td class="cart-image">
                             <a href="{% url 'product'  %}">
-                                <img src="http://placehold.it/61x80" alt="Similique delectus totam">
+                                {% if item.product.image %}
+                                <img src="{{ item.product.image.url }}" alt="{{ item.product.product_name}}">
+                                {% endif %}
                             </a>
                         </td>
                         <td class="cart-ttl">
-                            <a href="{% url 'product'  %}">Similique delectus totam</a>
-                            <p>Color: Red</p>
-                            <p>Size: XS</p>
+                            <a href="{% url 'product' %}">{{item.product.product_name }}</a>
                         </td>
                         <td class="cart-price">
-                            <b>$220</b>
+                            <b>{{item.product.price}}</b>
                         </td>
                         <td class="cart-quantity">
                             <p class="cart-qnt">
-                                <input value="1" type="text">
+                                <input value="{{ item.quantity }}" type="text">
                                 <a href="#" class="cart-plus"><i class="fa fa-angle-up"></i></a>
                                 <a href="#" class="cart-minus"><i class="fa fa-angle-down"></i></a>
                             </p>
                         </td>
                         <td class="cart-summ">
-                            <b>$220</b>
-                            <p class="cart-forone">unit price <b>$220</b></p>
+                            <b>{{ item.item_sum }}</b>
+                            <p class="cart-forone">unit price <b>{{ item.item_sum }}</b></p>
                         </td>
                         <td class="cart-del">
                             <a href="#" class="cart-remove"></a>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="cart-image">
-                            <a href="{% url 'product'  %}">
-                                <img src="http://placehold.it/69x80" alt="Eveniet nobis minus">
-                            </a>
-                        </td>
-                        <td class="cart-ttl">
-                            <a href="{% url 'product'  %}">Eveniet nobis minus</a>
-                        </td>
-                        <td class="cart-price">
-                            <b>$150</b>
-                        </td>
-                        <td class="cart-quantity">
-                            <p class="cart-qnt">
-                                <input value="1" type="text">
-                                <a href="#" class="cart-plus"><i class="fa fa-angle-up"></i></a>
-                                <a href="#" class="cart-minus"><i class="fa fa-angle-down"></i></a>
-                            </p>
-                        </td>
-                        <td class="cart-summ">
-                            <b>$150</b>
-                            <p class="cart-forone">unit price <b>$150</b></p>
-                        </td>
-                        <td class="cart-del">
-                            <a href="#" class="cart-remove"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="cart-image">
-                            <a href="{% url 'product'  %}">
-                                <img src="http://placehold.it/96x80" alt="Quod soluta corrupti">
-                            </a>
-                        </td>
-                        <td class="cart-ttl">
-                            <a href="{% url 'product'  %}">Quod soluta corrupti</a>
-                        </td>
-                        <td class="cart-price">
-                            <b>$195</b>
-                        </td>
-                        <td class="cart-quantity">
-                            <p class="cart-qnt">
-                                <input value="1" type="text">
-                                <a href="#" class="cart-plus"><i class="fa fa-angle-up"></i></a>
-                                <a href="#" class="cart-minus"><i class="fa fa-angle-down"></i></a>
-                            </p>
-                        </td>
-                        <td class="cart-summ">
-                            <b>$195</b>
-                            <p class="cart-forone">unit price <b>$195</b></p>
-                        </td>
-                        <td class="cart-del">
-                            <a href="#" class="cart-remove"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="cart-image">
-                            <a href="{% url 'product'  %}">
-                                <img src="http://placehold.it/67x80" alt="Perferendis recusandae">
-                            </a>
-                        </td>
-                        <td class="cart-ttl">
-                            <a href="{% url 'product'  %}">Perferendis recusandae</a>
-                            <p>Color: Blue</p>
-                            <p>Size: XS</p>
-                        </td>
-                        <td class="cart-price">
-                            <b>$250</b>
-                        </td>
-                        <td class="cart-quantity">
-                            <p class="cart-qnt">
-                                <input value="1" type="text">
-                                <a href="#" class="cart-plus"><i class="fa fa-angle-up"></i></a>
-                                <a href="#" class="cart-minus"><i class="fa fa-angle-down"></i></a>
-                            </p>
-                        </td>
-                        <td class="cart-summ">
-                            <b>$250</b>
-                            <p class="cart-forone">unit price <b>$250</b></p>
-                        </td>
-                        <td class="cart-del">
-                            <a href="#" class="cart-remove"></a>
-                        </td>
-                    </tr>
+                    {% endfor %}
                     </tbody>
                 </table>
             </div>
@@ -813,6 +732,25 @@
             </div>
         </form>
         <!-- Cart Items - end -->
+        <script>
+        $(document).ready(function() {
+            $('input[type="number"]').on('change', function() {
+                var item_id = $(this).data('item-id');
+                var quantity = $(this).val();
+                $.ajax({
+                    url: '/update_cart_item/' + item_id + '/',
+                    method: 'POST',
+                    data: { 'quantity': quantity },
+                    success: function(data) {
+                        // Обновите общую сумму на странице
+                        $('.total-sum').text('$' + data.total_sum);
+                        // Обновите сумму товара на странице
+                        $('td[data-item-id="' + item_id + '"]').text('$' + data.subtotal);
+                    }
+                });
+            });
+        });
+    </script>
 
     </section>
 </main>

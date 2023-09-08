@@ -49,3 +49,8 @@ class AvailabilityStatus(admin.ModelAdmin):
 class Admin(admin.ModelAdmin):
     form = ProductForm
     pass
+
+@admin.register(Cart)
+class CartAdmin(admin.ModelAdmin):
+    form = CartForm
+    pass

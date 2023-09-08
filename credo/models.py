@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractUser
 
 
 class CustomUser(AbstractUser):
-    email = models.EmailField('email', default = True)
+    email = models.EmailField('email', default=True)
 
     class Meta:
         verbose_name_plural = 'Пользователи'
@@ -96,6 +96,24 @@ class Product(models.Model):
 
     def __str__(self):
         return self.product_name
+
+
+class Cart(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  # Связь с пользователем
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)  # Связь с товаром
+    quantity = models.PositiveIntegerField(default=1)  # Количество товара в корзине
+    item_sum = models.DecimalField(max_digits=10, decimal_places=2, default=0)  # Добавляем поле для хранения суммы
+
+    class Meta:
+        verbose_name_plural = 'Корзина'
+
+    def save(self, *args, **kwargs):
+        # Пересчитываем сумму при сохранении объекта
+        self.item_sum = self.product.price * self.quantity
+        super().save(*args, **kwargs)
+
+    def str(self):
+        return f"{self.user.username}'s Cart Item - {self.product.product_name}"
 
 
 # Заказ

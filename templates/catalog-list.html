@@ -1270,78 +1270,82 @@
 			<!-- КаталогTopbar - end -->
 			<div class="prod-items section-items">
                 {% for product in products %}
-				<div class="prodlist-i">
-					<a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE -->
+        <div class="prodlist-i">
+          <a class="prodlist-i-img" href="{% url 'product'  %}"><!-- NO SPACE -->
                         {% if product.image %}
                         <img src="{{ product.image.url}}" alt="{{ product.product_name}}"><!-- NO SPACE --></a>
                         {% endif %}
-					<div class="prodlist-i-cont">
-						<h3><a href="{% url 'product'  %}">{{ product.product_name}}</a></h3>
-						<div class="prodlist-i-txt">
-							{{ product.description }}					</div>
-						<div class="prodlist-i-skuwrap">
-							<div class="prodlist-i-skuitem">
-								<p class="prodlist-i-skuttl">Color</p>
-								<ul class="prodlist-i-skucolor">
-									<li class="active"><img src="img/color/blue.jpg" alt=""></li>
-									<li><img src="img/color/red.jpg" alt=""></li>
-									<!--<li><img src="img/color/yellow.jpg" alt=""></li>-->
-									<!--<li><img src="img/color/purple.jpg" alt=""></li>-->
-									<li><img src="img/color/green.jpg" alt=""></li>
-								</ul>
-							</div>
-							<div class="prodlist-i-skuitem">
-								<p class="prodlist-i-skuttl">Clothes sizes</p>
-								<div class="offer-props-select">
-									<p>XS</p>
-									<ul>
-										<li><a href="#">S</a></li>
-										<li><a href="#">M</a></li>
-										<li><a href="#">L</a></li>
-										<li class="active"><a href="#">XS</a></li>
-										<li><a href="#">XL</a></li>
-										<li><a href="#">XXL</a></li>
-										<li><a href="#">XXXL</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="prodlist-i-action">
-							<p class="prodlist-i-qnt">
-								<input value="1" type="text">
-								<a href="#" class="prodlist-i-plus"><i class="fa fa-angle-up"></i></a>
-								<a href="#" class="prodlist-i-minus"><i class="fa fa-angle-down"></i></a>
-							</p>
-							<p class="prodlist-i-addwrap">
-								<a href="#" class="prodlist-i-add">Add to cart</a>
-							</p>
-						<span class="prodlist-i-price">
-							<b>{{ product.price }} BYN</b>
-													</span>
-						</div>
-						<p class="prodlist-i-info">
-							<a href="#" class="prodlist-i-favorites"><i class="fa fa-heart"></i> Add to wishlist</a>
-							<a href="#" class="qview-btn prodlist-i-qview"><i class="fa fa-search"></i> Quick view</a>
-							<a class="prodlist-i-compare" href="#"><i class="fa fa-bar-chart"></i> Compare</a>
-						</p>
-					</div>
+          <div class="prodlist-i-cont">
+            <h3><a href="{% url 'product'  %}">{{ product.product_name}}</a></h3>
+            <div class="prodlist-i-txt">
+              {{ product.description }}          </div>
+            <div class="prodlist-i-skuwrap">
+              <div class="prodlist-i-skuitem">
+                <p class="prodlist-i-skuttl">Color</p>
+                <ul class="prodlist-i-skucolor">
+                  <li class="active"><img src="img/color/blue.jpg" alt=""></li>
+                  <li><img src="img/color/red.jpg" alt=""></li>
+                  <!--<li><img src="img/color/yellow.jpg" alt=""></li>-->
+                  <!--<li><img src="img/color/purple.jpg" alt=""></li>-->
+                  <li><img src="img/color/green.jpg" alt=""></li>
+                </ul>
+              </div>
+              <div class="prodlist-i-skuitem">
+                <p class="prodlist-i-skuttl">Clothes sizes</p>
+                <div class="offer-props-select">
+                  <p>XS</p>
+                  <ul>
+                    <li><a href="#">S</a></li>
+                    <li><a href="#">M</a></li>
+                    <li><a href="#">L</a></li>
+                    <li class="active"><a href="#">XS</a></li>
+                    <li><a href="#">XL</a></li>
+                    <li><a href="#">XXL</a></li>
+                    <li><a href="#">XXXL</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="prodlist-i-action">
+              <p class="prodlist-i-qnt">
+                <input value="1" type="text">
+                <a href="#" class="prodlist-i-plus"><i class="fa fa-angle-up"></i></a>
+                <a href="#" class="prodlist-i-minus"><i class="fa fa-angle-down"></i></a>
+              </p>
+            <!--<p class="prodlist-i-addwrap">
+                <a href="#" class="prodlist-i-add">Add to cart</a>
+              </p> -->
+                                <form class="prodlist-i-addwrap" method="post" action="{% url 'add_to_cart' product.id %}">
+                             {% csrf_token %}
+                                 <button class="prodlist-i-add" type="submit">Add to cart</button>
+                            </form>
+            <span class="prodlist-i-price">
+              <b>{{ product.price }} BYN</b>
+                          </span>
+            </div>
+            <p class="prodlist-i-info">
+              <a href="#" class="prodlist-i-favorites"><i class="fa fa-heart"></i> Add to wishlist</a>
+              <a href="#" class="qview-btn prodlist-i-qview"><i class="fa fa-search"></i> Quick view</a>
+              <a class="prodlist-i-compare" href="#"><i class="fa fa-bar-chart"></i> Compare</a>
+            </p>
+          </div>
 
-					<div class="prodlist-i-props-wrap">
-						<ul class="prodlist-i-props">
-							<li><b>Exterior</b> Silt Pocket</li>
-							<li><b>Material</b> PU</li>
-							<li><b>Occasion</b> Versatile</li>
-							<li><b>Shape</b> Casual Tote</li>
-							<li><b>Pattern Type</b> Solid</li>
-							<li><b>Style</b> American Style</li>
-							<li><b>Hardness</b> Soft</li>
-							<li><b>Decoration</b> None</li>
-							<li><b>Closure Type</b> Zipper</li>
-						</ul>
-					</div>
-				</div>
+          <div class="prodlist-i-props-wrap">
+            <ul class="prodlist-i-props">
+              <li><b>Exterior</b> Silt Pocket</li>
+              <li><b>Material</b> PU</li>
+              <li><b>Occasion</b> Versatile</li>
+              <li><b>Shape</b> Casual Tote</li>
+              <li><b>Pattern Type</b> Solid</li>
+              <li><b>Style</b> American Style</li>
+              <li><b>Hardness</b> Soft</li>
+              <li><b>Decoration</b> None</li>
+              <li><b>Closure Type</b> Zipper</li>
+            </ul>
+          </div>
+        </div>
                 {% endfor %}
-			</div>
+      </div>
 
 			<!-- Pagination - start -->
 			<ul class="pagi">

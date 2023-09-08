@@ -1,13 +1,16 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import User
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password, check_password
 from django.contrib.auth import authenticate, login, logout
 from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_protect
+from django.contrib.auth.decorators import login_required
+from django.db import transaction
+from django.db.models import F
 
-# from .models import User, Product
 from .forms import *
+from .models import *
 import logging
 from django.http import HttpResponse
 
@@ -61,6 +64,19 @@ def login_view(request):
         return render(request, 'auth.html')
 
 
+@login_required
+def add_to_cart(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+
+    with transaction.atomic():
+        cart_item, created = Cart.objects.select_for_update().get_or_create(user=request.user, product=product)
+
+        if not created:
+            Cart.objects.filter(user=request.user, product=product).update(quantity=F('quantity') + 1)
+
+    return redirect('cart')
+
+
 def error(request):
     return render(request, '404.html')
 
@@ -83,7 +99,13 @@ def blog_2(request):
 
 
 def cart(request):
-    return render(request, 'cart.html')
+    cart_item = Cart.objects.all()
+    products = Product.objects.all()  # Здесь создал переменную, кт. получает объкты модели
+    item_sum = (item.product.price * item.quantity for item in cart_item)
+    total_sum = sum(item.product.price * item.quantity for item in cart_item)
+    context = {'products': products, 'cart_item': cart_item, 'item_sum': item_sum,
+               'total_sum': total_sum}  # Передал объекты в словарик
+    return render(request, 'cart.html', context, )
 
 
 def catalog_gallery(request):
