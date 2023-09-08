@@ -29,7 +29,6 @@ def register(request):
             user = CustomUser.objects.create(
                 username=email,
                 email=email,
-                # password=make_password(password)
                 password=make_password(password)
             )
             # send_mail(
@@ -60,85 +59,6 @@ def login_view(request):
             return render(request, 'auth.html', {'error': 'Неверное имя пользователя или пароль'})
     else:
         return render(request, 'auth.html')
-
-
-# @csrf_protect
-# def login_view(request):
-#     if request.method == 'POST':
-#         username = request.POST.get('log_email')
-#         password = request.POST.get('log_password')
-#         try:
-#             user = authenticate(request, username=username, password=password)
-#             if user is not None:
-#                 login(request, user)
-#                 return redirect('home')
-#             else:
-#                 return render(request, 'auth.html', {'error': 'Неверное имя пользователя или пароль'})
-#         except User.DoesNotExist:
-#             return render(request, 'auth.html', {'error': 'Пользователь с указанным email не найден'})
-#     else:
-#         return render(request, 'auth.html')
-# views.py
-
-# r = redis.Redis(host='localhost', port=6379, db=0)
-
-
-# def login_view(request):
-#             # Аутентификация через form / поставщик аутентификации
-#     user = authenticate(request, username=..., password=...)
-#
-#     if user is not None:
-#         # Генерируем токен
-#         session_token = get_random_string(length=32)
-#         # Сохраняем данные сессии в Redis
-#         r.hmset('session:{}'.format(session_token), {
-#         'user_id': user.id,
-#         'created_at': timezone.now().isoformat()
-#         })
-#
-#         # Устанавливаем cookie с токеном
-#         r.set('session_token', session_token)
-#
-#     login(request, user)
-#     return redirect('homepage')
-#
-# def logout_view(request):
-#             session_token = request.COOKIES['session_token']
-#
-#             # Удаляем данные сессии из Redis
-#             r.delete('session:{}'.format(session_token))
-#
-#             # Удаляем cookie
-#             r.delete('session_token')
-#
-#             logout(request)
-#
-#             return redirect('login')
-
-
-# def register(request):
-#     if request.method == 'POST':
-#         # username = request.POST['email']
-#         email = request.POST['reg_email']
-#         password = request.POST['reg_password']
-#         confirm_password = request.POST['reg_confirm_password']
-#
-#         # Проверка на существование почты в БД
-#         if User.objects.filter(email=email).exists():
-#             messages.error(request, 'Пользователь уже существует')
-#             return redirect('auth')
-#         # Проверка на совпадение паролей
-#         if confirm_password != password:
-#             messages.error(request, 'Пароли не совпадают.')
-#             return redirect('auth')
-#         else:
-#             hashed_password = make_password(password)
-#             User.objects.create(username=email, email=email, password=hashed_password)
-#
-#         messages.success(request, 'Регистрация прошла успешно.')
-#         return redirect('auth')
-#
-#     return render(request, 'auth.html')
 
 
 def error(request):

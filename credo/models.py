@@ -4,13 +4,14 @@ from django.contrib.auth.models import AbstractUser
 
 
 class CustomUser(AbstractUser):
-    fio = models.CharField('ФИО', max_length=255, default='')
+    email = models.EmailField('email', default = True)
 
     class Meta:
         verbose_name_plural = 'Пользователи'
 
     def __str__(self):
         return self.username
+
 
 class Category(models.Model):
     category_name = models.CharField(max_length=250, unique=True, null=True, blank=True, default='',

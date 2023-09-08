@@ -1,6 +1,6 @@
 # Подключение к репозиторию
 
-`git clone git@github.com:myata64/CredoRep.git` </br>
+`git clone git@github.com:myata64/Graduate.git` </br>
 `git branch -M dev`</br>
 `git push -u origin dev`
 
