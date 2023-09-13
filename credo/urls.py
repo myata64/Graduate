@@ -24,12 +24,14 @@ app_name = 'credo'
 urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('error/', views.error, name='error'),
+                  path('account/', views.account, name='account'),
                   path('addpost/', views.add_post, name='add_post'),
                   path('auth/', views.auth, name='auth'),
                   path('blog/', views.blog, name='blog'),
                   path('blog/', views.blog_2, name='blog_2'),
                   path('cart/', views.cart, name='cart'),
                   path('add_to_cart/<int:product_id>/', views.add_to_cart, name='add_to_cart'),
+                  # path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
                   path('catalog/gallery/', views.catalog_gallery, name='catalog_gallery'),
                   path('catalog/gallery/', views.catalog_gallery_2, name='catalog_gallery_2'),
                   path('catalog/list/', views.catalog_list, name='catalog'),
@@ -45,7 +47,8 @@ urlpatterns = [
                   path('wishlist/', views.wishlist, name='wishlist'),
 
                   path('register/', views.register, name='register'),
-                  path('login/', views.login_view, name='login')
+                  path('login/', views.login_view, name='login'),
+                  path('logout/', views.logout_view, name='logout')
 
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

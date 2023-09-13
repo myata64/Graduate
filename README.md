@@ -1,3 +1,11 @@
+# Запуск сайта
+
+`source venv/bin/activate` - виртуальное окружение </br>
+`pip install -r requirements.txt` - установка библиотек/зависимостей </br>
+`sudo docker-compose up -d` </br>
+http://localhost:8000
+
+
 # Подключение к репозиторию
 
 `git clone git@github.com:myata64/Graduate.git` </br>
@@ -6,16 +14,16 @@
 
 # Docker. Работа сервера
 
-
-- Проверка на занятость портов: `sudo lsof -i :5433`</br>
-- `sudo docker run --name my-postgres -e`
-- Пересборка контейнера: `sudo docker-compose build` </br>
 - Запуск контейнеров: </br>
   `sudo docker-compose up -d` </br>
   `sudo docker-compose exec web python manage.py makemigrations` </br>
   `sudo docker-compose exec web python manage.py migrate` </br>
-  `sudo docker-compose exec web python manage.py runserver 0.0.0.0:8000`
+
+
 - Проверка на занятость портов: `sudo lsof -i :5433`</br>
+- `sudo docker run --name my-postgres -e`
+- Пересборка контейнера: `sudo docker-compose build` </br>
+  `sudo docker-compose exec web python manage.py runserver 0.0.0.0:8000`
 - Откройте веб-браузер и перейдите по адресу http://localhost:8000 </br>
 
 

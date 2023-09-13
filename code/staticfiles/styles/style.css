@@ -337,7 +337,7 @@ body {
 .shop-menu ul li.topauth a:first-child {
 	margin: 0;
 	padding: 2px 12px 2px 0;
-	background: url(../img/sep1.png) no-repeat right center;
+	//background: url(../img/sep1.png) no-repeat right center;
 }
 /*----------------------------------
 2 - Header

@@ -95,16 +95,9 @@
                         </a>
                     </li>
 
-                    <li class="topauth">
-                        <a href="{% url 'auth' %}">
-                            <i class="fa fa-lock"></i>
-                            <span class="shop-menu-ttl">Registration</span>
-                        </a>
-                        <a href="{% url 'auth' %}">
-                            <span class="shop-menu-ttl">Login</span>
-                        </a>
-                    </li>
 
+
+                    {% if user.is_authenticated %}
                     <li>
                         <div class="h-cart">
                             <a href="{% url 'cart' %}">
@@ -114,6 +107,7 @@
                             </a>
                         </div>
                     </li>
+                    {% endif %}
 
                 </ul>
             </div>

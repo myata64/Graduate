@@ -161,3 +161,9 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Используйте базу данных для хранения сессий
+SESSION_COOKIE_NAME = 'my_session_cookie'
+SESSION_COOKIE_SECURE = True  # Включите это, если используете HTTPS
+SESSION_COOKIE_HTTPONLY = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # Установите True, если хотите завершать сессию при закрытии браузера

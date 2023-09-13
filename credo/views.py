@@ -14,6 +14,8 @@ from .models import *
 import logging
 from django.http import HttpResponse
 
+from django.contrib.sessions.models import Session
+
 # import redis
 
 logger = logging.getLogger('registration')
@@ -41,6 +43,7 @@ def register(request):
             #     [email],
             #     fail_silently=False
             # )
+            # login(request, user)
             logger.info('Новый пользователь зарегистрирован', extra={'userid': user.id})
             return redirect('auth')
         else:
@@ -56,6 +59,8 @@ def login_view(request):
         password = request.POST.get('log_password')
         user = authenticate(request, username=username, password=password)
         if user is not None:
+            if request.session.session_key:
+                Session.objects.get(session_key=request.session.session_key).delete()
             login(request, user)
             return redirect('home')
         else:
@@ -64,7 +69,21 @@ def login_view(request):
         return render(request, 'auth.html')
 
 
-@login_required
+def logout_view(request):
+    logout(request)
+
+    return redirect('auth')
+
+
+def reg_log_view(request):
+    context = {
+        # Другие данные контекста
+        'user': request.user,
+    }
+    return render(request, user)
+
+
+@login_required(login_url='auth')
 def add_to_cart(request, product_id):
     product = get_object_or_404(Product, id=product_id)
 
@@ -79,6 +98,10 @@ def add_to_cart(request, product_id):
 
 def error(request):
     return render(request, '404.html')
+
+
+def account(request):
+    return render(request, 'account.html')
 
 
 def add_post(request):
@@ -97,15 +120,44 @@ def blog(request):
 def blog_2(request):
     return render(request, 'blog-2.html')
 
-
 def cart(request):
-    cart_item = Cart.objects.all()
-    products = Product.objects.all()  # Здесь создал переменную, кт. получает объкты модели
-    item_sum = (item.product.price * item.quantity for item in cart_item)
-    total_sum = sum(item.product.price * item.quantity for item in cart_item)
-    context = {'products': products, 'cart_item': cart_item, 'item_sum': item_sum,
-               'total_sum': total_sum}  # Передал объекты в словарик
-    return render(request, 'cart.html', context, )
+    cart_items = Cart.objects.filter(user=request.user)
+    total_sum = sum(item.product.price * item.quantity for item in cart_items)
+    products = Product.objects.all()  # Определение переменной products
+
+    context = {'cart_items': cart_items, 'total_sum': total_sum, 'products': products}  # Добавление переменной products в контекст
+    return render(request, 'cart.html', context)
+
+# def cart(request):
+#     cart_item = Cart.objects.all()
+#     products = Product.objects.all()  # Здесь создал переменную, кт. получает объкты модели
+#     item_sum = (product.price * item.quantity for item in cart_item)
+#
+#     # total_sum = sum(item.product.price * item.quantity for item in cart_item)
+#     total_sum = (item.product.price * item.quantity for item in cart_item)
+#     context = {'products': products, 'cart_item': cart_item, 'item_sum': item_sum,
+#                'total_sum': total_sum}  # Передал объекты в словарик
+#     return render(request, 'cart.html', context, )
+
+
+# def cart(request):
+#     if request.method == 'POST':
+#         try:
+#             cart_item = Cart.objects.get(id=item_id)
+#             quantity = int(request.POST.get('quantity'))
+#             cart_item.quantity = quantity
+#             cart_item.item_sum = cart_item.product.price * quantity
+#             cart_item.save()
+#
+#             # Пересчитать общую сумму
+#             cart_items = Cart.objects.all()
+#             total_sum = sum(item.item_sum for item in cart_items)
+#
+#             return JsonResponse({'subtotal': cart_item.item_sum, 'total_sum': total_sum})
+#         except Cart.DoesNotExist:
+#             return JsonResponse({'error': 'Cart item not found'}, status=404)
+#
+#     return redirect
 
 
 def catalog_gallery(request):

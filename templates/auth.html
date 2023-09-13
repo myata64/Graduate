@@ -95,16 +95,9 @@
                         </a>
                     </li>
 
-                    <li class="topauth">
-                        <a href="{% url 'auth' %}">
-                            <i class="fa fa-lock"></i>
-                            <span class="shop-menu-ttl">Registration</span>
-                        </a>
-                        <a href="{% url 'auth' %}">
-                            <span class="shop-menu-ttl">Login</span>
-                        </a>
-                    </li>
 
+
+                    {% if user.is_authenticated %}
                     <li>
                         <div class="h-cart">
                             <a href="{% url 'cart' %}">
@@ -114,7 +107,22 @@
                             </a>
                         </div>
                     </li>
-
+                    {% endif %}
+            {% if user.is_authenticated %}
+            <li class="topauth">
+                <a href="{% url 'account' %}">
+                    <i class="fa fa-lock"></i>
+                    <span class="shop-menu-ttl">Профиль</span>
+                </a>
+            </li>
+        {% else %}
+            <li class="topauth">
+                <a href="{% url 'auth' %}">
+                    <i class="fa fa-lock"></i>
+                    <span class="shop-menu-ttl">Вход/Регистрация</span>
+                </a>
+            </li>
+            {% endif %}
                 </ul>
             </div>
         </div>
@@ -517,35 +525,9 @@
                     </li>
                     <li class="menu-item-has-children">
                         <a href="{% url 'catalog'  %}">
-                            Каталог<i class="fa fa-angle-down"></i>
+                            Каталог<!--<i class="fa fa-angle-down">--></i>
                         </a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="{% url 'catalog'  %}">
-                                    КаталогList - Style 1
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'catalog_list_2'  %}">
-                                    КаталогList - Style 2
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'catalog_gallery'  %}">
-                                    КаталогGallery - Style 1
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'catalog_gallery_2'  %}">
-                                    КаталогGallery - Style 2
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'catalog_table'  %}">
-                                    КаталогTable
-                                </a>
-                            </li>
-                        </ul>
+
                     </li>
                     <li class="menu-item-has-children">
                         <a href="{% url 'catalog'  %}">

@@ -99,21 +99,20 @@ class Product(models.Model):
 
 
 class Cart(models.Model):
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  # Связь с пользователем
+    user = models.ForeignKey('CustomUser', on_delete=models.CASCADE)  # Связь с пользователем
     product = models.ForeignKey(Product, on_delete=models.CASCADE)  # Связь с товаром
     quantity = models.PositiveIntegerField(default=1)  # Количество товара в корзине
     item_sum = models.DecimalField(max_digits=10, decimal_places=2, default=0)  # Добавляем поле для хранения суммы
 
+    def update_item_sum(self):
+        self.item_sum = self.product.price * self.quantity
+        self.save()
+
     class Meta:
         verbose_name_plural = 'Корзина'
 
-    def save(self, *args, **kwargs):
-        # Пересчитываем сумму при сохранении объекта
-        self.item_sum = self.product.price * self.quantity
-        super().save(*args, **kwargs)
-
-    def str(self):
-        return f"{self.user.username}'s Cart Item - {self.product.product_name}"
+    def __str__(self):
+        return f"Cart for {self.user.username} - Product: {self.product.product_name}, Quantity: {self.quantity}"
 
 
 # Заказ
