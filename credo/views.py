@@ -120,44 +120,15 @@ def blog(request):
 def blog_2(request):
     return render(request, 'blog-2.html')
 
+
 def cart(request):
     cart_items = Cart.objects.filter(user=request.user)
     total_sum = sum(item.product.price * item.quantity for item in cart_items)
     products = Product.objects.all()  # Определение переменной products
 
-    context = {'cart_items': cart_items, 'total_sum': total_sum, 'products': products}  # Добавление переменной products в контекст
+    context = {'cart_items': cart_items, 'total_sum': total_sum,
+               'products': products}  # Добавление переменной products в контекст
     return render(request, 'cart.html', context)
-
-# def cart(request):
-#     cart_item = Cart.objects.all()
-#     products = Product.objects.all()  # Здесь создал переменную, кт. получает объкты модели
-#     item_sum = (product.price * item.quantity for item in cart_item)
-#
-#     # total_sum = sum(item.product.price * item.quantity for item in cart_item)
-#     total_sum = (item.product.price * item.quantity for item in cart_item)
-#     context = {'products': products, 'cart_item': cart_item, 'item_sum': item_sum,
-#                'total_sum': total_sum}  # Передал объекты в словарик
-#     return render(request, 'cart.html', context, )
-
-
-# def cart(request):
-#     if request.method == 'POST':
-#         try:
-#             cart_item = Cart.objects.get(id=item_id)
-#             quantity = int(request.POST.get('quantity'))
-#             cart_item.quantity = quantity
-#             cart_item.item_sum = cart_item.product.price * quantity
-#             cart_item.save()
-#
-#             # Пересчитать общую сумму
-#             cart_items = Cart.objects.all()
-#             total_sum = sum(item.item_sum for item in cart_items)
-#
-#             return JsonResponse({'subtotal': cart_item.item_sum, 'total_sum': total_sum})
-#         except Cart.DoesNotExist:
-#             return JsonResponse({'error': 'Cart item not found'}, status=404)
-#
-#     return redirect
 
 
 def catalog_gallery(request):
@@ -211,7 +182,23 @@ def product_2(request):
 
 
 def wishlist(request):
-    return render(request, 'wishlist.html')
+    wishlist_items = Whishlist.objects.filter(user=request.user)
+    products = Product.objects.all()  # Определение переменной products
+    context = {'cart_items': wishlist_items, 'products': products}  # Добавление переменной products в контекст
+    return render(request, 'wishlist.html', context)
+
+
+@login_required(login_url='auth')
+def add_to_wishlist(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+
+    with transaction.atomic():
+        wishlist_item, created = Whishlist.objects.select_for_update().get_or_create(user=request.user, product=product)
+
+        if not created:
+            Cart.objects.filter(user=request.user, product=product).update(quantity=F('quantity') + 1)
+
+    return redirect('wishlist')
 
 
 def shoes(request):

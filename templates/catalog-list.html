@@ -62,7 +62,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="http://instagram.com" rel="nofollow" target="_blank">
+                    <a href="https://www.instagram.com/credo.sh/" rel="nofollow" target="_blank">
                         <i class="fa fa-instagram"></i>
                     </a>
                 </li>
@@ -82,13 +82,15 @@
             <div class="shop-menu">
                 <ul>
 
+                    {% if user.is_authenticated %}
                     <li>
                         <a href="{% url 'wishlist' %}">
                             <i class="fa fa-heart"></i>
-                            <span class="shop-menu-ttl">Wishlist</span>
+                            <span class="shop-menu-ttl">Избранное</span>
                             (<span id="topbar-favorites">1</span>)
                         </a>
                     </li>
+                    {% endif %}
 
                     <li>
                         <a href="{% url 'compare' %}">
@@ -106,7 +108,7 @@
                         <div class="h-cart">
                             <a href="{% url 'cart' %}">
                                 <i class="fa fa-shopping-cart"></i>
-                                <span class="shop-menu-ttl">Cart</span>
+                                <span class="shop-menu-ttl">Корзина</span>
                                 (<b>0</b>)
                             </a>
                         </div>
@@ -1343,19 +1345,21 @@
                                     <a href="#" class="prodlist-i-minus"><i class="fa fa-angle-down"></i></a>
                                 </p>
                                 <!--<p class="prodlist-i-addwrap">
-                                    <a href="#" class="prodlist-i-add">Add to cart</a>
+                                    <a href="#" class="prodlist-i-add">В корзину</a>
                                   </p> -->
                                 <form class="prodlist-i-addwrap" method="post"
                                       action="{% url 'add_to_cart' product.id %}">
                                     {% csrf_token %}
-                                    <button class="prodlist-i-add" type="submit">Add to cart</button>
+                                    <button class="prodlist-i-add" type="submit">В корзину</button>
                                 </form>
                                 <span class="prodlist-i-price">
               <b>{{ product.price }} BYN</b>
                           </span>
                             </div>
                             <p class="prodlist-i-info">
-                                <a href="#" class="prodlist-i-favorites"><i class="fa fa-heart"></i> Add to wishlist</a>
+                            <form class="prodlist-i-info" action="{% url 'add_to_wishlist' product.id %}">
+                                <button style="border: none; background: none" class="prodlist-i-favorites"><i class="fa fa-heart"></i> В избранное</button>
+                            </form>
                                 <a href="#" class="qview-btn prodlist-i-qview"><i class="fa fa-search"></i> Quick
                                     view</a>
                                 <a class="prodlist-i-compare" href="#"><i class="fa fa-bar-chart"></i> Compare</a>
@@ -1390,7 +1394,7 @@
             <!-- Pagination - end -->
         </div>
 
-        <!-- Quick View Товар- start -->
+        <!-- Быстрый просмотр Товар- start -->
         <div class="qview-modal">
             <div class="prod-wrap">
                 <a href="{% url 'product' %}">
@@ -1534,7 +1538,7 @@
                             <a href="#" class="prod-minus"><i class="fa fa-angle-down"></i></a>
                         </p>
                         <p class="prod-addwrap">
-                            <a href="#" class="prod-add">Add to cart</a>
+                            <a href="#" class="prod-add">В корзину</a>
                         </p>
                     </div>
                     <ul class="prod-i-props">
@@ -1565,7 +1569,7 @@
             </div>
             -->
         </div>
-        <!-- Quick View Товар- end -->
+        <!-- Быстрый просмотр Товар- end -->
     </section>
 </main>
 <!-- Main Content - end -->
@@ -1686,7 +1690,7 @@
                     About us
                 </h3>
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="active"><a href="{% url 'home' %}">Главная</a></li>
                     <li><a href="{% url 'catalog' %}">Каталог</a></li>
                     <li><a href="{% url 'elements' %}">Elements</a></li>
                     <li><a href="{% url 'blog' %}">Blog</a></li>

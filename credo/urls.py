@@ -45,7 +45,7 @@ urlpatterns = [
                   path('product/', views.product, name='product'),
                   path('product/', views.product_2, name='product_2'),
                   path('wishlist/', views.wishlist, name='wishlist'),
-
+                  path('add_to_wishlist/<int:product_id>/', views.add_to_wishlist, name='add_to_wishlist'),
                   path('register/', views.register, name='register'),
                   path('login/', views.login_view, name='login'),
                   path('logout/', views.logout_view, name='logout')

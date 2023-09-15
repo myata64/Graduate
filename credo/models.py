@@ -114,6 +114,9 @@ class Cart(models.Model):
     def __str__(self):
         return f"Cart for {self.user.username} - Product: {self.product.product_name}, Quantity: {self.quantity}"
 
+class Whishlist(models.Model):
+    user = models.ForeignKey('CustomUser', on_delete=models.CASCADE)
+    product = models.ForeignKey('Product', on_delete=models.CASCADE)  # Связь с товаром
 
 # Заказ
 class Order(models.Model):

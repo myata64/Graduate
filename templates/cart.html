@@ -61,7 +61,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="http://instagram.com" rel="nofollow" target="_blank">
+                    <a href="https://www.instagram.com/credo.sh/" rel="nofollow" target="_blank">
                         <i class="fa fa-instagram"></i>
                     </a>
                 </li>
@@ -80,13 +80,15 @@
             <div class="shop-menu">
                 <ul>
 
+                    {% if user.is_authenticated %}
                     <li>
-                        <a href="{% url 'wishlist'  %}">
+                        <a href="{% url 'wishlist' %}">
                             <i class="fa fa-heart"></i>
-                            <span class="shop-menu-ttl">Wishlist</span>
+                            <span class="shop-menu-ttl">Избранное</span>
                             (<span id="topbar-favorites">1</span>)
                         </a>
                     </li>
+                    {% endif %}
 
                     <li>
                         <a href="{% url 'compare'  %}">
@@ -102,7 +104,7 @@
                         <div class="h-cart">
                             <a href="{% url 'cart' %}">
                                 <i class="fa fa-shopping-cart"></i>
-                                <span class="shop-menu-ttl">Cart</span>
+                                <span class="shop-menu-ttl">Корзина</span>
                                 (<b>0</b>)
                             </a>
                         </div>
@@ -647,10 +649,10 @@
                 </a>
             </li>
             <li>
-                <span>Cart</span>
+                <span>Корзина</span>
             </li>
         </ul>
-        <h1 class="main-ttl"><span>Cart</span></h1>
+        <h1 class="main-ttl"><span>Корзина</span></h1>
         <!-- Cart Items - start -->
         <form action="#">
 
@@ -658,11 +660,11 @@
                 <table class="cart-items">
                     <thead>
                     <tr>
-                        <td class="cart-image">Photo</td>
-                        <td class="cart-ttl">Products</td>
-                        <td class="cart-price">Price</td>
-                        <td class="cart-quantity">Quantity</td>
-                        <td class="cart-summ">Summ</td>
+                        <td class="cart-image">Изображение</td>
+                        <td class="cart-ttl">Имя товара</td>
+                        <td class="cart-price">Цена</td>
+                        <td class="cart-quantity">Количество</td>
+                        <td class="cart-summ">Стоимость товара</td>
                         <td class="cart-del">&nbsp;</td>
                     </tr>
                     </thead>
@@ -702,15 +704,15 @@
                 </table>
             </div>
             <ul class="cart-total">
-                <li class="cart-summ">TOTAL: <b>$815</b></li>
+                <li class="cart-summ">Общая стоимость: <b>BYN 815</b></li>
             </ul>
             <div class="cart-submit">
                 <div class="cart-coupon">
                     <input placeholder="your coupon" type="text">
                     <a class="cart-coupon-btn" href="#"><img src="img/ok.png" alt="your coupon"></a>
                 </div>
-                <a href="#" class="cart-submit-btn">Checkout</a>
-                <a href="#" class="cart-clear">Clear cart</a>
+                <a href="#" class="cart-submit-btn">Оформить заказ</a>
+                <a href="#" class="cart-clear">Очистить корзину</a>
             </div>
         </form>
         <!-- Cart Items - end -->
@@ -847,7 +849,7 @@
                     About us
                 </h3>
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="{% url 'home'  %}">Home</a></li>
+                    <li class="active"><a href="{% url 'home'  %}">Главная</a></li>
                     <li><a href="{% url 'catalog'  %}">Каталог</a></li>
                     <li><a href="{% url 'elements'  %}">Elements</a></li>
                     <li><a href="{% url 'blog' %}">Blog</a></li>

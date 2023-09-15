@@ -61,7 +61,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="http://instagram.com" rel="nofollow" target="_blank">
+                    <a href="https://www.instagram.com/credo.sh/" rel="nofollow" target="_blank">
                         <i class="fa fa-instagram"></i>
                     </a>
                 </li>
@@ -80,13 +80,15 @@
             <div class="shop-menu">
                 <ul>
 
+                    {% if user.is_authenticated %}
                     <li>
-                        <a href="{% url 'wishlist'  %}">
+                        <a href="{% url 'wishlist' %}">
                             <i class="fa fa-heart"></i>
-                            <span class="shop-menu-ttl">Wishlist</span>
+                            <span class="shop-menu-ttl">Избранное</span>
                             (<span id="topbar-favorites">1</span>)
                         </a>
                     </li>
+                    {% endif %}
 
                     <li>
                         <a href="{% url 'compare'  %}">
@@ -102,7 +104,7 @@
                         <div class="h-cart">
                             <a href="{% url 'cart' %}">
                                 <i class="fa fa-shopping-cart"></i>
-                                <span class="shop-menu-ttl">Cart</span>
+                                <span class="shop-menu-ttl">Корзина</span>
                                 (<b>0</b>)
                             </a>
                         </div>
@@ -648,24 +650,24 @@
                 </a>
             </li>
             <li>
-                <span>Wishlist</span>
+                <span>Избранное</span>
             </li>
         </ul>
-        <h1 class="main-ttl"><span>Wishlist</span></h1>
+        <h1 class="main-ttl"><span>Избранное</span></h1>
         <!-- КаталогItems | Full - start -->
         <div class="section-cont section-full">
 
             <div class="prod-items section-items">
 
-                <div class="prod-i">
+               <!-- <div class="prod-i">
                     <div class="prod-i-top">
-                        <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/378x300" alt="Sunt temporibus velit"><!-- NO SPACE --></a>
+                        <a href="{% url 'product'  %}" class="prod-i-img"><img src="http://placehold.it/378x300" alt="Sunt temporibus velit"></a>
                         <p class="prod-i-info">
                             <a href="#" class="prod-i-favorites"><span>Remove from Wishlist</span><i class="fa fa-remove"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
                         </p>
-                        <a href="#" class="prod-i-buy">Add to cart</a>
+                        <a href="#" class="prod-i-buy">В корзину</a>
                         <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
 
                         <div class="prod-i-properties">
@@ -700,13 +702,13 @@
                 </div>
                 <div class="prod-i">
                     <div class="prod-i-top">
-                        <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/300x504" alt="Fuga impedit inciduntipsa"><!-- NO SPACE --></a>
+                        <a href="{% url 'product'  %}" class="prod-i-img"><img src="http://placehold.it/300x504" alt="Fuga impedit inciduntipsa"></a>
                         <p class="prod-i-info">
                             <a href="#" class="prod-i-favorites"><span>Remove from Wishlist</span><i class="fa fa-remove"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
                         </p>
-                        <a href="#" class="prod-i-buy">Add to cart</a>
+                        <a href="#" class="prod-i-buy">В корзину</a>
                         <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
 
                         <div class="prod-i-properties">
@@ -736,16 +738,21 @@
                     <p class="prod-i-price">
                         <b>$80</b>
                     </p>
-                </div>
+                </div> -->
+                {% for product in products %}
                 <div class="prod-i">
                     <div class="prod-i-top">
-                        <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/358x300" alt="Iusto labore laudantium"><!-- NO SPACE --></a>
+                        <a href="{% url 'product'  %}" class="prod-i-img"><img src="http://placehold.it/358x300" alt="Iusto labore laudantium"></a>
                         <p class="prod-i-info">
-                            <a href="#" class="prod-i-favorites"><span>Remove from Wishlist</span><i class="fa fa-remove"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="prod-i-favorites"><span>Удалить</span><i class="fa fa-remove"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
                         </p>
-                        <a href="#" class="prod-i-buy">Add to cart</a>
+                       <!-- <a href="#" class="prod-i-buy">В корзину</a> -->
+                                <form  method="post" action="{% url 'add_to_cart' product.id %}">
+                                    {% csrf_token %}
+                                    <button class="prod-i-buy" type="submit">В корзину</button>
+                                </form>
                         <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
 
                         <div class="prod-i-properties">
@@ -785,15 +792,16 @@
                         <b>$170</b>
                     </p>
                 </div>
-                <div class="prod-i">
+                {% endfor %}
+             <!--   <div class="prod-i">
                     <div class="prod-i-top">
-                        <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/300x303" alt="Reprehenderit rerum"><!-- NO SPACE --></a>
+                        <a href="{% url 'product'  %}" class="prod-i-img"><img src="http://placehold.it/300x303" alt="Reprehenderit rerum"></a>
                         <p class="prod-i-info">
                             <a href="#" class="prod-i-favorites"><span>Remove from Wishlist</span><i class="fa fa-remove"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
                         </p>
-                        <a href="#" class="prod-i-buy">Add to cart</a>
+                        <a href="#" class="prod-i-buy">В корзину</a>
                         <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
 
                         <div class="prod-i-properties">
@@ -835,13 +843,13 @@
                 </div>
                 <div class="prod-i">
                     <div class="prod-i-top">
-                        <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/300x366" alt="Nulla numquam obcaecati"><!-- NO SPACE --></a>
+                        <a href="{% url 'product'  %}" class="prod-i-img"><img src="http://placehold.it/300x366" alt="Nulla numquam obcaecati"></a>
                         <p class="prod-i-info">
                             <a href="#" class="prod-i-favorites"><span>Remove from Wishlist</span><i class="fa fa-remove"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
                         </p>
-                        <a href="#" class="prod-i-buy">Add to cart</a>
+                        <a href="#" class="prod-i-buy">В корзину</a>
                         <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
 
                         <div class="prod-i-properties">
@@ -874,13 +882,13 @@
                 </div>
                 <div class="prod-i">
                     <div class="prod-i-top">
-                        <a href="{% url 'product'  %}" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/300x416" alt="Maxime molestias necessitatibus nobis"><!-- NO SPACE --></a>
+                        <a href="{% url 'product'  %}" class="prod-i-img"><img src="http://placehold.it/300x416" alt="Maxime molestias necessitatibus nobis"></a>
                         <p class="prod-i-info">
                             <a href="#" class="prod-i-favorites"><span>Remove from Wishlist</span><i class="fa fa-remove"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
                         </p>
-                        <a href="#" class="prod-i-buy">Add to cart</a>
+                        <a href="#" class="prod-i-buy">В корзину</a>
                         <p class="prod-i-properties-label"><i class="fa fa-info"></i></p>
 
                         <div class="prod-i-properties">
@@ -914,14 +922,14 @@
                     <p class="prod-i-price">
                         <b>$95</b>
                     </p>
-                </div>
+                </div> -->
 
             </div>
 
         </div>
         <!-- КаталогItems | Full - end -->
 
-        <!-- Quick View Товар- start -->
+        <!-- Быстрый просмотр Товар- start -->
         <div class="qview-modal">
             <div class="prod-wrap">
                 <a href="{% url 'product'  %}">
@@ -1058,7 +1066,7 @@
                             <a href="#" class="prod-minus"><i class="fa fa-angle-down"></i></a>
                         </p>
                         <p class="prod-addwrap">
-                            <a href="#" class="prod-add">Add to cart</a>
+                            <a href="#" class="prod-add">В корзину</a>
                         </p>
                     </div>
                     <ul class="prod-i-props">
@@ -1088,7 +1096,7 @@
                 </div>
             </div>
         </div>
-        <!-- Quick View Товар- end -->
+        <!-- Быстрый просмотр Товар- end -->
     </section>
 </main>
 <!-- Main Content - end -->
@@ -1202,7 +1210,7 @@
                     About us
                 </h3>
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="{% url 'home'  %}">Home</a></li>
+                    <li class="active"><a href="{% url 'home'  %}">Главная</a></li>
                     <li><a href="{% url 'catalog'  %}">Каталог</a></li>
                     <li><a href="{% url 'elements'  %}">Elements</a></li>
                     <li><a href="{% url 'blog' %}">Blog</a></li>

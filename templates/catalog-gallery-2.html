@@ -61,7 +61,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="http://instagram.com" rel="nofollow" target="_blank">
+                    <a href="https://www.instagram.com/credo.sh/" rel="nofollow" target="_blank">
                         <i class="fa fa-instagram"></i>
                     </a>
                 </li>
@@ -80,13 +80,15 @@
             <div class="shop-menu">
                 <ul>
 
+                    {% if user.is_authenticated %}
                     <li>
-                        <a href="{% url 'wishlist'  %}">
+                        <a href="{% url 'wishlist' %}">
                             <i class="fa fa-heart"></i>
-                            <span class="shop-menu-ttl">Wishlist</span>
+                            <span class="shop-menu-ttl">Избранное</span>
                             (<span id="topbar-favorites">1</span>)
                         </a>
                     </li>
+                    {% endif %}
 
                     <li>
                         <a href="{% url 'compare'  %}">
@@ -102,7 +104,7 @@
                         <div class="h-cart">
                             <a href="{% url 'cart' %}">
                                 <i class="fa fa-shopping-cart"></i>
-                                <span class="shop-menu-ttl">Cart</span>
+                                <span class="shop-menu-ttl">Корзина</span>
                                 (<b>0</b>)
                             </a>
                         </div>
@@ -1310,10 +1312,10 @@
                     </h3>
                     <div class="prod-i-action">
                         <p class="prod-i-info">
-                            <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                            <a href="#" class="prod-i-favorites"><span>Избранное</span><i class="fa fa-heart"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
-                            <a href="#" class="prod-i-buy"><span>Add to cart</span><i class="fa fa-shopping-basket"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="prod-i-buy"><span>В корзину</span><i class="fa fa-shopping-basket"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a href="#" class="prod-i-properties-label"><span>Features</span><i class="fa fa-info"></i></a>
                         </p>
                         <p class="prod-i-price">
@@ -1357,10 +1359,10 @@
                     </h3>
                     <div class="prod-i-action">
                         <p class="prod-i-info">
-                            <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                            <a href="#" class="prod-i-favorites"><span>Избранное</span><i class="fa fa-heart"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
-                            <a href="#" class="prod-i-buy"><span>Add to cart</span><i class="fa fa-shopping-basket"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="prod-i-buy"><span>В корзину</span><i class="fa fa-shopping-basket"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a href="#" class="prod-i-properties-label"><span>Features</span><i class="fa fa-info"></i></a>
                         </p>
                         <p class="prod-i-price">
@@ -1392,10 +1394,10 @@
                     </h3>
                     <div class="prod-i-action">
                         <p class="prod-i-info">
-                            <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                            <a href="#" class="prod-i-favorites"><span>Избранное</span><i class="fa fa-heart"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
-                            <a href="#" class="prod-i-buy"><span>Add to cart</span><i class="fa fa-shopping-basket"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="prod-i-buy"><span>В корзину</span><i class="fa fa-shopping-basket"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a href="#" class="prod-i-properties-label"><span>Features</span><i class="fa fa-info"></i></a>
                         </p>
                         <p class="prod-i-price">
@@ -1435,10 +1437,10 @@
                     </h3>
                     <div class="prod-i-action">
                         <p class="prod-i-info">
-                            <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                            <a href="#" class="prod-i-favorites"><span>Избранное</span><i class="fa fa-heart"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
-                            <a href="#" class="prod-i-buy"><span>Add to cart</span><i class="fa fa-shopping-basket"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="prod-i-buy"><span>В корзину</span><i class="fa fa-shopping-basket"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a href="#" class="prod-i-properties-label"><span>Features</span><i class="fa fa-info"></i></a>
                         </p>
                         <p class="prod-i-price">
@@ -1479,10 +1481,10 @@
                     </h3>
                     <div class="prod-i-action">
                         <p class="prod-i-info">
-                            <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                            <a href="#" class="prod-i-favorites"><span>Избранное</span><i class="fa fa-heart"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
-                            <a href="#" class="prod-i-buy"><span>Add to cart</span><i class="fa fa-shopping-basket"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="prod-i-buy"><span>В корзину</span><i class="fa fa-shopping-basket"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a href="#" class="prod-i-properties-label"><span>Features</span><i class="fa fa-info"></i></a>
                         </p>
                         <p class="prod-i-price">
@@ -1524,10 +1526,10 @@
                     </h3>
                     <div class="prod-i-action">
                         <p class="prod-i-info">
-                            <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                            <a href="#" class="prod-i-favorites"><span>Избранное</span><i class="fa fa-heart"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
-                            <a href="#" class="prod-i-buy"><span>Add to cart</span><i class="fa fa-shopping-basket"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="prod-i-buy"><span>В корзину</span><i class="fa fa-shopping-basket"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a href="#" class="prod-i-properties-label"><span>Features</span><i class="fa fa-info"></i></a>
                         </p>
                         <p class="prod-i-price">
@@ -1569,10 +1571,10 @@
                     </h3>
                     <div class="prod-i-action">
                         <p class="prod-i-info">
-                            <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                            <a href="#" class="prod-i-favorites"><span>Избранное</span><i class="fa fa-heart"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
-                            <a href="#" class="prod-i-buy"><span>Add to cart</span><i class="fa fa-shopping-basket"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="prod-i-buy"><span>В корзину</span><i class="fa fa-shopping-basket"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a href="#" class="prod-i-properties-label"><span>Features</span><i class="fa fa-info"></i></a>
                         </p>
                         <p class="prod-i-price">
@@ -1607,10 +1609,10 @@
                     </h3>
                     <div class="prod-i-action">
                         <p class="prod-i-info">
-                            <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                            <a href="#" class="prod-i-favorites"><span>Избранное</span><i class="fa fa-heart"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
-                            <a href="#" class="prod-i-buy"><span>Add to cart</span><i class="fa fa-shopping-basket"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="prod-i-buy"><span>В корзину</span><i class="fa fa-shopping-basket"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a href="#" class="prod-i-properties-label"><span>Features</span><i class="fa fa-info"></i></a>
                         </p>
                         <p class="prod-i-price">
@@ -1652,10 +1654,10 @@
                     </h3>
                     <div class="prod-i-action">
                         <p class="prod-i-info">
-                            <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                            <a href="#" class="prod-i-favorites"><span>Избранное</span><i class="fa fa-heart"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
-                            <a href="#" class="prod-i-buy"><span>Add to cart</span><i class="fa fa-shopping-basket"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="prod-i-buy"><span>В корзину</span><i class="fa fa-shopping-basket"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a href="#" class="prod-i-properties-label"><span>Features</span><i class="fa fa-info"></i></a>
                         </p>
                         <p class="prod-i-price">
@@ -1697,10 +1699,10 @@
                     </h3>
                     <div class="prod-i-action">
                         <p class="prod-i-info">
-                            <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                            <a href="#" class="prod-i-favorites"><span>Избранное</span><i class="fa fa-heart"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
-                            <a href="#" class="prod-i-buy"><span>Add to cart</span><i class="fa fa-shopping-basket"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="prod-i-buy"><span>В корзину</span><i class="fa fa-shopping-basket"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a href="#" class="prod-i-properties-label"><span>Features</span><i class="fa fa-info"></i></a>
                         </p>
                         <p class="prod-i-price">
@@ -1747,10 +1749,10 @@
                     </h3>
                     <div class="prod-i-action">
                         <p class="prod-i-info">
-                            <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                            <a href="#" class="prod-i-favorites"><span>Избранное</span><i class="fa fa-heart"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
-                            <a href="#" class="prod-i-buy"><span>Add to cart</span><i class="fa fa-shopping-basket"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="prod-i-buy"><span>В корзину</span><i class="fa fa-shopping-basket"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a href="#" class="prod-i-properties-label"><span>Features</span><i class="fa fa-info"></i></a>
                         </p>
                         <p class="prod-i-price">
@@ -1784,10 +1786,10 @@
                     </h3>
                     <div class="prod-i-action">
                         <p class="prod-i-info">
-                            <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                            <a href="#" class="prod-i-favorites"><span>Избранное</span><i class="fa fa-heart"></i></a>
                             <a class="prod-i-compare" href="#"><span>Сравнение</span><i class="fa fa-bar-chart"></i></a>
-                            <a href="#" class="prod-i-buy"><span>Add to cart</span><i class="fa fa-shopping-basket"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="#" class="prod-i-buy"><span>В корзину</span><i class="fa fa-shopping-basket"></i></a>
+                            <a href="#" class="qview-btn prod-i-qview"><span>Быстрый просмотр</span><i class="fa fa-search"></i></a>
                             <a href="#" class="prod-i-properties-label"><span>Features</span><i class="fa fa-info"></i></a>
                         </p>
                         <p class="prod-i-price">
@@ -1810,7 +1812,7 @@
         </div>
         <!-- КаталогItems | Gallery V2 - start -->
 
-        <!-- Quick View Товар- start -->
+        <!-- Быстрый просмотр Товар- start -->
         <div class="qview-modal">
             <div class="prod-wrap">
                 <a href="{% url 'product'  %}">
@@ -1947,7 +1949,7 @@
                             <a href="#" class="prod-minus"><i class="fa fa-angle-down"></i></a>
                         </p>
                         <p class="prod-addwrap">
-                            <a href="#" class="prod-add">Add to cart</a>
+                            <a href="#" class="prod-add">В корзину</a>
                         </p>
                     </div>
                     <ul class="prod-i-props">
@@ -1977,7 +1979,7 @@
                 </div>
             </div>
         </div>
-        <!-- Quick View Товар- end -->
+        <!-- Быстрый просмотр Товар- end -->
     </section>
 </main>
 <!-- Main Content - end -->
@@ -2091,7 +2093,7 @@
                     About us
                 </h3>
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="{% url 'home'  %}">Home</a></li>
+                    <li class="active"><a href="{% url 'home'  %}">Главная</a></li>
                     <li><a href="{% url 'catalog'  %}">Каталог</a></li>
                     <li><a href="{% url 'elements'  %}">Elements</a></li>
                     <li><a href="{% url 'blog' %}">Blog</a></li>
