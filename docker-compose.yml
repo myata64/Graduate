@@ -1,0 +1,66 @@
+version: '3'
+services:
+  db:
+    container_name: postgres
+    image: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: store
+      POSTGRES_USER: myata64
+      POSTGRES_PASSWORD: pass1234
+    ports:
+      - '5434:5432'
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - '8080:80'
+    depends_on:
+      - db
+    environment:
+      PGADMIN_DEFAULT_EMAIL: credostore.mail@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: lalka228
+
+  web:
+    build:
+      context: .
+      dockerfile: dockerfile
+
+    command: bash -c "python3 /code/manage.py collectstatic --noinput && python3 /code/manage.py runserver 0.0.0.0:8000" # /wait-for-it.sh db:5432 -t 60 &&
+
+    volumes:
+      - .:/code
+    ports:
+      - '8000:8000'
+    depends_on:
+      - db
+      - redis
+#    networks:
+#      - credo-network
+
+  redis:
+    image: redis:6.0.7
+    container_name: redis
+    restart: always
+    volumes:
+      - redis_volume_data:/data
+    ports:
+      - '6379:6379'
+
+  redis_insight:
+    image: redislabs/redisinsight:latest
+    container_name: redis_insight
+    restart: always
+    ports:
+      - '8001:8001'
+    volumes:
+      - redis_insight_volume_data:/db
+
+volumes:
+  redis_volume_data:
+  redis_insight_volume_data:
+  pgdata:
+
+#networks:
+#  credo-network:
+#    driver: bridge

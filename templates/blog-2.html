@@ -1,0 +1,974 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>AllStore - MultiConcept eCommerce Template</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700ii%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'styles/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/ion.rangeSlider.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/ion.rangeSlider.skinFlat.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/jquery.bxslider.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/jquery.fancybox.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/flexslider.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/media.css' %}">
+
+</head>
+<body>
+<!-- Header - start -->
+<header class="header">
+
+    <!-- Topbar - start -->
+    <div class="header_top">
+        <div class="container">
+            <ul class="contactinfo nav nav-pills">
+                <li>
+                    <i class='fa fa-phone'></i> +7 777 123 1575
+                </li>
+                <li>
+                    <i class="fa fa-envelope"></i> admin@real-web.pro
+                </li>
+            </ul>
+            <!-- Social links -->
+            <ul class="social-icons nav navbar-nav">
+                <li>
+                    <a href="http://facebook.com" rel="nofollow" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://google.com" rel="nofollow" target="_blank">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://twitter.com" rel="nofollow" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://vk.com" rel="nofollow" target="_blank">
+                        <i class="fa fa-vk"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/credo.sh/" rel="nofollow" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>		</div>
+    </div>
+    <!-- Topbar - end -->
+
+    <!-- Logo, Shop-menu - start -->
+    <div class="header-middle">
+        <div class="container header-middle-cont">
+            <div class="toplogo">
+                <a href="{% url 'home'  %}">
+                    <img src="img/logo.png" alt="AllStore - MultiConcept eCommerce Template">
+                </a>
+            </div>
+            <div class="shop-menu">
+                <ul>
+
+                    {% if user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'wishlist' %}">
+                            <i class="fa fa-heart"></i>
+                            <span class="shop-menu-ttl">Избранное</span>
+                            (<span id="topbar-favorites">1</span>)
+                        </a>
+                    </li>
+                    {% endif %}
+
+                    <li>
+                        <a href="{% url 'compare'  %}">
+                            <i class="fa fa-bar-chart"></i>
+                            <span class="shop-menu-ttl">Сравнение</span> (5)
+                        </a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <div class="h-cart">
+                            <a href="{% url 'cart' %}">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="shop-menu-ttl">Корзина</span>
+                                (<b>0</b>)
+                            </a>
+                        </div>
+                    </li>
+                    {% endif %}
+            {% if user.is_authenticated %}
+            <li class="topauth">
+                <a href="{% url 'account' %}">
+                    <i class="fa fa-lock"></i>
+                    <span class="shop-menu-ttl">Профиль</span>
+                </a>
+            </li>
+        {% else %}
+            <li class="topauth">
+                <a href="{% url 'auth' %}">
+                    <i class="fa fa-lock"></i>
+                    <span class="shop-menu-ttl">Вход/Регистрация</span>
+                </a>
+            </li>
+            {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Logo, Shop-menu - end -->
+
+    <!-- Topmenu - start -->
+    <div class="header-bottom">
+        <div class="container">
+            <nav class="topmenu">
+
+                <!-- Каталогmenu - start -->
+                <div class="topcatalog">
+                    <a class="topcatalog-btn" href="{% url 'catalog'  %}"><span>All</span> catalog</a>
+                    <ul class="topcatalog-list">
+                        <li>
+                            <a href="{% url 'catalog'  %}">
+                                Women
+                            </a>
+                            <i class="fa fa-angle-right"></i>
+                            <ul>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Knitwear
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Dresses
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Bags
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Shoulder Bags
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Falabella
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Becks
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Clutches
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Travel Bags
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Accessories
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Sunglasses
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Tech Cases
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Jewelry
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Stella
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Coats & Jackets
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{% url 'catalog'  %}">
+                                Men
+                            </a>
+                            <i class="fa fa-angle-right"></i>
+                            <ul>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Jackets & Blazers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Pants & Shorts
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Accessories
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Bags
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Sunglasses
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Other Accessories
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Suiting
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Shirts
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{% url 'catalog'  %}">
+                                Kids
+                            </a>
+                            <i class="fa fa-angle-right"></i>
+                            <ul>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Girls
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Outerwear
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                T-Shirts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Blouses & Shirts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Pants & Shorts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Sleepwear & Underwear
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Skirts
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Boys
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Shoes & Accessories
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Jumpers & Cardigans
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Shirts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Outerwear
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Swimwear
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Baby
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Baby Sets
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Dresses & All-In-One
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Pants & Shorts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Shoes & Accessories
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                T-shirts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Outerwear
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{% url 'catalog'  %}">
+                                Shoes
+                            </a>
+                            <i class="fa fa-angle-right"></i>
+                            <ul>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Women
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Elyse
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Odette
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Brody
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Flats
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Sandals
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Men
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Casual Shoes
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Sneakers
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Sandals
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Boots
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Mules & Clogs
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Children's
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Girls
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Boys
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{% url 'catalog'  %}">
+                                        Baby Shoe
+                                    </a>
+                                    <i class="fa fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                First Walkers
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Sneakers
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Boots
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'catalog'  %}">
+                                                Sandals & Clogs
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Каталогmenu - end -->
+
+                <!-- Main menu - start -->
+                <button type="button" class="mainmenu-btn">Menu</button>
+
+                <ul class="mainmenu">
+                    <li>
+                        <a href="{% url 'home'  %}">
+                            Home
+                        </a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="{% url 'catalog'  %}">
+                            Каталог<!--<i class="fa fa-angle-down">--></i>
+                        </a>
+
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="{% url 'catalog'  %}">
+                            Товар<i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="{% url 'product'  %}">
+                                    Товар- Style 1 (Slider)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'product_2'  %}">
+                                    Товар- Style 2 (Scroll)
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{% url 'elements'  %}">
+                            Elements
+                        </a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="{% url 'blog' %}" class="active">
+                            Blog <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="{% url 'blog' %}">
+                                    Blog - Style 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'blog_2' %}" class="active">
+                                    Blog - Style 2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'post' %}">
+                                    Single Post
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">
+                            Pages <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="{% url 'contacts'  %}">
+                                    Contacts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'cart' %}">
+                                    Cart
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'auth' %}">
+                                    Authorization
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'compare'  %}">
+                                    Compare
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'wishlist'  %}">
+                                    Wishlist
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'error' %}">
+                                    Error 404
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainmenu-more">
+                        <span>...</span>
+                        <ul class="mainmenu-sub"></ul>
+                    </li>
+                </ul>
+                <!-- Main menu - end -->
+
+                <!-- Search - start -->
+                <div class="topsearch">
+                    <a id="topsearch-btn" class="topsearch-btn" href="#"><i class="fa fa-search"></i></a>
+                    <form class="topsearch-form" action="#">
+                        <input type="text" placeholder="Search products">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <!-- Search - end -->
+
+            </nav>		</div>
+    </div>
+    <!-- Topmenu - end -->
+
+</header>
+<!-- Header - end -->
+
+
+<!-- Main Content - start -->
+<main>
+    <section class="container">
+
+
+        <ul class="b-crumbs">
+            <li>
+                <a href="{% url 'home'  %}">
+                    Home
+                </a>
+            </li>
+            <li>
+                <span>Blog</span>
+            </li>
+        </ul>
+        <h1 class="main-ttl main-ttl-categs"><span>Blog</span></h1>
+        <!-- Blog Categories -->
+        <ul class="blog-categs">
+            <li class="active"><a href="{% url 'blog' %}">All</a></li>
+            <li><a href="{% url 'blog' %}">News</a></li>
+            <li><a href="{% url 'blog' %}">Reviews</a></li>
+            <li><a href="{% url 'blog' %}">Articles</a></li>
+        </ul>
+
+        <!-- Blog Posts - start -->
+        <div class="posts-list blog-page">
+            <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/354x236)"></span></a>
+                <time class="posts-i-date" datetime="2017-01-01 12:00"><span>09</span> Jan</time>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Animi quaerat at</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At fugit obcaecati quod veritatis vero!</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
+            </div>
+            <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/360x203)"></span></a>
+                <time class="posts-i-date" datetime="2017-01-01 12:00"><span>15</span> Feb</time>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Ex atque commodi</a></h3>
+                <p>Obcaecati ratione, illo qui dignissimos excepturi non earum, sed tempore, amet at labore ullam unde delectus</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
+            </div>
+            <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/360x224)"></span></a>
+                <time class="posts-i-date" datetime="2017-01-01 12:00"><span>21</span> Mar</time>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Hic quod maxime deserunt</a></h3>
+                <p>Aliquam soluta eveniet voluptas, nesciunt eius libero officiis officia eos consectetur ut velit natus</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
+            </div>
+            <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/314x236)"></span></a>
+                <time class="posts-i-date" datetime="2017-01-01 12:00"><span>08</span> Apr</time>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Ipsum dolor sit amet</a></h3>
+                <p>Porro incidunt reprehenderit eaque? Sit nihil culpa ex quaerat nostrum ab</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
+            </div>
+            <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/318x236)"></span></a>
+                <time class="posts-i-date" datetime="2017-01-01 12:00"><span>18</span> Jun</time>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Lorem ipsum dolor sit amet</a></h3>
+                <p>Nihil vel quod laboriosam perspiciatis nostrum nam quis optio, vitae autem, architecto pariatur quo</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
+            </div>
+            <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/354x236)"></span></a>
+                <time class="posts-i-date" datetime="2017-01-01 12:00"><span>29</span> Jul</time>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Adipisci corporis velit</a></h3>
+                <p>Id vero tenetur sunt eligendi sequi adipisci similique sint corporis praesentium aliquam iusto maxime tempora eos non culpa</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
+            </div>
+            <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/341x236)"></span></a>
+                <time class="posts-i-date" datetime="2017-01-01 12:00"><span>04</span> Aug</time>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Beatae nisi blanditiis</a></h3>
+                <p>Asperiores minus ipsam eaque saepe repellat libero earum mollitia cum tempore sint autem, magni, ducimus</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
+            </div>
+            <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/354x236)"></span></a>
+                <time class="posts-i-date" datetime="2017-01-01 12:00"><span>14</span> Sep</time>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Dolorum vero mollitia</a></h3>
+                <p>Aliquid nesciunt amet officiis nemo numquam perferendis ipsam dolor ratione rerum quasi repellat officia distinctio quos</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
+            </div>
+            <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/354x236)"></span></a>
+                <time class="posts-i-date" datetime="2017-01-01 12:00"><span>21</span> Oct</time>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Quasi corporis recusandae</a></h3>
+                <p>Officiis atque facilis corporis ipsum, sint totam doloremque quas laborum asperiores doloribus voluptatum</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
+            </div>
+            <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/353x235)"></span></a>
+                <time class="posts-i-date" datetime="2017-01-01 12:00"><span>02</span> Nov</time>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Sit deleniti placeat quia aspernatur</a></h3>
+                <p>Sit nihil culpa ex quaerat nostrum ab. Aliquid nesciunt amet officiis nemo numquam perferendis ipsam dolor ratione</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
+            </div>
+            <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/354x236)"></span></a>
+                <time class="posts-i-date" datetime="2017-01-01 12:00"><span>09</span> Dec</time>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Odit reprehenderit</a></h3>
+                <p>Id distinctio cum laboriosam sint atque culpa laborum eaque, quod porro esse hic, consectetur assumenda optio</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
+            </div>
+            <div class="cf-sm-6 cf-lg-4 col-xs-6 col-sm-6 col-md-4 posts2-i">
+                <a class="posts-i-img" href="{% url 'post' %}"><span style="background: url(http://placehold.it/354x236)"></span></a>
+                <time class="posts-i-date" datetime="2017-01-01 12:00"><span>22</span> Jan</time>
+                <h3 class="posts-i-ttl"><a href="{% url 'post' %}">Quibusdam officiis quas</a></h3>
+                <p>Suscipit alias cumque, totam iure ipsam voluptatibus ratione sed quam minima non laudantium</p>		<a href="{% url 'post' %}" class="posts-i-more">Read more...</a>
+            </div>
+        </div>
+        <!-- Blog Posts - end -->
+
+        <!-- Pagination - start -->
+        <ul class="pagi">
+            <li class="active"><span>1</span></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li class="pagi-next"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+        </ul>
+        <!-- Pagination - end -->
+    </section>
+</main>
+<!-- Main Content - end -->
+
+
+<!-- Footer - start -->
+<footer class="footer-wrap">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="companyinfo">
+                    <a href="{% url 'home'  %}">
+                        <img src="img/logo-b.png" alt="AllStore - MultiConcept eCommerce Responsive HTML5 Template">
+                        AllStore - MultiConcept eCommerce Responsive HTML5 Template
+                    </a>
+                </div>
+                <div class="f-block-list">
+                    <div class="f-block-wrap">
+                        <div class="f-block">
+                            <a href="#" class="f-block-btn" data-id="#f-block-modal-1">
+                                <div class="iframe-img">
+                                    <img src="http://placehold.it/300x127" alt="About us">
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-info-circle"></i>
+                                </div>
+                            </a>
+                            <p class="f-info-ttl">About us</p>
+                            <p>Shipping and payment information.</p>
+                        </div>
+                    </div>
+                    <div class="f-block-wrap">
+                        <div class="f-block">
+                            <a href="#" class="f-block-btn" data-id="#f-block-modal-2">
+                                <div class="iframe-img">
+                                    <img src="http://placehold.it/300x127" alt="Ask questions">
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                            </a>
+                            <p class="f-info-ttl">Ask questions</p>
+                            <p>We call back within 10 minutes</p>
+                        </div>
+                    </div>
+                    <div class="f-block-wrap">
+                        <div class="f-block">
+                            <a href="#" class="f-block-btn" data-id="#f-block-modal-3" data-content="<iframe width='853' height='480' src='https://www.youtube.com/embed/kaOVHSkDoPY?rel=0&amp;showinfo=0' allowfullscreen></iframe>">
+                                <div class="iframe-img">
+                                    <img src="http://placehold.it/300x127" alt="Video (2 min)">
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-play-circle"></i>
+                                </div>
+                            </a>
+                            <p class="f-info-ttl">Video (2 min)</p>
+                            <p>Watch a video about our store</p>
+                        </div>
+                    </div>
+                    <div class="f-block-wrap">
+                        <div class="f-block">
+                            <a href="#" class="f-block-btn" data-id="#f-block-modal-4">
+                                <div class="iframe-img">
+                                    <img src="http://placehold.it/300x127" alt="Our address">
+                                </div>
+                                <div class="overlay-icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                            </a>
+                            <p class="f-info-ttl">Our address</p>
+                            <p>Spain, Madrid, 45</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stylization f-block-modal f-block-modal-content" id="f-block-modal-1">
+                    <img class="f-block-modal-img" src="http://placehold.it/500x334" alt="About us">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam natus iste ullam vero, tenetur ab ipsa consectetur deleniti officiis ex debitis incidunt alias voluptatum, maxime placeat dolores veniam sunt at atque velit, soluta. Neque ea alias quia provident molestias, ratione aut esse placeat beatae sequi sed laudantium. Unde animi nihil esse, repellendus exercitationem dicta harum ab labore, voluptates explicabo in, quidem dolorum voluptas!
+                </div>
+                <div class="stylization f-block-modal f-block-modal-callback" id="f-block-modal-2">
+                    <div class="modalform">
+                        <form action="#" method="POST" class="form-validate">
+                            <p class="modalform-ttl">Callback</p>
+                            <input type="text" placeholder="Your name" data-required="text" name="name">
+                            <input type="text" placeholder="Your phone" data-required="text" name="phone">
+                            <button type="submit"><i class="fa fa-paper-plane"></i> Send</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="stylization f-block-modal f-block-modal-video" id="f-block-modal-3">
+
+                </div>
+                <div class="stylization f-block-modal f-block-modal-map" id="f-block-modal-4">
+                    <div class="allstore-gmap">
+                        <div class="marker" data-zoom="15" data-lat="-37.81485261872975" data-lng="144.95655298233032" data-marker="img/marker.png">534-540 Little Bourke St, Melbourne VIC 3000, Australia</div>
+                    </div>
+                </div>
+                <div class="f-delivery">
+                    <img src="img/map.png" alt="">
+                    <h4>Free delivery in London</h4>
+                    <p>We will deliver within 1 hour</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container f-menu-list">
+        <div class="row">
+            <div class="f-menu">
+                <h3>
+                    About us
+                </h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="{% url 'home'  %}">Главная</a></li>
+                    <li><a href="{% url 'catalog'  %}">Каталог</a></li>
+                    <li><a href="{% url 'elements'  %}">Elements</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'contacts'  %}">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="f-menu">
+                <h3>
+                    Shop
+                </h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="{% url 'catalog'  %}">Women</a></li>
+                    <li><a href="{% url 'catalog'  %}">Men</a></li>
+                    <li><a href="{% url 'catalog'  %}">Kids</a></li>
+                    <li><a href="{% url 'catalog'  %}">Shoes</a></li>
+                    <li><a href="{% url 'catalog'  %}">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="f-menu">
+                <h3>
+                    Information
+                </h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'blog' %}">News</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="{% url 'blog' %}">Articles</a></li>
+                    <li><a href="{% url 'contacts'  %}">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="f-menu">
+                <h3>
+                    Pages
+                </h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="{% url 'contacts'  %}">About us</a></li>
+                    <li><a href="{% url 'contacts'  %}">Delivery</a></li>
+                    <li><a href="{% url 'contacts'  %}">Guarantees</a></li>
+                    <li><a href="{% url 'contacts'  %}">Contacts</a></li>
+                    <li><a href="{% url 'error' %}">Page 404</a></li>
+                </ul>
+            </div>
+            <div class="f-subscribe">
+                <h3>Subscribe to news</h3>
+                <form class="f-subscribe-form" action="#">
+                    <input placeholder="Your e-mail" type="text">
+                    <button type="submit"><i class="fa fa-paper-plane"></i></button>
+                </form>
+                <p>Enter your email address if you want to receive our newsletter. Subscribe now!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <ul class="social-icons nav navbar-nav">
+                    <li>
+                        <a href="http://facebook.com/" rel="nofollow" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://google.com/" rel="nofollow" target="_blank">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/" rel="nofollow" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://vk.com/" rel="nofollow" target="_blank">
+                            <i class="fa fa-vk"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://instagram.com/" rel="nofollow" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer-copyright">
+                    <i><a href="https://themeforest.net/user/real-web?ref=real-web">Real-Web</a></i> © Copyright 2017
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- Footer - end -->
+
+
+<!-- jQuery plugins/scripts - start -->
+<script src="{% static 'scripts/jquery-1.11.2.min.js' %}"></script>
+<script src="{% static 'scripts/jquery.bxslider.min.js' %}"></script>
+<script src="{% static 'scripts/fancybox/fancybox.js' %}"></script>
+<script src="{% static 'scripts/fancybox/helpers/jquery.fancybox-thumbs.js' %}"></script>
+<script src="{% static 'scripts/jquery.flexslider-min.js' %}"></script>
+<script src="{% static 'scripts/swiper.jquery.min.js' %}"></script>
+<script src="{% static 'scripts/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'scripts/progressbar.min.js' %}"></script>
+<script src="{% static 'scripts/ion.rangeSlider.min.js' %}"></script>
+<script src="{% static 'scripts/chosen.jquery.min.js' %}"></script>
+<script src="{% static 'scripts/jQuery.Brazzers-Carousel.js' %}"></script>
+<script src="{% static 'scripts/plugins.js' %}"></script>
+<script src="{% static 'scripts/main.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhAYvx0GmLyN5hlf6Uv_e9pPvUT3YpozE"></script>
+<script src="{% static 'scripts/gmap.js' %}"></script>
+<!-- jQuery plugins/scripts - end -->
+
+</body>
+</html>

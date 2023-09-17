@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="{% static 'styles/account.css' %}">
+<body>
+<div class="container">
+    <div class="flex-box">
+        <ul class="form_menu">
+            <li class="form_menu-list"><a href="{% url 'home' %}">Главная</a></li>
+            <li id="personal-tab" class="form_menu-list active"><a href="" class="form_menu-tabs" data-tab="personal-data">Личные данные</a></li>
+            <li id="personal-tab" class="form_menu-list"><a href="" class="form_menu-tabs" data-tab="security-settings">Безопасность и вход</a></li>
+            <li id="personal-tab" class="form_menu-list"><a href="" class="form_menu-tabs">Заказы</a></li>
+            <li id="personal-tab" class="form_menu-list"><a href="" class="form_menu-tabs">Отзывы</a></li>
+            <li class="form_menu-list">
+                <form action="{% url 'logout' %}">
+                    <button >Выход</button>
+                </form>
+            </li>
+        </ul>
+        <div class="form_wrapper">
+            <form id="personal-data" action="" class="account_form tab-content" >
+                <label for="name">Имя</label>
+                <input type="text">
+
+                <label for="lastname">Фамилия</label>
+                <input type="text">
+
+                <label for="midlename">Отчество</label>
+                <input type="text">
+            </form>
+            <form action="" id="security-settings" class="tab-content">
+                <label for="email">Email:</label>
+                <input type="email" id="email"><br>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password"><br>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".form_menu-tabs");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", (event) => {
+            event.preventDefault(); // Предотвращаем переход по ссылке
+
+            // Удаляем класс "active" у всех вкладок и скрываем все содержимое
+            tabs.forEach(t => t.classList.remove("active"));
+            tabContents.forEach(content => content.style.display = "none");
+
+            // Получаем значение атрибута "data-tab" из ссылки и отображаем соответствующее содержимое
+            const tabId = tab.getAttribute("data-tab");
+            tab.classList.add("active");
+            document.getElementById(tabId).style.display = "block";
+        });
+    });
+
+    // По умолчанию активируем первую вкладку
+    tabs[0].click();
+});
+</script>
+</body>
+</html>

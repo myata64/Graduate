@@ -1,0 +1,428 @@
+@font-face {
+    font-family: 'Urban Sketart';
+    src: url('/credo/static/fonts/urban-sketart.regular.ttf') format('truetype');
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Remove default margin */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+    list-style: none;
+}
+
+ul > li {
+    list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+}
+
+/* Make images easier to work with */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+    margin-top: 1em;
+}
+
+.admin_function {
+    position: relative;
+    bottom: calc(50%);
+    left: 0;
+    z-index: 999999;
+}
+
+#admin_gears {
+    display: block;
+    width: 72px;
+    height: 72px;
+    border: 3px solid black;
+    border-radius: 100%;
+
+    position: fixed;
+    bottom: calc(50%);
+    left: 0;
+    z-index: 999999;
+
+    cursor: pointer;
+}
+
+#admin_menu {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    bottom: calc(1080px * 50%);
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/*#menu-list li {*/
+/*  margin: 5px 0;*/
+/*}*/
+
+/*#menu-btn {*/
+/*  background-color: #ccc;*/
+/*  color: #fff;*/
+/*  border: none;*/
+/*  padding: 10px;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    outline: none;
+    border: none;
+}
+
+.page {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    /*max-height: fixed;*/
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.header_nav {
+    height: 100px;
+    position: relative;
+}
+
+.header_logo {
+    position: relative;
+    top: 0;
+    left: 43%;
+    z-index: 2;
+    color: #000;
+    font-family: 'Urban Sketart', regular;
+    font-size: 44px;
+    text-transform: uppercase;
+}
+
+.header_list {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.header_menu {
+    color: #000;
+    font-family: 'SNFBSTRD handwrite', cursive;
+}
+
+.header_menu:hover {
+    border-bottom: 1px solid white;
+}
+
+/*ACCOUNT Style*/
+.title h1{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 40px;
+	color: #fcfffc;
+	margin-bottom: 50px;
+}
+.list_menu a{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 25px;
+	color: #fcfffc;
+	border-left: 2px solid #F5B7C7;
+	transition: 0.2s ease;
+	padding-left: 5px;
+}
+.list_menu a:hover{
+	border-left: 2px solid #F5B7C7;
+	transition: 0.2s ease;
+	padding-left: 10px;
+}
+.list_menu li{
+	margin: 20px 0;
+}
+.list_menu{
+	margin-bottom: 50px;
+}
+.menu{
+    position: absolute;
+    top: 0;
+    z-index: 99999999999;
+    padding: 25vh 50px;
+    background: rgba(20, 20, 20, 1);
+    height: 100vh;
+    border-right: 7px solid #fcfffc;
+    left: -248px;
+    transition: 0.4s ease;
+}
+.menu:hover{
+	left: 0;
+	transition: 0.5s ease;
+}
+.content{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+.footer_menu p{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 15px;
+	color: #fcfffc;
+	opacity: 0.7;
+}
+
+.header_account {
+    position: absolute;
+    top: calc(25%);
+    /*right: 64px;*/
+    left: 0;
+    z-index: 99999;
+}
+
+.header_account-icon {
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    z-index: 999999;
+    width: 50px;
+    height: 50px;
+}
+
+#header_account_menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: gray;
+    color: white;
+    padding: 20px;
+    opacity: 0.5; /* Изначально меню скрыто */
+    transition: opacity 0.3s ease; /* Плавная анимация показа и скрытия меню */
+}
+
+#account-menu.active {
+    display: block;
+    opacity: 1; /* Показывать меню с плавностью */
+}
+
+#account-menu > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#account-menu > ul > li {
+    margin-bottom: 10px;
+}
+
+#account-menu > ul > li > a {
+    color: white;
+    text-decoration: none;
+}
+
+/*END*/
+#header_shadow {
+    width: 100%;
+    height: 100px;
+    background-color: #1b1b1b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.25s;
+}
+
+#header_shadow:hover {
+    opacity: 1;
+}
+
+section {
+    padding: 5% 10%;
+}
+
+.main-home {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+
+/* SLIDER */
+#slider {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.9s;
+
+}
+
+.showSlide {
+    opacity: 1;
+
+}
+
+.slide_img {
+    width: 100%;
+    height: 860px;
+}
+
+.slider-btns {
+    position: absolute;
+    cursor: pointer;
+    z-index: 999;
+    top: 380px;
+    width: 60px;
+    height: 80px;
+}
+
+.prevBtn {
+    left: 38px;
+}
+
+.nextBtn {
+    right: 38px;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: auto;
+    background: #000;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'SNFBSTRD handwrite', cursive;
+}
+
+footer a {
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+
+}
+
+footer nav a:hover {
+    border-bottom: 1px solid white;
+}
+
+.footer_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_icons a:not(:last-child) {
+    margin: 20px 20px 20px 20px;
+
+}
+
+.footer_icons img {
+    width: 50px;
+    height: auto;
+    text-align: center;
+}
+
+.footer_icons img:hover {
+    background: #0000003d;
+    border-radius: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    #slider {
+
+        height: 10%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #slider {
+        height: 20%;
+    }
+}
