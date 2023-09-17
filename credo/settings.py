@@ -36,6 +36,7 @@ AUTHENTICATION_BACKENDS = [
 INSTALLED_APPS = [
     # 'django_redis',
     'credo',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

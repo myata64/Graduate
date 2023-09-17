@@ -24,49 +24,6 @@ class Category(models.Model):
         return self.category_name
 
 
-# class SubCategory(models.Model):
-#     category_name = models.ForeignKey('Category', on_delete=models.CASCADE, max_length=250, null=True, blank=True,
-#                                       default='', verbose_name="Категория", )
-#     subcategory_name = models.CharField(max_length=255, unique=True, null=True, default='',
-#                                         verbose_name="Подкатегория", )
-#
-#     class Meta:
-#         verbose_name_plural = 'Подкатегория'
-#
-#     def __str__(self):
-#         return self.subcategory_name
-#
-#
-# class Brand(models.Model):
-#     brand = models.CharField(max_length=255, default='', verbose_name="Бренд", )
-#
-#     class Meta:
-#         verbose_name_plural = 'Бренд'
-#
-#     def __str__(self):
-#         return self.brand
-#
-#
-# class Color(models.Model):
-#     color = models.CharField(max_length=20, default='', verbose_name="Цвет", )
-#
-#     class Meta:
-#         verbose_name_plural = 'Цвет'
-#
-#     def __str__(self):
-#         return self.color
-#
-#
-# class Size(models.Model):
-#     size = models.CharField(max_length=15, default='', verbose_name="Размер", )
-#
-#     class Meta:
-#         verbose_name_plural = 'Размер'
-#
-#     def __str__(self):
-#         return self.size
-
-
 class AvailabilityStatus(models.Model):
     availability_status = models.CharField(max_length=10, default='В наличии', verbose_name="Статус наличия", )
 
@@ -122,40 +79,16 @@ class Whishlist(models.Model):
 # Заказ
 class Order(models.Model):
     user = models.ForeignKey('CustomUser', on_delete=models.CASCADE)
-    items = models.ManyToManyField(Cart, through='OrderItem')
-
-
-class OrderItem(models.Model):
-    order = models.ForeignKey(Order, on_delete=models.CASCADE)
-    cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
+    cart = models.ManyToManyField('Cart', null=False, default=1)
     order_date = models.DateTimeField(auto_now_add=True, null=True, verbose_name="Дата оформления заказа")
     status = models.ForeignKey('OrderStatus', on_delete=models.CASCADE, null=True, verbose_name="Статус заказа")
 
-    # comment = models.CharField(max_length=400, null=True, default='', verbose_name="Комментарий")
-    # delivery_method = models.ForeignKey('DeliveryMethod', on_delete=models.PROTECT, null=True,
-    # verbose_name="Способ доставки")
     class Meta:
         verbose_name_plural = 'Заказ'
 
     def __str__(self):
-        return self.order
+        return f"Order {self.id}"
 
-# class Order(models.Model):
-#     user = models.OneToOneField('CustomUser', on_delete=models.CASCADE, null=True, verbose_name="Имя пользователя")
-#     product = models.ForeignKey('Product', on_delete=models.PROTECT, null=True, verbose_name="Товар")
-#     delivery_method = models.ForeignKey('DeliveryMethod', on_delete=models.PROTECT, null=True,
-#                                         verbose_name="Способ доставки")
-#     status = models.ForeignKey('OrderStatus', on_delete=models.CASCADE, null=True, default='На рассмотрении',
-#                                verbose_name="Статус заказа")
-#     count = models.DecimalField(max_digits=50, decimal_places=2, default=1, verbose_name="Количество")
-#     order_date = models.DateTimeField(auto_now_add=True, null=True, verbose_name="Дата оформления заказа")
-#     comment = models.CharField(max_length=400, null=True, default='', verbose_name="Комментарий")
-#
-#     class Meta:
-#         verbose_name_plural = 'Заказ'
-#
-#     def __str__(self):
-#         return self.status
 
 
 class OrderStatus(models.Model):

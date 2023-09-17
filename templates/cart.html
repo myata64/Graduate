@@ -654,7 +654,6 @@
         </ul>
         <h1 class="main-ttl"><span>Корзина</span></h1>
         <!-- Cart Items - start -->
-        <form action="#">
 
             <div class="cart-items-wrap">
                 <table class="cart-items">
@@ -711,10 +710,13 @@
                     <input placeholder="your coupon" type="text">
                     <a class="cart-coupon-btn" href="#"><img src="img/ok.png" alt="your coupon"></a>
                 </div>
-                <a href="#" class="cart-submit-btn">Оформить заказ</a>
+
+                <form method="POST" action="{% url 'checkout' %}">
+                    {% csrf_token %}
+                    <button class="cart-submit-btn">Оформить заказ</button>
+                </form>
                 <a href="#" class="cart-clear">Очистить корзину</a>
             </div>
-        </form>
         <!-- Cart Items - end -->
         <script>
         $(document).ready(function() {

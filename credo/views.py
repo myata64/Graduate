@@ -21,6 +21,41 @@ from django.contrib.sessions.models import Session
 logger = logging.getLogger('registration')
 
 
+from rest_framework import generics
+from .models import Order
+from .serializers import *
+
+class OrderListCreateView(generics.ListCreateAPIView):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+
+def checkout(request):
+    if request.method == 'POST':
+        # Получаем текущего пользователя
+        if request.method == 'POST':
+            # Получаем текущего пользователя
+            user = request.user
+
+            # Получаем товары в корзине пользователя
+            cart_items = Cart.objects.filter(user=user)
+
+            if cart_items.exists():
+                # Создаем новый заказ
+                order = Order.objects.create(user=user,)
+
+                # Добавляем товары из корзины в заказ
+                for cart_item in cart_items:
+                    order.cart.add(cart_item)
+                    # Устанавливаем пользователя для элемента корзины перед созданием
+                    cart_item.user = user
+                    cart_item.save()
+
+            # Редиректим пользователя после успешного оформления заказа
+            return redirect('cart')
+
+    return render(request, 'index.html')
+
+
 @csrf_protect
 def register(request):
     if request.method == 'POST':
@@ -85,7 +120,7 @@ def reg_log_view(request):
 
 @login_required(login_url='auth')
 def add_to_cart(request, product_id):
-    product = get_object_or_404(Product)
+    product = get_object_or_404(Product, id=product_id)
 
     with transaction.atomic():
         cart_item, created = Cart.objects.select_for_update().get_or_create(user=request.user, product=product)

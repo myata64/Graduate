@@ -15,29 +15,15 @@ class Category(admin.ModelAdmin):
     pass
 
 
-# @admin.register(SubCategory)
-# class SubCategory(admin.ModelAdmin):
-#     form = SubCategoryForm
-#     pass
-#
-#
-# @admin.register(Brand)
-# class Brand(admin.ModelAdmin):
-#     form = BrandForm
-#     pass
-#
-#
-# @admin.register(Size)
-# class Size(admin.ModelAdmin):
-#     form = SizeForm
-#     pass
-#
-#
-# @admin.register(Color)
-# class Color(admin.ModelAdmin):
-#     form = ColorForm
-#     pass
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+    form = OrderForm
+    pass
 
+# @admin.register(OrderItem)
+# class OrderItemAdmin(admin.ModelAdmin):
+#     form = OrderItemForm
+#     pass
 
 @admin.register(AvailabilityStatus)
 class AvailabilityStatus(admin.ModelAdmin):

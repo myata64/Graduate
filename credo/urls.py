@@ -17,11 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views, settings
+from .views import *
 from django.conf.urls.static import static
 
 app_name = 'credo'
 
 urlpatterns = [
+                  # API
+                  path('api/orders/', OrderListCreateView.as_view(), name='order-list-create'),
+                  # Function
+                  path('checkout/', views.checkout, name='checkout'),
+                  # URLs
                   path('admin/', admin.site.urls),
                   path('error/', views.error, name='error'),
                   path('account/', views.account, name='account'),
@@ -30,7 +36,7 @@ urlpatterns = [
                   path('blog/', views.blog, name='blog'),
                   path('blog/', views.blog_2, name='blog_2'),
                   path('cart/', views.cart, name='cart'),
-                  path('add_to_cart/', views.add_to_cart, name='add_to_cart'),
+                  path('add_to_cart/<int:product_id>/', views.add_to_cart, name='add_to_cart'),
                   # path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
                   path('catalog/gallery/', views.catalog_gallery, name='catalog_gallery'),
                   path('catalog/gallery/', views.catalog_gallery_2, name='catalog_gallery_2'),
