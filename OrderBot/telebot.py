@@ -14,7 +14,9 @@ async def get_orders(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
 
         chat_id = update.effective_chat.id
         for order in orders:
-            text = f"Заказ #{order['id']}\nДата: {order['order_date']}\nСтатус: {order['status']}"
+            username = order['user']['username']
+            email = order['user']['email']
+            text = f"Заказ #{order['id']}\nUsername: {username}\nemail: {email}\nДата: {order['order_date']}\nСтатус: {order['status']}"
             await context.bot.send_message(chat_id=chat_id, text=text)
 
     except Exception as e:

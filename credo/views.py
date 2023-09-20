@@ -40,17 +40,13 @@ def checkout(request):
             cart_items = Cart.objects.filter(user=user)
 
             if cart_items.exists():
-                # Создаем новый заказ
                 order = Order.objects.create(user=user,)
 
-                # Добавляем товары из корзины в заказ
                 for cart_item in cart_items:
                     order.cart.add(cart_item)
-                    # Устанавливаем пользователя для элемента корзины перед созданием
                     cart_item.user = user
                     cart_item.save()
 
-            # Редиректим пользователя после успешного оформления заказа
             return redirect('cart')
 
     return render(request, 'index.html')
@@ -65,7 +61,7 @@ def register(request):
         if password == confirm_password and len(password) > 7:  # and password.is_valid() and email.is_valid():
             if CustomUser.objects.filter(email=email).exists():
                 messages.error(request, 'Email уже зарегистрирован')
-                return render(request, 'auth.html')
+                return render(request, 'auth.html', {"errorr": 'Пользователь с таким логином уже существует'})
             user = CustomUser.objects.create(
                 username=email,
                 email=email,
@@ -82,7 +78,7 @@ def register(request):
             logger.info('Новый пользователь зарегистрирован', extra={'userid': user.id})
             return redirect('auth')
         else:
-            return HttpResponse('Пароли не совпадают либо пароль короткий')
+            return render(request, 'auth.html', {'errorl': 'Пароли не совпадают либо пароль меньше 8 символов'})
     else:
         return redirect(request, 'auth')
 

@@ -5,6 +5,9 @@
 `sudo docker-compose up -d` </br>
 http://localhost:8000
 
+# Django Admin
+login: `admin` </br> 
+password: `1`
 
 # Подключение к репозиторию
 
@@ -71,10 +74,7 @@ http://localhost:8000
 - Ну и теперь мы можем делать миграции (докер будет выводить в консоль журнал, потому следющую команду нужно выполнять в другой консоли): </br>
   `sudo docker-compose exec web python manage.py migrate`
 
-
-# Django Admin
-login: `admin` </br> 
-password: `pass1234`
+  
 # Создание БД и таблиц (не обязательно)
 
 `CREATE DATABASE your_database;` </br>

@@ -20,10 +20,6 @@ class OrderAdmin(admin.ModelAdmin):
     form = OrderForm
     pass
 
-# @admin.register(OrderItem)
-# class OrderItemAdmin(admin.ModelAdmin):
-#     form = OrderItemForm
-#     pass
 
 @admin.register(AvailabilityStatus)
 class AvailabilityStatus(admin.ModelAdmin):

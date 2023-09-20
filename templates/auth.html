@@ -8,7 +8,8 @@
     <meta name="format-detection" content="telephone=no">
     <title>AllStore - MultiConcept eCommerce Template</title>
 
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700ii%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700ii%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic"
+          rel="stylesheet">
 
     <link rel="stylesheet" href="{% static 'styles/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'styles/bootstrap.min.css' %}">
@@ -65,7 +66,8 @@
                         <i class="fa fa-instagram"></i>
                     </a>
                 </li>
-            </ul>		</div>
+            </ul>
+        </div>
     </div>
     <!-- Topbar - end -->
 
@@ -98,7 +100,6 @@
                     </li>
 
 
-
                     {% if user.is_authenticated %}
                     <li>
                         <div class="h-cart">
@@ -110,21 +111,21 @@
                         </div>
                     </li>
                     {% endif %}
-            {% if user.is_authenticated %}
-            <li class="topauth">
-                <a href="{% url 'account' %}">
-                    <i class="fa fa-lock"></i>
-                    <span class="shop-menu-ttl">Профиль</span>
-                </a>
-            </li>
-        {% else %}
-            <li class="topauth">
-                <a href="{% url 'auth' %}">
-                    <i class="fa fa-lock"></i>
-                    <span class="shop-menu-ttl">Вход/Регистрация</span>
-                </a>
-            </li>
-            {% endif %}
+                    {% if user.is_authenticated %}
+                    <li class="topauth">
+                        <a href="{% url 'account' %}">
+                            <i class="fa fa-lock"></i>
+                            <span class="shop-menu-ttl">Профиль</span>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="topauth">
+                        <a href="{% url 'auth' %}">
+                            <i class="fa fa-lock"></i>
+                            <span class="shop-menu-ttl">Вход/Регистрация</span>
+                        </a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -629,7 +630,8 @@
                 </div>
                 <!-- Search - end -->
 
-            </nav>		</div>
+            </nav>
+        </div>
     </div>
     <!-- Topmenu - end -->
 
@@ -658,14 +660,18 @@
                 <h2>Login</h2>
                 <form method="POST" class="login" action="{% url 'login' %}">
                     {% csrf_token %}
-                    {% if error  %}
+                    {% if error %}
                     <p>{{ error }}</p>
                     {% endif %}
                     <p>
-                        <label for="username">E-mail <span class="required">*</span></label><input type="text" id="username" name="log_email">
+                        <label for="username">E-mail <span class="required">*</span></label><input type="text"
+                                                                                                   id="username"
+                                                                                                   name="log_email">
                     </p>
                     <p>
-                        <label for="password">Password <span class="required">*</span></label><input type="password" id="password" name="log_password">
+                        <label for="password">Password <span class="required">*</span></label><input type="password"
+                                                                                                     id="password"
+                                                                                                     name="log_password">
                     </p>
                     <p class="auth-submit">
                         <input type="submit" value="Login">
@@ -679,28 +685,35 @@
             </div>
             <div class="auth-col">
                 <h2>Register</h2>
-<form method="POST" class="register" action="{% url 'register' %}">
-    {% csrf_token %}
-    <p>
-        <label style="text-align: left;" for="reg_email">Email <span class="required">*</span></label>
-        <input type="email" id="reg_email" name="reg_email">
-    </p>
-    <p>
-        <label style="text-align: left;" for="reg_password">Password <span class="required">*</span></label>
-        <input type="password" id="reg_password" name="reg_password">
-    </p>
-    <p>
-        <label style="text-align: left;" for="reg_confirm_password">Confirm password <span class="required">*</span></label>
-        <input type="password" id="reg_confirm_password" name="reg_confirm_password">
-    </p>
-    <p class="auth-submit">
-        <input type="submit" value="Register">
-    </p>
-</form>
+                <form method="POST" class="register" action="{% url 'register' %}">
+                    {% csrf_token %}
+                    {% if errorr %}
+                    <p>{{ errorr }}</p>
+                    {% endif %}
+                    {% if errorl %}
+                    <p>{{ errorl }}</p>
+                    {% endif %}
+                    <p>
+                        <label style="text-align: left;" for="reg_email">Email <span class="required">*</span></label>
+                        <input type="email" id="reg_email" name="reg_email">
+                    </p>
+                    <p>
+                        <label style="text-align: left;" for="reg_password">Password <span
+                                class="required">*</span></label>
+                        <input type="password" id="reg_password" name="reg_password">
+                    </p>
+                    <p>
+                        <label style="text-align: left;" for="reg_confirm_password">Confirm password <span
+                                class="required">*</span></label>
+                        <input type="password" id="reg_confirm_password" name="reg_confirm_password">
+                    </p>
+                    <p class="auth-submit">
+                        <input type="submit" value="Register">
+                    </p>
+                </form>
 
             </div>
         </div>
-
 
 
     </section>
@@ -750,7 +763,8 @@
                     </div>
                     <div class="f-block-wrap">
                         <div class="f-block">
-                            <a href="#" class="f-block-btn" data-id="#f-block-modal-3" data-content="<iframe width='853' height='480' src='https://www.youtube.com/embed/kaOVHSkDoPY?rel=0&amp;showinfo=0' allowfullscreen></iframe>">
+                            <a href="#" class="f-block-btn" data-id="#f-block-modal-3"
+                               data-content="<iframe width='853' height='480' src='https://www.youtube.com/embed/kaOVHSkDoPY?rel=0&amp;showinfo=0' allowfullscreen></iframe>">
                                 <div class="iframe-img">
                                     <img src="http://placehold.it/300x127" alt="Video (2 min)">
                                 </div>
@@ -780,7 +794,11 @@
 
                 <div class="stylization f-block-modal f-block-modal-content" id="f-block-modal-1">
                     <img class="f-block-modal-img" src="http://placehold.it/500x334" alt="About us">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam natus iste ullam vero, tenetur ab ipsa consectetur deleniti officiis ex debitis incidunt alias voluptatum, maxime placeat dolores veniam sunt at atque velit, soluta. Neque ea alias quia provident molestias, ratione aut esse placeat beatae sequi sed laudantium. Unde animi nihil esse, repellendus exercitationem dicta harum ab labore, voluptates explicabo in, quidem dolorum voluptas!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam natus iste ullam vero, tenetur ab ipsa
+                    consectetur deleniti officiis ex debitis incidunt alias voluptatum, maxime placeat dolores veniam
+                    sunt at atque velit, soluta. Neque ea alias quia provident molestias, ratione aut esse placeat
+                    beatae sequi sed laudantium. Unde animi nihil esse, repellendus exercitationem dicta harum ab
+                    labore, voluptates explicabo in, quidem dolorum voluptas!
                 </div>
                 <div class="stylization f-block-modal f-block-modal-callback" id="f-block-modal-2">
                     <div class="modalform">
@@ -797,7 +815,9 @@
                 </div>
                 <div class="stylization f-block-modal f-block-modal-map" id="f-block-modal-4">
                     <div class="allstore-gmap">
-                        <div class="marker" data-zoom="15" data-lat="-37.81485261872975" data-lng="144.95655298233032" data-marker="img/marker.png">534-540 Little Bourke St, Melbourne VIC 3000, Australia</div>
+                        <div class="marker" data-zoom="15" data-lat="-37.81485261872975" data-lng="144.95655298233032"
+                             data-marker="img/marker.png">534-540 Little Bourke St, Melbourne VIC 3000, Australia
+                        </div>
                     </div>
                 </div>
                 <div class="f-delivery">

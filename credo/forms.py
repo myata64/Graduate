@@ -35,13 +35,6 @@ class OrderForm(forms.ModelForm):
         fields = '__all__'
 
 
-# class OrderItemForm(forms.ModelForm):
-#
-#     class Meta:
-#         model = OrderItem
-#         fields = '__all__'
-
-
 class AvailabilityStatusForm(forms.ModelForm):
     class Meta:
         model = AvailabilityStatus
